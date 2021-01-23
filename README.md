@@ -15,15 +15,15 @@ Tengo 30 años, soy profe de música y guionista de cine. Soy muy curiosa, me gu
 <br>
 <br>
 
-## **Tematica del sitio**
+## **Temática del sitio**
 
-El sitio busca darle un lugar donde una persona fanatica de la ciencia ficcion uniendo todos los universos entre los cuales se destacan:
+El sitio busca darle ese lugar de pertenencia a cualquier fanátic@ de la ciencia ficción, uniendo todos los universos entre los cuales se destacan:
 * Los Simpsons
 * Star Wars
 * Marvel
-* Y mas
+* Y más...
 
-Buscamos brindarle a todos los fanaticos de estas increíbles sagas todos los accesorios, figuras de accion, juguetes y mas mercancia que necesiten y deseen. El publico al que nuestros sitio apunta es todos los nerds desde la edad de 10 hasta primeros fanaticos de alrededor de 55 años. En nustro sitio tambien se podra encontrar una seccion con un blog donde los productos sera evaluados y describidos para que el consumidor pueda lograr una decisión inteligente. 
+Buscamos brindarle a todos los fanáticos de estas increíbles sagas todos los accesorios, figuras de acción coleccionables, juguetes y demás productos que necesiten y deseen. El público al que apunta nuestro sitio es todos aquellos nerds desde los 10 años hasta aquellos primeros fanáticos de alrededor de 55 años. En nustro sitio también se podrá encontrar una sección con un blog donde los productos serán evaluados y descriptos para que el consumidor pueda tomar la mejor decisión con base en la mayor cantidad de información posible.
 
 <br>
 

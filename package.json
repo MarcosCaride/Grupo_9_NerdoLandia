@@ -1,0 +1,23 @@
+{
+  "name": "Grupo_9_NerdoLandia",
+  "version": "1.0.0",
+  "description": "Por el Grupo_9_NerdoLandia",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcosCaride/Grupo_9_NerdoLandia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcosCaride/Grupo_9_NerdoLandia/issues"
+  },
+  "homepage": "https://github.com/MarcosCaride/Grupo_9_NerdoLandia#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

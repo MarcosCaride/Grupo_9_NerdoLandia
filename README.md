@@ -38,3 +38,10 @@ Buscamos brindarle a todos los fanáticos de estas increíbles sagas todos los a
 - [CATITAS](https://holacatitas.com.ar/)
 
 - [Shop Disney](https://www.shopdisney.com/)
+
+<br>
+<br>
+
+## Links relacionados:
+
+- [Trello del sitio](https://trello.com/b/kvMm2bad/sprint-1)

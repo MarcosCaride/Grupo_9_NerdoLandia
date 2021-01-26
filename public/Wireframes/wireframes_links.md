@@ -9,6 +9,6 @@
 <br>
 - [Boceto B home](https://wireframe.cc/gbWFGv)
 <br>
-
+git 
 - [Boceto C Home] (Propuesta_La_Cantina_Del_Androide.pdf)
 - [Boceto C Info producto] (https://wireframe.cc/pro/pp/d83f32848409441)

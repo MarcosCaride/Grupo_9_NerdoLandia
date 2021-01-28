@@ -1,30 +1,16 @@
 body{
     background-color: black !important;
-    margin: 5px  0 0 0;
+    margin: 0px;
     width: 360px;
 }
 
-header h1{
-    display: inline-block;
-    color: blue;
-    font-size: 12px;
-    margin: 22px 0;
-    background-color: lightblue;
-}
-.logo h1{
-    text-align: left;
-}
-
-.logo img{
-    float: left;
-}
-
 header div{
-    display: inline-block;
-    margin: auto;
+    display: flex;
+    margin: 5px 0;
     width: 350px;
     max-height: 60px;
-    margin: 0 5px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header p{
@@ -61,11 +47,6 @@ nav a{
 
 .item{
     max-height: 180px;
-}
-
-.fas{
-    float: right;
-    margin: 22px 10px;
 }
 
 #searchBar{

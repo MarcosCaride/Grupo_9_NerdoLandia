@@ -33,6 +33,36 @@ nav a{
     color: aquamarine;
 }
 
+.productos article{
+    margin: 15px 20px;
+    border-radius: 10%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productos article img{
+    max-width: 90%;
+    margin: 30px 0 10px 0;
+}
+
+.productos article .infoDelProducto{
+    margin-bottom: 10px;
+}
+
+.productos article .descripcion{
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+}
+
+.productos article .precio{
+    font-size: 15px;
+    text-align: center;
+}
+
+
 .carousel-caption h3{
     font-size: 15px;
 }

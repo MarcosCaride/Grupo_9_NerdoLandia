@@ -31,30 +31,30 @@
 
 <h1>Registrarse</h1>
 
-<form>
+<form action="/" method="GET" id=Registro>
     <label for="nombreapellido">Nombre y Apellido</label><br>
-    <input type="text" id="nombreapellido" name="nombreapellido"><br>
+    <input type="text" id="nombreapellido" name="nombreapellido"required><br>
     <label for="celectronico">Correo electrónico</label><br>
-    <input type="text" id="celectronico" name="celectronico"><br>
+    <input type="text" id="celectronico" name="celectronico" required><br>
     <label for="tel">Teléfono</label><br>
-    <input type="text" id="tel" name="tel"><br>
+    <input type="text" id="tel" name="tel" required><br>
     <label for="contraseña">Contraseña</label><br>
-    <input type="text" id="contraseña" name="contraseña"><br>
+    <input type="text" id="contraseña" name="contraseña" required><br>
     <label for="confcontraseña">Confirmar Contraseña</label><br>
-    <input type="text" id="confcontraseña" name="confcontraseña"><br>
-  </form>
-  
+    <input type="text" id="confcontraseña" name="confcontraseña"required><br>
+    
+</form>
+
+<span><input type="checkbox" name="No soy un robot"></span><div>No soy un robot</div> <span><i width:30px class="fas fa-sync-alt"></i><br></span>
+
+ <button type="submit" form="Registro"><h3>Registrarse</h3></button><br>
+
+ <input type="checkbox" name="newsletter"><div>Suscribirme al newsletter</div><br>
+
+<div>Podés ingresar con tu cuenta de Google</div> 
 
 
-<div>No soy un robot</div> <i width:30px class="far fa-square"></i> 
-<i width:30px class="fas fa-sync-alt"></i>
-
-<h2>Registrarse</h2>
-
-<i class="far fa-square"></i> <div>Suscribirme al newsletter</div>
-
-<div>Podés ingresar con tu cuenta de Google</div> <i class="fab fa-google-plus"></i>
-
+<button type="submit" value=URL ><h3><i class="fab fa-google-plus"></i></h3></button><br>
 
     <footer>
         <h2>La cantina del Androide</h2>

@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>La Cantina del Androide</title>
@@ -15,8 +17,8 @@
         <div class="logo">
             <a href="/"><img width="60px" src="imagenes/LaCantinaDelAndroideLogo.png" alt=""></a>
             <input type="text" placeholder="¿Qué estas buscando?" id="searchBar">
-            <a href="Carrito"><i width: 30px class="fas fa-shopping-cart"></i></a>
-            <a href="login"><i width: 30px class="fas fa-user-circle"></i></a>
+            <a href="Carrito"><i class="fas fa-shopping-cart"></i></a>
+            <a href="login"><i class="fas fa-user-circle"></i></a>
         </div>
         <nav>
             <a href="/">Home</a>
@@ -27,7 +29,10 @@
         </nav>
     </header>
 
-    <section>
+    <br>
+    <br>
+
+    <section class="carousel">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -74,9 +79,10 @@
             </a>
     </section>
 
-
     <section class="destacados">
-      <h2>Los Androides Del Mes</h2>
+      <div class="titulo-Section">
+        <h2>Los Androides Del Mes</h2>
+      </div>
       <div class="productos">
         <a href="ashokaTanoLEGO">
           <article>
@@ -97,6 +103,16 @@
           </article>
         </a>
 
+        <a href="homerMuumuu">
+          <article>
+            <img src="Imagenes/Marvel-Black-Widow-Funko-POP.jpg" alt="">
+            <div class="infoDelProducto">
+              <p class="descripcion">La Viuda Negra Funko POP</p>
+              <p class="precio">$3.500</p>
+            </div>
+          </article>
+        </a>
+
         </a>
         <a href="sithTrooper">
           <article>
@@ -107,6 +123,27 @@
             </div>
           </article>
         </a>
+
+        <a href="captainMarvel">
+          <article>
+            <img src="Imagenes/Marvel-Captain-Marvel-Funko-POP.jpg" alt="">
+            <div class="infoDelProducto">
+              <p class="descripcion">Capitana Marvel Funko POP</p>
+              <p class="precio">$3.500</p>
+            </div>
+          </article>
+        </a>
+
+        <a href="simpsonsHouse">
+          <article>
+            <img src="Imagenes/The-Simpsons-LEGO-The-Simpsons-House.jpg" alt="">
+            <div class="infoDelProducto">
+              <p class="descripcion">La Casa de Los Simpsons Lego</p>
+              <p class="precio">$6.000</p>
+            </div>
+          </article>
+        </a>
+        
       </div>
     </section>
 

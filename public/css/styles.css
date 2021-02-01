@@ -1,15 +1,21 @@
 body{
     background-color: black !important;
     margin: 0px;
-    width: 360px;
+}
+
+header{
+    background-image: url(/Imagenes/Fondo-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 16vh;
 }
 
 header div{
     display: flex;
-    margin: 5px 0;
-    width: 350px;
-    max-height: 60px;
-    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    height: 9vh;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -17,34 +23,64 @@ header p{
     color: blue;
 }
 
-nav{
+header nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     margin: 10px 0px 10px 0px;
     text-align: center;
     background-color:#303030;
-    height: 30px;
+    height: 6vh;
 }
 
 nav a{
-    display: inline-block;
     text-decoration: none;
-    margin-top: 6px;
+    font-size: 2vh;
     padding: 0 3.2px 0 3.2px;
-    background-color: darkgray;
-    color: aquamarine;
+    background-color: white;
+    color: black;
+    align-content: center;
+    font-family: 'Russo One', sans-serif;
 }
 
-.productos article{
-    margin: 15px 20px;
-    border-radius: 10%;
-    background-color: whitesmoke;
+section .titulo-Section{
+    display: flex;
+    justify-content: center;
+}
+
+.destacados h2{
+    font-family: 'Russo One', sans-serif;
+    background-color: antiquewhite;
+    border-color: gray;
+    border: 2px;
+}
+
+.productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+
 .productos article img{
     max-width: 90%;
     margin: 30px 0 10px 0;
+    
+}
+
+.productos a{
+    cursor: pointer;
+    text-decoration: none;
+    margin: 15px 20px;
+    border-radius: 7%;
+    background-color: whitesmoke;
+    width: 320px;
+    transform: 1s all;
+    text-align: center;
+}
+
+.productos article:hover{
+    transform: scale(0.95);
 }
 
 .productos article .infoDelProducto{
@@ -76,17 +112,66 @@ nav a{
 }
 
 .item{
-    max-height: 180px;
+    width: 90vw;
+    height: 50vw;
+}
+
+.nav-imgs{
+    width: 30px;
+    height: 30px;
+}
+
+.carousel{
+    display: flex;
+    flex-wrap: initial;
+    justify-content: center;
+}
+
+.fas{
+    font-size: 4vw;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.logo a img{
+    width: 8vh;
 }
 
 #searchBar{
-    width: 200px;
-    height: 15px;
+    width: 40vw;
+    height: 4vh;
     text-align: center;
     margin: 22px 0 22px 5px;
-    font-size: 8px;
+    font-size: 3vw;
 }
 
-#myCarousel{
-    max-height: 200px;
+
+
+@media (min-width: 791px){
+    .item{
+        width: 80vw;
+        height: 50vh;
+    }
+
+    .productos a:hover{
+        transform: scale(0.90);
+
+    }
+
+    .destacados h2{
+        font-size: 10vh;
+    }
+
+    header{
+        height: 16vh;
+    }
+
+    header .logo{
+        height: 15vh;
+    }
+
+    nav a{
+        font-size: 2.5vw;
+    }
 }

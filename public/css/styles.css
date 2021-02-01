@@ -1,15 +1,27 @@
 body{
     background-color: black !important;
     margin: 0px;
-    width: 360px;
+}
+
+header{
+    background-image: url(/Imagenes/Fondo-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header div{
     display: flex;
+<<<<<<< HEAD
     margin: 5px 0;
     width: 360px;
     max-height: 60px;
     justify-content: space-between;
+=======
+    margin: 0;
+    width: 100%;
+    height: 9vh;
+    justify-content: space-around;
+>>>>>>> 927aede4fe3a48d01f7f217951d8f56474aa1e29
     align-items: center;
 }
 
@@ -17,34 +29,86 @@ header p{
     color: blue;
 }
 
-nav{
+header nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     margin: 10px 0px 10px 0px;
     text-align: center;
     background-color:#303030;
-    height: 30px;
+    height: 6vh;
 }
 
 nav a{
-    display: inline-block;
     text-decoration: none;
-    margin-top: 6px;
+    font-size: 2vh;
     padding: 0 3.2px 0 3.2px;
-    background-color: darkgray;
-    color: aquamarine;
+    background-color: white;
+    color: black;
+    align-content: center;
+    font-family: 'Russo One', sans-serif;
 }
 
-.productos article{
-    margin: 15px 20px;
-    border-radius: 10%;
+section .titulo-Section{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
     background-color: whitesmoke;
+    display: inline-block!important;
+    font-family: 'Oxanium', cursive;
+    width: 100%;
+}
+
+footer h2{
+    margin: 10px;
+    color: black;
+    text-align: center;
+    background-color: #00c2cb;
+    border-radius: 10px;
+}
+
+/*  CLASES  */
+
+.logo a img{
+    width: 8vh;
+}
+
+/*  DESTACADOS  */
+.destacados h2{
+    font-family: 'Russo One', sans-serif;
+    background-color: antiquewhite;
+    border-color: gray;
+    border: 2px;
+}
+
+.productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+
 .productos article img{
     max-width: 90%;
     margin: 30px 0 10px 0;
+    
+}
+
+.productos a{
+    cursor: pointer;
+    text-decoration: none;
+    margin: 15px 20px;
+    border-radius: 7%;
+    background-color: whitesmoke;
+    width: 320px;
+    transform: 1s all;
+    text-align: center;
+}
+
+.productos article:hover{
+    transform: scale(0.95);
 }
 
 .productos article .infoDelProducto{
@@ -62,6 +126,9 @@ nav a{
     text-align: center;
 }
 
+/*  FIN DESTACADOS  */
+
+        /*  Carousle    */
 
 .carousel-caption h3{
     font-size: 15px;
@@ -76,19 +143,93 @@ nav a{
 }
 
 .item{
-    max-height: 180px;
+    width: 90vw;
+    height: 50vw;
 }
+
+
+.carousel{
+    display: flex;
+    flex-wrap: initial;
+    justify-content: center;
+}
+        /*  Fin Carousel    */
+
+.nav-imgs{
+    width: 30px;
+    height: 30px;
+}
+
+.fas{
+    font-size: 4vw;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*  FOOTER  */
+
+.footerInfo{
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.masInfo{
+    text-align: left;
+    align-self: flex-start;
+}
+
+.masInfo ol{
+    font-size: 10px;
+}
+
+.contacto{
+    text-align: right;
+    font-size: 10px;
+    align-self: flex-end;
+    text-align: center;
+
+}
+
+.contacto .fa-facebook{
+    font-size: 20px;
+    background-color: #00c2cb;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contacto .fa-linkedin{
+    font-size: 20px;
+    background-color: #00c2cb;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contacto .fa-twitter-square{
+    font-size: 20px;
+    background-color: #00c2cb;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contacto p{
+    text-align: center;
+}
+
+.copyright{
+    display: block;
+    text-align: center;
+}
+
+/*  FIN FOOTER   */
 
 #searchBar{
-    width: 200px;
-    height: 15px;
+    width: 40vw;
+    height: 4vh;
     text-align: center;
     margin: 22px 0 22px 5px;
-    font-size: 8px;
-}
-
-#myCarousel{
-    max-height: 200px;
+    font-size: 3vw;
 }
 
 /* product.Detail.html */
@@ -112,40 +253,36 @@ main .fotoProducto3 {
 main .descripcion-producto {
     text-align:;
 }
-.info-lacantina {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
-}
 
-.mas-info {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
-}
+@media (min-width: 791px){
+    .item{
+        width: 80vw;
+        height: 50vh;
+        margin: auto;
+    }
 
-.contactanos {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
-}
+    .item a{
+        text-align: center;
+    }
 
-.redes {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
-}
-    
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    .productos a:hover{
+        transform: scale(0.90);
+
+    }
+
+    .destacados h2{
+        font-size: 10vh;
+    }
+
+    header{
+        height: 16vh;
+    }
+
+    header .logo{
+        height: 15vh;
+    }
+
+    nav a{
+        font-size: 2.5vw;
+    }
 }

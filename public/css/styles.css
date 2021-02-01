@@ -7,7 +7,6 @@ header{
     background-image: url(/Imagenes/Fondo-1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 16vh;
 }
 
 header div{
@@ -48,6 +47,28 @@ section .titulo-Section{
     justify-content: center;
 }
 
+footer{
+    background-color: whitesmoke;
+    display: inline-block!important;
+    font-family: 'Oxanium', cursive;
+    width: 100%;
+}
+
+footer h2{
+    margin: 10px;
+    color: black;
+    text-align: center;
+    background-color: #00c2cb;
+    border-radius: 10px;
+}
+
+/*  CLASES  */
+
+.logo a img{
+    width: 8vh;
+}
+
+/*  DESTACADOS  */
 .destacados h2{
     font-family: 'Russo One', sans-serif;
     background-color: antiquewhite;
@@ -98,6 +119,9 @@ section .titulo-Section{
     text-align: center;
 }
 
+/*  FIN DESTACADOS  */
+
+        /*  Carousle    */
 
 .carousel-caption h3{
     font-size: 15px;
@@ -116,15 +140,17 @@ section .titulo-Section{
     height: 50vw;
 }
 
-.nav-imgs{
-    width: 30px;
-    height: 30px;
-}
 
 .carousel{
     display: flex;
     flex-wrap: initial;
     justify-content: center;
+}
+        /*  Fin Carousel    */
+
+.nav-imgs{
+    width: 30px;
+    height: 30px;
 }
 
 .fas{
@@ -134,9 +160,62 @@ section .titulo-Section{
     border-radius: 5px;
 }
 
-.logo a img{
-    width: 8vh;
+/*  FOOTER  */
+
+.footerInfo{
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
 }
+
+.masInfo{
+    text-align: left;
+    align-self: flex-start;
+}
+
+.masInfo ol{
+    font-size: 10px;
+}
+
+.contacto{
+    text-align: right;
+    font-size: 10px;
+    align-self: flex-end;
+    text-align: center;
+
+}
+
+.contacto .fa-facebook{
+    font-size: 20px;
+    background-color: #00c2cb;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contacto .fa-linkedin{
+    font-size: 20px;
+    background-color: #00c2cb;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contacto .fa-twitter-square{
+    font-size: 20px;
+    background-color: #00c2cb;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contacto p{
+    text-align: center;
+}
+
+.copyright{
+    display: block;
+    text-align: center;
+}
+
+/*  FIN FOOTER   */
 
 #searchBar{
     width: 40vw;
@@ -152,6 +231,11 @@ section .titulo-Section{
     .item{
         width: 80vw;
         height: 50vh;
+        margin: auto;
+    }
+
+    .item a{
+        text-align: center;
     }
 
     .productos a:hover{

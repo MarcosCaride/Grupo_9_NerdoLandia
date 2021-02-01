@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=360, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>La Cantina del Androide</title>
+    </head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img width="60px" src="imagenes/LaCantinaDelAndroideLogo.png" alt=""></a>
+            <input type="text" placeholder="¿Qué estas buscando?" id="searchBar">
+            <a href="Carrito"><i width: 30px class="fas fa-shopping-cart"></i></a>
+            <a href="login"><i width: 30px class="fas fa-user-circle"></i></a>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="categorias">Categorias</a>
+            <a href="heroinas">Heroínas</a>
+            <a href="blog">Blog</a>
+            <a href="nosotros">Sobre Nosotros</a>
+        </nav>
+    </header>
+    <br>
+    <br>
+   <main class="register">
+    <form action="/register" method="POST">
+        <div class="nombre-apellido">
+          <label for="nombre">Nombre y apellido:</label>
+        <input type="text" name="nombre-apellido" id="nombre-apellido"> 
+        </div>
+        <br>
+
+        <div class="email">
+            <label for="emaiL"> Email</label>
+            <input type="email" name="email" type="email">
+        </div>
+        <br>
+
+        <div class="domicilio">
+            <label for="domicilio">Domicilio:</label>
+        <input type="text" name="domicilio" id="domicilio"> 
+        <br>
+        </div>
+        <br>
+
+        <div class="telefono">
+            <label for="telefono">Teléfono:</label>
+        <input type="text" name="telefono" id="telefono"> 
+        </div>
+        <br>
+
+        <div class="fecha-nac">
+            <h4>Fecha de nacimiento</h4>
+            <label> Fecha de nacimiento
+                <input type="date" name="fecha" value="2021-07-22" min="2018-01-01" max="2022-12-31">
+            </label>
+        </div>
+        <br>
+
+        <div class="foto-perfil">
+            <label> <h4>Seleccione foto de perfil </h4>
+                <input type="file" name="avatar" accept=".jpg" multiple>
+            </label>
+        </div>
+        <br>
+        <div class="contraseña"> 
+            <h4>Ingrese su cotraseña</h4>
+            <label for="contraseña">
+                <input type="text" name="contraseña" id="contraseña">
+            </label>
+        </div>
+        <br>
+        <div class="confirmar-contraseña"> 
+            <h4>Confirme su cotraseña</h4>
+            <label for="confirmar-contraseña">
+                <input type="text" name="confirmar-contraseña" id="confirmar-contraseña">
+            </label>
+        </div>
+        <div class="no-soy-un-robot">
+            <label> No soy un robot
+                <input type="checkbox" name="no-soy-un-robot" value="no-soy-un-robot">
+            </label>
+        </div>
+        <br>
+        <br>
+        <div class="podes-ingresar-con-google">
+            <label> Podes ingresar con tu cuenta de Google
+                <button type="submit">
+                    <div class="google">
+                        <i class="fab fa-google">
+                            <a href="https://www.google.com/"></a>
+                        </i>
+                    </div>
+                </button>
+            </label>   
+        </div>
+        <button type="submit">REGISTRARSE</button>
+        <br>
+        <br>
+    </form>
+   </main>
+   <br>
+   <br>
+   <footer class="footer">
+    <section class="info-lacantina"> 
+    <h2>La cantina del Androide</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sit delectus maxime. Est ea ex magnam modi mollitia exercitationem fugit minima, consequuntur, laudantium veritatis doloremque? Similique amet repellendus dolore doloribus!</p>
+    </section>>
+    <section class="mas-info">
+      <h2>Más información</h2>
+      <p><ol>
+          <li>bla</li>
+          <li>bla</li>
+          <li>bla</li>
+      </ol></p>
+    </section>
+    <section class="contactanos">
+      <h2>¡Contactanos!</h2>
+      <p>A. Siempreviva 742</p>
+      <p>lacantinadelandroidex@gmail.com</p>
+    </section>
+    <section class="redes">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-twitter-square"></i>
+    </section>      
+      <p class="copyright">copyright</p>
+      <i class="far fa-copyright"></i>
+      </footer>
+</body>
+</html>

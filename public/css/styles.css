@@ -7,7 +7,7 @@ body{
 header div{
     display: flex;
     margin: 5px 0;
-    width: 350px;
+    width: 360px;
     max-height: 60px;
     justify-content: space-between;
     align-items: center;
@@ -89,4 +89,63 @@ nav a{
 
 #myCarousel{
     max-height: 200px;
+}
+
+/* product.Detail.html */
+.contenedor1 {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+main .fotoProducto1 {
+    width: ;
+}
+
+main .fotoProducto2 {
+    width: ;
+}
+
+main .fotoProducto3 {
+    width: ;
+}
+
+main .descripcion-producto {
+    text-align:;
+}
+.info-lacantina {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.mas-info {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.contactanos {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.redes {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+    
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }

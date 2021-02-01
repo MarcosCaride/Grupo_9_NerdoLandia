@@ -1,27 +1,27 @@
 body{
     background-color: black !important;
     margin: 0px;
+    background-image: url(/Imagenes/Fondo-Background05.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 header{
-    background-image: url(/Imagenes/Fondo-1.png);
+    background-image: url(/Imagenes/Fondo-Background02.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 header div{
     display: flex;
-<<<<<<< HEAD
     margin: 5px 0;
     width: 360px;
     max-height: 60px;
     justify-content: space-between;
-=======
     margin: 0;
     width: 100%;
     height: 9vh;
     justify-content: space-around;
->>>>>>> 927aede4fe3a48d01f7f217951d8f56474aa1e29
     align-items: center;
 }
 
@@ -35,7 +35,7 @@ header nav{
     align-items: center;
     margin: 10px 0px 10px 0px;
     text-align: center;
-    background-color:#303030;
+    background-color: #000059;
     height: 6vh;
 }
 
@@ -155,11 +155,6 @@ footer h2{
 }
         /*  Fin Carousel    */
 
-.nav-imgs{
-    width: 30px;
-    height: 30px;
-}
-
 .fas{
     font-size: 4vw;
     background-color: whitesmoke;
@@ -251,7 +246,7 @@ main .fotoProducto3 {
 }
 
 main .descripcion-producto {
-    text-align:;
+    text-align: ;
 }
 
 @media (min-width: 791px){

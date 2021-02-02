@@ -340,19 +340,22 @@ h4.titulo {
 /* login.html */
 
 .formulario-registro{
-            text-align: center;
+        text-align: center;
         background-color: whitesmoke;
-        font-family: 'Russo One', sans-serif
+        font-family: 'Oxanium', cursive;
         
 }
 
-/* login.html */
+/* ProductCart.html */
 
 .caja-producto{
-   display:flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: flex-start;
+  width: 600px;
+  height: 100px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  font-size:20px;
 background-color: whitesmoke;
 font-family: 'Oxanium', cursive;
 

@@ -340,8 +340,20 @@ h4.titulo {
 /* login.html */
 
 .formulario-registro{
-        text-align: center;
-        background-color: blanchedalmond;
+            text-align: center;
+        background-color: whitesmoke;
         font-family: 'Russo One', sans-serif
         
+}
+
+/* login.html */
+
+.caja-producto{
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: flex-start;
+background-color: whitesmoke;
+font-family: 'Oxanium', cursive;
+
 }

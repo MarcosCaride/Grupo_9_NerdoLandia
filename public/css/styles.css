@@ -334,3 +334,14 @@ h4.titulo {
         font-size: 2.5vw;
     }
 }
+
+
+
+/* login.html */
+
+.formulario-registro{
+        text-align: center;
+        background-color: blanchedalmond;
+        font-family: 'Russo One', sans-serif
+        
+}

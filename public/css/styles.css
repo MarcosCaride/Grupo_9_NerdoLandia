@@ -230,47 +230,34 @@ footer h2{
 /* product.Detail.html */
 .contenedor1 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    width: 360px;
+    height: 200px;
     color: ivory;
     font-family:'Oxanium', cursive;;
 }
-.contenedor1 .contenedor2{
-    flex-direction: row;
+.contenedor1 .contenedor2 {
     order: -1;
+    width: 25%;
 }
 
 .contenedor1 .fotoProducto1 {
     order:0;
+    width: 45%;
 }
 
 
 .contenedor1 .contenedor3 {
    order:1;
+   height: 200px;
+   flex-grow: 0.30;
 }
 
-.contenedor1 .contenedor3 .precio {
-   flex-direction: column;
-}
-
+ }
 .contenedor1 .contenedor2 {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
-    box-sizing: border-box;
-}
-
-main .fotoProducto1 {
-    width: 40%;
-}
-
-main .fotoProducto2 {
-    width: 20%;
-}
-
-main .fotoProducto3 {
-    width: 20%;
+    height: 200px;
 }
 
 main .descripcion-producto {
@@ -292,10 +279,10 @@ h4.titulo {
 }
 .contenedor4 {
     display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
     color: ivory;
-    font-family:'Oxanium', cursive;;
+    font-family:'Oxanium', cursive;
+    font-size: 12px;
+
 }
 
 .contenedor4 h4 {

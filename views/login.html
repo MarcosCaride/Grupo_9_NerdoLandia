@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
 </head>
 <body>
     <header>
@@ -31,9 +35,13 @@
     </header>
 
 
-<h1>Registrarse</h1>
+    <section class="destacados">
+      <div class="titulo-Section">
+        <h2>Registrarse</h2>
+      </div>
 
-<form action="/" method="GET" id=Registro>
+      <div class="formulario-registro">
+<form action="/" method="POST" id=Registro>
     <label for="nombreapellido">Nombre y Apellido</label><br>
     <input type="text" id="nombreapellido" name="nombreapellido"required><br>
     <label for="celectronico">Correo electrónico</label><br>
@@ -53,14 +61,27 @@
 
  <input type="checkbox" name="newsletter"><div>Suscribirme al newsletter</div><br>
 
-<div>Podés ingresar con tu cuenta de Google</div> 
-
-<a href="googleregister"><i width: 30px class="fab fa-google-plus"></i></a>
+ <div class="podes-ingresar-con-google">
+  <label> Podes ingresar con tu cuenta de Google
+      <button type="submit">
+          <div class="google">
+              <i class="fab fa-google">
+                  <a href="https://www.google.com/"></a>
+              </i>
+          </div>
+      </button>
+  </label>   
+</div>
+<button type="submit">REGISTRARSE</button>
+<br>
+</div><br>
 
 
 <footer>
-    <h2>La cantina del Androide</h2>
-    
+  <footer class="footer">
+    <section class="info-lacantina"> 
+  <h2>La cantina del Androide</h2>
+  <div class="footerInfo">
     <div class="masInfo">
       <h4>Más información</h4>
       <ol>
@@ -79,12 +100,12 @@
         <i class="fab fa-twitter-square"></i>
       </p>
     </div>
-    <br>
-    <div class="copyright">
-      <p> Copyright <i class="far fa-copyright"></i> 2018 Copyright Holder All Rights Reserved.</p>
-    </div>
-  </footer>
-        
+  </div>
+
+  <div class="copyright">
+    <p> Copyright <i class="far fa-copyright"></i> 2021 Copyright Holder All Rights Reserved.</p>
+  </div>
+</footer>
 
 
 </body>

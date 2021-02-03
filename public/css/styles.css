@@ -323,11 +323,16 @@ h4.titulo {
 
 /* login.html */
 
-.formulario-registro{
+.login{
         text-align: center;
         background-color: whitesmoke;
         font-family: 'Oxanium', cursive;
-        
+        padding-top: 15px ;
+        padding-bottom: 10px;
+}
+
+.fa-sync-alt{
+    font-size: 25px;
 }
 
 /* register.html */

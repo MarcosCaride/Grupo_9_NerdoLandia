@@ -228,40 +228,22 @@ footer h2{
 }
 
 /* product.Detail.html */
+.section-producto {
+    background-color: whitesmoke;
+    margin: 10px;
+}
 .contenedor1 {
     display: flex;
     width: 360px;
-    height: 200px;
+    column-count: 2;
     color: ivory;
     font-family:'Oxanium', cursive;;
-}
-.contenedor1 .contenedor2 {
-    order: -1;
-    width: 25%;
+    align-items: stretch;
 }
 
-.contenedor1 .fotoProducto1 {
-    order:0;
-    width: 45%;
-}
-
-
-.contenedor1 .contenedor3 {
-   order:1;
-   height: 200px;
-   flex-grow: 0.30;
-}
-
- }
-.contenedor1 .contenedor2 {
-    display: inline-flex;
-    flex-wrap: wrap;
+.contenedor2{
+    display: flex;
     flex-direction: column;
-    height: 200px;
-}
-
-main .descripcion-producto {
-    width: 20%;
 }
 
 .camion {
@@ -288,6 +270,21 @@ h4.titulo {
 .contenedor4 h4 {
     text-align: center;
 }
+
+.contenedor3 {
+    display: flex;
+    width: 360px;
+    column-count: 2;
+    color:black;
+    font-family:'Oxanium', cursive;;
+    align-items: stretch;
+    margin-right: 20px;
+    background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    display: block;
+    box-sizing: border-box;
+}
+
 
 @media (min-width: 791px){
     .item{
@@ -333,17 +330,46 @@ h4.titulo {
         
 }
 
-/* ProductCart.html */
+/* register.html */
 
+.register {
+    text-align: center;
+    background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ProductCart.html */
+.contenedor-carrito {
+    margin: 20px;
+    width: 320px;
+}
 .caja-producto{
-  width: 600px;
-  height: 100px;
+  width: 320px;
+  height: 200px;
   display:flex;
-  flex-wrap: wrap;
+  flex-direction:column;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: space-between;
   font-size:20px;
 background-color: whitesmoke;
 font-family: 'Oxanium', cursive;
+}
 
+.caja-detalles {
+    column-count: 3;
+    display: inline-block;
+}
+
+.total-carrito {
+    float: right;
+    margin-right: 20px;
+    background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    padding: 15px;
+    display: block;
 }

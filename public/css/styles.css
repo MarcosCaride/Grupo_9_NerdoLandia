@@ -354,7 +354,7 @@ h4.titulo {
 }
 .caja-producto{
   width: 320px;
-  height: 200px;
+  height: 300px;
   display:flex;
   flex-direction:column;
   flex-wrap: nowrap;
@@ -363,6 +363,7 @@ h4.titulo {
   font-size:20px;
 background-color: whitesmoke;
 font-family: 'Oxanium', cursive;
+padding-top: 15px;
 }
 
 .caja-detalles {
@@ -380,4 +381,3 @@ font-family: 'Oxanium', cursive;
    
 }
 
- 

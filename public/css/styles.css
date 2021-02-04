@@ -230,7 +230,8 @@ footer h2{
 /* product.Detail.html */
 .section-producto {
     background-color: whitesmoke;
-    margin: 10px;
+    margin: 15px 20px;
+    border-radius: 7%;
 }
 .contenedor1 {
     display: flex;
@@ -284,11 +285,18 @@ h4.titulo {
 }
 
 .contenedor3 .data1-producto {
-    width: 50%
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
 }
 
 .contenedor3 .data2-producto {
-    width: 50%
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 
@@ -311,7 +319,6 @@ h4.titulo {
 
 .producto .nombre-producto, .precio {
     font-family: 'Russo One', sans-serif;
-    background-color: antiquewhite;
     border-color: gray;
     margin: 2px;
     color: black;

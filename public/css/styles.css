@@ -419,3 +419,8 @@ padding-top: 15px;
         font-size: 2.5vw;
     }
 }
+@media (min-width: 1290px){
+
+    #searchbar fontsize: 20px;
+
+}

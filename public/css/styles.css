@@ -330,11 +330,11 @@ h4.titulo {
 /* login.html */
 
 .login{
-        text-align: center;
-        background-color: whitesmoke;
-        font-family: 'Oxanium', cursive;
-        padding-top: 15px ;
-        padding-bottom: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    padding-top: 15px ;
+    padding-bottom: 10px;
 }
 
 .fa-sync-alt{
@@ -359,17 +359,17 @@ h4.titulo {
     width: 320px;
 }
 .caja-producto{
-  width: 320px;
-  height: 300px;
-  display:flex;
-  flex-direction:column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: space-between;
-  font-size:20px;
-background-color: whitesmoke;
-font-family: 'Oxanium', cursive;
-padding-top: 15px;
+    width: 320px;
+    height: 300px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: space-between;
+    font-size:20px;
+    background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    padding-top: 15px;
 }
 
 .caja-detalles {
@@ -384,7 +384,7 @@ padding-top: 15px;
     font-family: 'Oxanium', cursive;
     padding: 15px;
     display: block;
-   
+    
 }
 
 @media (min-width: 791px){
@@ -421,6 +421,12 @@ padding-top: 15px;
 }
 @media (min-width: 1290px){
 
-    #searchbar fontsize: 20px;
+    #searchBar {
+        font-size: 20px;
+    }
+
+    .logo a img{
+        width: 100px;
+    }
 
 }

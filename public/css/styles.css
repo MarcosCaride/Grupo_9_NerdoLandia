@@ -325,39 +325,6 @@ h4.titulo {
 }
 
 
-@media (min-width: 791px){
-    .item{
-        width: 80vw;
-        height: 50vh;
-        margin: auto;
-    }
-
-    .item a{
-        text-align: center;
-    }
-
-    .productos a:hover{
-        transform: scale(0.90);
-
-    }
-
-    .destacados h2{
-        font-size: 10vh;
-    }
-
-    header{
-        height: 16vh;
-    }
-
-    header .logo{
-        height: 15vh;
-    }
-
-    nav a{
-        font-size: 2.5vw;
-    }
-}
-
 
 
 /* login.html */
@@ -420,3 +387,35 @@ padding-top: 15px;
    
 }
 
+@media (min-width: 791px){
+    .item{
+        width: 80vw;
+        height: 50vh;
+        margin: auto;
+    }
+
+    .item a{
+        text-align: center;
+    }
+
+    .productos a:hover{
+        transform: scale(0.90);
+
+    }
+
+    .destacados h2{
+        font-size: 10vh;
+    }
+
+    header{
+        height: 16vh;
+    }
+
+    header .logo{
+        height: 15vh;
+    }
+
+    nav a{
+        font-size: 2.5vw;
+    }
+}

@@ -67,6 +67,7 @@ nav a:hover{
     text-decoration: none;
     color: white;
     border-radius: 15px;
+    padding: 0 15px;
     transition: 250ms;
 }
 
@@ -430,8 +431,8 @@ h4.titulo {
 
     .productos a:hover{
         transform: scale(0.90);
-        transition: 700ms;
         text-decoration: none;
+        transition: 700ms;
     }
 
     .destacados h2{

@@ -48,7 +48,7 @@ header nav{
     align-items: center;
     margin: 10px 0px 10px 0px;
     text-align: center;
-    background-color: #000059;
+    border: solid #00C2CB 2px;
     height: 6vh;
 }
 

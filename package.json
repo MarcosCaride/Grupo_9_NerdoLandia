@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/MarcosCaride/Grupo_9_NerdoLandia#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }

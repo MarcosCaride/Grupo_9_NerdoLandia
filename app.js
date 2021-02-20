@@ -19,7 +19,7 @@ app.use('/Carrito', mainRoutes);
 
 app.use('/productDetail', productsRoutes)
 
-app.use('/login', usersRoutes);
+app.use('/users', usersRoutes);
 
 app.post('/register', (req, res) =>{
     res.send (req.body)

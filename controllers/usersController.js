@@ -1,5 +1,3 @@
-const path = require('path');
-
 const usersController = {
     login:(req, res) => {
         res.render('login')

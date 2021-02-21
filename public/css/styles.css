@@ -324,8 +324,13 @@ h4.titulo {
     color: black;
 }
 
+  /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
-
+  .titulo-section{
+    color:#00c2cb;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+  }
 
 /* login.html */
 
@@ -418,6 +423,15 @@ h4.titulo {
     nav a{
         font-size: 2.5vw;
     }
+    /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
+
+.titulo-section{
+    display: none;
+    color:#00c2cb;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+  
+}
 }
 @media (min-width: 1290px){
 
@@ -428,5 +442,13 @@ h4.titulo {
     .logo a img{
         width: 100px;
     }
+/* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
+.titulo-section{
+    color:#00c2cb;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    display: none;
+  
+}
 }

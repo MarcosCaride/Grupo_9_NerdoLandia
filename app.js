@@ -24,3 +24,9 @@ app.use('/users', usersRoutes);
 app.post('/register', (req, res) =>{
     res.send (req.body)
 });
+app.get('/adminstrator', (req, res) => {
+    res.sendFile(path.resolve(('./views/administrator.html')))
+});
+app.post('/administrator', (req, res) =>{
+    res.send (req.body)
+});

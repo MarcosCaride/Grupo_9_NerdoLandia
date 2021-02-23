@@ -2,21 +2,7 @@
 <html lang="en">
 <%- include('./partials/head') %>
 <body>
-    <header>
-        <div class="logo">
-            <a href="/"><img width="60px" src="imagenes/LaCantinaDelAndroideLogo.png" alt=""></a>
-            <input type="text" placeholder="¿Qué estas buscando?" id="searchBar">
-            <a href="Carrito"><i class="fas fa-shopping-cart"></i></a>
-            <a href="login"><i class="fas fa-user-circle"></i></a>
-        </div>
-        <nav>
-            <a href="/">Home</a>
-            <a href="categorias">Categorias</a>
-            <a href="heroinas">Heroínas</a>
-            <a href="blog">Blog</a>
-            <a href="nosotros">Sobre Nosotros</a>
-        </nav>
-    </header>
+  <%- include('./partials/header') %>
 
     <br>
     <br>
@@ -142,33 +128,7 @@
       </div>
     </section>
 
-      <footer>
-        <h2>La cantina del Androide</h2>
-        <div class="footerInfo">
-          <div class="masInfo">
-            <h4>Más información</h4>
-            <ol>
-                <li>bla</li>
-                <li>bla</li>
-                <li>bla</li>
-            </ol>
-          </div>
-          <div class="contacto">
-            <h4>¡Contactanos!</h4>
-            <p>A. Siempreviva 742</p>
-            <p>lacantinadelandroidex@gmail.com</p>
-            <p>
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-linkedin"></i>
-              <i class="fab fa-twitter-square"></i>
-            </p>
-          </div>
-        </div>
-
-        <div class="copyright">
-          <p> Copyright <i class="far fa-copyright"></i> 2021 Copyright Holder All Rights Reserved.</p>
-        </div>
-      </footer>
+    <%- include('./partials/footer') %> 
     
 </body>
 </html>

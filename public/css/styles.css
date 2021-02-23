@@ -268,10 +268,16 @@ footer h2{
     background-color: whitesmoke;
     margin: 15px 20px;
     border-radius: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
 }
+
+
 .contenedor1 {
     display: flex;
-    width: 360px;
+    width: 50%;
+    height: 101px;
     column-count: 2;
     color: ivory;
     font-family:'Oxanium', cursive;
@@ -308,32 +314,7 @@ h4.titulo {
     text-align: center;
 }
 
-.contenedor3 {
-    display: flex;
-    column-count: 2;
-    color:black;
-    font-family:'Oxanium', cursive;;
-    align-items: stretch;
-    margin-right: 20px;
-    background-color: whitesmoke;
-    font-family: 'Oxanium', cursive;  
-    box-sizing: border-box;
-}
 
-.contenedor3 .data1-producto {
-    width: 50%;
-    margin-left: 10px;
-    margin-right: 10px;
-    box-sizing: border-box;
-}
-
-.contenedor3 .data2-producto {
-    width: 50%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
 
 
 .producto {

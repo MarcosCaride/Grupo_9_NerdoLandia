@@ -428,6 +428,14 @@ h4.titulo {
     
 }
 
+  /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
+
+  .titulo-section{
+    color:#00c2cb;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+  }
+
 @media (min-width: 791px){
     .item{
         width: 80vw;

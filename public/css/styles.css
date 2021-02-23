@@ -25,6 +25,19 @@ header div{
     align-items: center;
 }
 
+header .logo img:hover{
+    transform: scale(0.95);
+    border-radius: 10px;
+    transition: 250ms;
+}
+
+header .logo a i:hover{
+    background-color: #00c2cb;
+    color: #000059;
+    transform: scale(0.85);
+    transition: 700ms;
+}
+
 header p{
     color: blue;
 }
@@ -35,7 +48,6 @@ header nav{
     align-items: center;
     margin: 10px 0px 10px 0px;
     text-align: center;
-    background-color: #000059;
     height: 6vh;
 }
 
@@ -47,6 +59,15 @@ nav a{
     color: black;
     align-content: center;
     font-family: 'Russo One', sans-serif;
+}
+
+nav a:hover{
+    background-color: #00c2cb;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    padding: 0 15px;
+    transition: 250ms;
 }
 
 section .titulo-Section{
@@ -78,7 +99,7 @@ footer h2{
 /*  DESTACADOS  */
 .destacados h2{
     font-family: 'Russo One', sans-serif;
-    background-color: antiquewhite;
+    background-color: #00c2cb;
     border-color: gray;
     border: 2px;
 }
@@ -101,7 +122,7 @@ footer h2{
     text-decoration: none;
     margin: 15px 20px;
     border-radius: 7%;
-    background-color: whitesmoke;
+    background-color: white;
     width: 320px;
     transform: 1s all;
     text-align: center;
@@ -109,6 +130,7 @@ footer h2{
 
 .productos article:hover{
     transform: scale(0.95);
+    transition: 700ms;
 }
 
 .productos article .infoDelProducto{
@@ -225,6 +247,20 @@ footer h2{
     text-align: center;
     margin: 22px 0 22px 5px;
     font-size: 3vw;
+    margin: 0;
+}
+
+.logo form{
+    display: flex;
+    align-content: center;
+}
+
+.logo form button{
+    padding: 0;
+}
+
+.logo form button i{
+    font-size: 1em;
 }
 
 /* product.Detail.html */
@@ -338,8 +374,8 @@ h4.titulo {
     text-align: center;
     background-color: whitesmoke;
     font-family: 'Oxanium', cursive;
-    padding-top: 15px ;
-    padding-bottom: 10px;
+    padding-top: 10px ;
+    padding-bottom: 20px;
 }
 
 .fa-sync-alt{
@@ -405,42 +441,108 @@ h4.titulo {
 
     .productos a:hover{
         transform: scale(0.90);
-
+        text-decoration: none;
+        transition: 700ms;
     }
 
     .destacados h2{
-        font-size: 10vh;
+        font-size: 7vw;
     }
 
     header{
-        height: 16vh;
+        height: 23vh;
+        padding-top: 10px;
+    }
+    
+    header .logo{
+        height: 13vh;
+        max-height: none;
     }
 
-    header .logo{
-        height: 15vh;
+    .logo a img{
+        width: 12vh;
+    }
+
+    header .logo img:hover{
+        transform: scale(0.95);
+        border-radius: 30px;
+        transition: 250ms;
+    }
+    
+    header .logo a i:hover{
+        background-color: #00c2cb;
+        color: #000059;
+        transform: scale(0.85);
+        transition: 700ms;
+    }
+
+    .login{
+        margin: 0 20%;
+        border-radius: 30px;
+    }
+
+    #searchBar {
+        font-size: 20px;
     }
 
     nav a{
         font-size: 2.5vw;
     }
+
+    .destacados h2{
+        border-radius: 20px;
+        padding: 10px 40px;
+    }
     /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
 .titulo-section{
-    display: none;
     color:#00c2cb;
     font-family: 'Russo One', sans-serif;
     text-align: center;
-  
+    }
 }
-}
+
 @media (min-width: 1290px){
+
+    header{
+        height: 23vh;
+        padding-top: 10px;
+    }
+    
+    header .logo{
+        height: 13vh;
+        max-height: none;
+    }
+
+    header nav{
+        height: 7vh;
+    }
+
+    header nav a{
+        font-size: 2vw;
+        padding: 3px 20px;
+    }
+
+    .logo form button{
+        min-width: 2vw;
+    }
 
     #searchBar {
         font-size: 20px;
     }
 
     .logo a img{
-        width: 100px;
+        width: 13vh;
+    }
+
+    .login{
+        margin: 0 20%;
+        border-radius: 30px;
+    }
+
+    .destacados h2{
+        border-radius: 20px;
+        padding: 10px 40px;
     }
 /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
@@ -448,7 +550,5 @@ h4.titulo {
     color:#00c2cb;
     font-family: 'Russo One', sans-serif;
     text-align: center;
-    display: none;
-  
-}
+    }
 }

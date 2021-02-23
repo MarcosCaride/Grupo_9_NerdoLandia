@@ -45,3 +45,14 @@ Buscamos brindarle a todos los fanáticos de estas increíbles sagas todos los a
 ## Links relacionados:
 
 - [Trello del sitio](https://trello.com/b/kvMm2bad/sprint-1)
+
+- [Wireframes](https://github.com/MarcosCaride/Grupo_9_NerdoLandia/tree/main/public/Wireframes)
+
+- [Retros](https://github.com/MarcosCaride/Grupo_9_NerdoLandia/blob/main/retro.md)
+
+
+# Implementación:
+
+El proyecto fue empezado con una visión de Mobile first a diferencia de como habíamos diseñado los wireframes. lo que en sí nos presentó un desafío no esperado ya que debíamos adaptar los wireframes a una versión Mobile y de ahí diseñarlos para representar la visión original del sitio. 
+
+Al momento de escribir el código para la pagina como equipo nos reunimos para definir lo que vendría a ser la paleta de colores, las imágenes con logos, y más importante la temática que el sitio iba a tener. En la misma reunión llegamos a conocer unos intereses que compartimos y nos decidimos por un Ecommerce donde se podrían encontrar productos geeks, esto incluye todo lo relacionado con Star Wars, Los Simpsons, Marvel, etc. Los productos que se venderían serian figuras de acción, artefactos e incluso set de armado como los LEGO.

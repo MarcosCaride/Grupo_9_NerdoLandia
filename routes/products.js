@@ -4,6 +4,7 @@ const path = require('path');
 const productsController =require ('../controllers/productsController')
 
 router.get('/', productsController.productDetail);
+router.get('/administrador', productsController.editor)
 
 
 

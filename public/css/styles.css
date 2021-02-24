@@ -263,7 +263,7 @@ footer h2{
     font-size: 1em;
 }
 
-/* product.Detail.html */
+/* productDetail.html */
 .section-producto {
     background-color: whitesmoke;
     margin: 15px 20px;
@@ -278,15 +278,23 @@ footer h2{
     display: flex;
     width: 50%;
     height: 101px;
-    column-count: 2;
     color: ivory;
     font-family:'Oxanium', cursive;
-    align-items: stretch;
+    margin: 10px;
 }
 
 .contenedor2{
     display: flex;
     flex-direction: column;
+}
+
+.data2-producto {
+    justify-content: flex-end;
+    font-family: 'Oxanium', cursive;
+}
+
+.data1-producto {
+    font-family: 'Oxanium', cursive;
 }
 
 .camion {
@@ -334,11 +342,18 @@ h4.titulo {
     margin: 30px 0 10px 0;
 }
 
-.producto .nombre-producto, .precio {
+.producto .nombre-producto {
     font-family: 'Russo One', sans-serif;
     border-color: gray;
     margin: 2px;
-    color: black;
+    color: #00C2CB;
+}
+
+.precio {
+    font-family: 'Russo One', sans-serif;
+    border-color: gray;
+    margin: 2px;
+    color:black;
 }
 
   /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
@@ -482,6 +497,43 @@ h4.titulo {
         border-radius: 20px;
         padding: 10px 40px;
     }
+
+    .section-producto {
+        border-radius: 20px;
+    }
+
+    .contenedor1 {
+        display: flex;
+        margin: 5px;
+        width: 50%;
+        height: 201px;
+        color: ivory;
+        font-family:'Oxanium', cursive;
+    }
+
+    .fotoProducto2, .fotoProducto3 {
+        width: 100px;
+    }
+
+    .fotoProducto1 {
+        width: 200px;
+    }
+
+    .data1-producto {
+        margin: 10px;
+    }
+
+    .section-producto .data2-producto {
+        justify-content: flex-end;
+    }
+
+    .contenedor4 {
+        display: flex;
+        flex-wrap: wrap;
+        color: ivory;
+        font-family:'Oxanium', cursive;
+        font-size: 12px;
+    }
     /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
 .titulo-section{
@@ -533,11 +585,30 @@ h4.titulo {
         border-radius: 20px;
         padding: 10px 40px;
     }
+
+
+    .section-producto {
+        border-radius: 20px;
+    }
+
+
 /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
-.titulo-section{
+    .titulo-section{
     color:#00c2cb;
     font-family: 'Russo One', sans-serif;
     text-align: center;
     }
 }
+
+    .titulo-register {
+    color:#00c2cb;
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+    margin: 30px;
+}
+
+    .register {
+            margin: 0 20%;
+        border-radius: 30px;
+    }

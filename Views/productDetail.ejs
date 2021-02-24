@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+<body>
+  <%- include('./partials/header') %>
+    <main>
+    <section class="section-producto">
+        <article class="contenedor1"> 
+          <article class="contenedor2"> 
+            <img src="Imagenes/time-turner2.jpg" alt= "Giratiempo" width="50" class="fotoProducto2">
+            <img src="Imagenes/time-turner3.jpeg" alt= "Giratiempo" width="50" class="fotoProducto3">
+          </article> 
+        <img src="Imagenes/time-turner1.jpg" alt= "Giratiempo" width="100" class="fotoProducto1">
+        </article>  
+     <br>
+     <br>
+      <article class="data2-producto">
+        <p class="precio">$2500</p>
+        <p class="cuotas">12 cuotas sin interés</p>
+        <input type="button" value="Envío a domicilio" name="B4" OnClick=>
+        <div class="envío-a-domicilio">
+          <div class="camion">
+          <i class="fas fa-truck"></i>
+          </div> 
+        <br>
+        </div>
+        <input type="button" value="Retiralo en el local" name="B4" OnClick=>
+        <div class="nuestro-local">
+        <!-- icono + dirección + gratis -->
+        <div class="local">
+          <i class="fas fa-store"></i>
+        </div>
+        </div>
+      </article>
+      <article class="data1-producto">
+        <h4 class="Nombre-producto"> Giratiempo </h4>
+        <p> ¡Collar giratiempo para volver en el tiempo y no cometer los mismos errores!</p>
+      </article>
+    </main>
+    <br>
+    <br>
+    <h4 class="titulo">Productos relacionados</h4>
+      <section class="contenedor4"> 
+        <article class="producto">
+          <img src="Imagenes/The-Simpsons-Homer-Muumuu-Funko-POP.jpg" alias="imagen producto" width="300" class="product-img">
+          <p class="nombre-producto">FUNKO POP HOMERO HOME OFFICE</p>
+          <p class="precio">$3000/p>
+        </article>
+        <br>
+        <article class="producto">
+          <img src="Imagenes/LEGO-Star-Wars-75292-The-Mandalorian-Bounty-Hunter-Transport-The-Razor-Crest.jpg" alias="imagen producto" width="300" height="270" class="product-img">
+          <p class="nombre-producto">NAVE MANDALORIAN LEGO </p>
+          <p class="precio">$3000</p>
+        </article>
+        <br>
+        <article class="producto">
+          <img src="Imagenes/Marvel-Black-Widow-Funko-POP.jpg" alias="imagen producto" width="300" class="product-img">
+          <p class="nombre-producto">FUNKO POP BLACK WIDOW</p>
+          <p class="precio">$3000/p>
+        </article>
+      </section>
+      <%- include('./partials/footer') %> 
+</body>
+</html>
+  

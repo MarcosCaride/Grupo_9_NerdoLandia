@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <%- include('./partials/head') %>
+<body> 
+  <%- include('./partials/header') %>     
+      <div class="titulo-section"> 
+        <h2>Registrarse</h2> 
+      </div> 
+ 
+      <div class="login"> 
+<form action="/" method="POST" id=login> 
+     
+    <label for="celectronico">Correo electrónico</label><br> 
+    <input type="text" id="celectronico" name="celectronico" required><br><br> 
+    <label for="contraseña">Contraseña</label><br> 
+    <input type="text" id="contraseña" name="contraseña" required><br> 
+  
+     
+</form> 
+ 
+<span><input type="checkbox" name="No soy un robot"></span><div>No soy un robot</div> 
+<span><i class="fas fa-sync-alt"></i><br></span> 
+ 
+ <button type="submit" form="login"><h3>Ingresar</h3></button><br><br> 
+ 
+ <div class="podes-ingresar-con-google"> 
+  <label> Podes ingresar con tu cuenta de Google 
+      <button type="submit"> 
+          <div class="google"> 
+              <i class="fab fa-google"> 
+                  <a href="https://www.google.com/"></a> 
+              </i> 
+          </div> 
+      </button> 
+  </label>    
+</div> 
+</div><br> 
+ 
+<%- include('./partials/footer') %> 
+ 
+</body> 
+</html>

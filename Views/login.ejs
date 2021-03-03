@@ -4,13 +4,13 @@
 <body> 
   <%- include('./partials/header') %>     
       <div class="titulo-section"> 
-        <h2>Registrarse</h2> 
-      </div> 
+        <h2>Ingresa a tu cuenta!</h2> 
+      </div>
  
-      <div class="login"> 
-<form action="/" method="POST" id=login> 
+      <div class="login">
+<form action="/" method="POST" id=login>
      
-    <label for="celectronico">Correo electrónico</label><br> 
+    <label for="celectronico">Correo electrónico</label><br>
     <input type="text" id="celectronico" name="celectronico" required><br><br> 
     <label for="contraseña">Contraseña</label><br> 
     <input type="text" id="contraseña" name="contraseña" required><br> 
@@ -32,7 +32,9 @@
               </i> 
           </div> 
       </button> 
-  </label>    
+  </label>
+  <br>
+  <button><a href="/users/register" style="color: black; text-decoration: none;">Crea tu cuenta ahora!</a></button>    
 </div> 
 </div><br> 
  

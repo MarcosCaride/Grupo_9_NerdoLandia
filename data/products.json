@@ -1,0 +1,20 @@
+[
+    {
+     "id": 1,
+     "name": "Marvel Black Widow Funko Pop",
+     "price": "$3500" ,
+     "color": "black",
+     "category": "in-sale",
+     "description": "Figura de colección Black Widow",
+     "image": "Imagenes/Marvel-Black-Widow-Funko-POP.jpg",
+     }, 
+     {
+     "id": 2,
+     "name": ,
+     "price": ,
+     "color": ,
+     "category": ,
+     "description": ,
+     "image": ,
+    }
+   ]

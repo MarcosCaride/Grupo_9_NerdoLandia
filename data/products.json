@@ -1,20 +1,43 @@
 [
-    {
-     "id": 1,
-     "name": "Marvel Black Widow Funko Pop",
-     "price": "$3500" ,
-     "color": "black",
-     "category": "in-sale",
-     "description": "Figura de colección Black Widow",
-     "image": "Imagenes/Marvel-Black-Widow-Funko-POP.jpg",
-     }, 
-     {
-     "id": 2,
-     "name": ,
-     "price": ,
-     "color": ,
-     "category": ,
-     "description": ,
-     "image": ,
-    }
-   ]
+ {
+  "id": 1,
+  "name": "Marvel Black Widow Funko Pop",
+  "price": "$3500",
+  "color": "black",
+  "category": "Marvel",
+  "description": "Figura de colección Black Widow",
+  "image": "Marvel-Black-Widow-Funko-POP.jpg"
+ },
+ {
+  "name": "Scarlet Witch",
+  "description": "figura coleccionable de Marvel, Scarlet Witch. La cabeza de la figura tiene 9cm de alto y 7cm",
+  "category": "Marvel",
+  "price": "3500",
+  "id": 2,
+  "image": "file-1615508648255.jpg"
+ },
+ {
+  "name": "Alien Maggie",
+  "description": "figura coleccionable de Los Simpmsons, Maggie. La cabeza de la figura tiene 9cm de alto y 7cm",
+  "category": "Los Simpsons",
+  "price": "3500",
+  "id": 3,
+  "image": "file-1615508853635.jpg"
+ },
+ {
+  "name": "Captain Marvel",
+  "description": "figura coleccionable de Marvel, Capitana Marvel. La cabeza de la figura tiene 9cm de alto y 7cm",
+  "category": "Marvel",
+  "price": "3500",
+  "id": 4,
+  "image": "file-1615509019715.jpg"
+ },
+ {
+  "name": "La Viuda Negra",
+  "description": "figura coleccionable de Marvel, La Viuda Negra. La cabeza de la figura tiene 9cm de alto y 7cm",
+  "category": "Marvel",
+  "price": "3000",
+  "id": 5,
+  "image": "file-1615509099468.jpg"
+ }
+]

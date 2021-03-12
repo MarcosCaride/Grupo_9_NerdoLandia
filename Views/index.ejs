@@ -84,16 +84,6 @@
           </article>
         </a>
 
-        <a href="homerMuumuu">
-          <article>
-            <img src="Imagenes/Marvel-Black-Widow-Funko-POP.jpg" alt="">
-            <div class="infoDelProducto">
-              <p class="descripcion">La Viuda Negra Funko POP</p>
-              <p class="precio">$3.500</p>
-            </div>
-          </article>
-        </a>
-
         </a>
         <a href="sithTrooper">
           <article>
@@ -126,6 +116,54 @@
         </a>
         
       </div>
+    </section>
+
+    <section class="destacados">
+      <div class="titulo-Section">
+        <h2>Marvel</h2>
+      </div>
+      <div class="productos">
+        <% for (product of marvel){%>
+
+        <a href="/productDetail/<%= product.id %>">
+          <article>
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+            <div class="infoDelProducto">
+              <p class="descripcion"><%= product.name %></p>
+              <p class="precio">$<%= product.price %></p>
+            </div>
+          </article>
+        </a>
+
+        <% } %>
+
+      </div>
+
+
+    </section>
+
+    <section class="destacados">
+      <div class="titulo-Section">
+        <h2>Los Simpsons</h2>
+      </div>
+      <div class="productos">
+        <% for (product of losSimpsons){%>
+
+        <a href="/productDetail/<%= product.id %>">
+          <article>
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+            <div class="infoDelProducto">
+              <p class="descripcion"><%= product.name %></p>
+              <p class="precio">$<%= product.price %></p>
+            </div>
+          </article>
+        </a>
+
+        <% } %>
+
+      </div>
+
+
     </section>
 
     <%- include('./partials/footer') %> 

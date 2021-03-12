@@ -22,3 +22,18 @@ LESS OF> atrasarnos con los contenidos en el playground. No llegar a ver los con
 
 STOP DOING> No detectamos muchas cosas para dejar de hacer, al contrario, mucho para sumar.
 
+
+RETROSPECTIVA SPRINT 3
+FORMATO ESTRELLA DE MAR
+
+MORE OF> Dividr mas las tareas. En este sprint nos pasó que, si bien habíamos hecho una división inical, luego terminamos un poco trabajando todos en lo de todos. En relación a este punto, insitimos en que debemos darle mas tiempo a los contenidos de playgroudn. El hecho de no estar al día con los contenidos muchas veces nos dificulta realizar la división de tareas. Por otro lado, establecer una comunicación interna mas fluida.
+
+START DOING> Detallar mas el archivo readme.md. Sumar información útil como por ejemplo el puerto y las rutas.
+
+CONTINUE DOING> Continuar comunicándonos por el grupo de whatsapp, seguir con las reuniones semanales y mantener siempre el tablero de trello actualizado.
+
+LESS OF> utilizar menos cantidad de ramas en Github. Tuvimos varios conflictos las ramas en este sprint. Tal vez todavía no sabemos utilizarlas bien.
+
+STOP DOING> depsués de los problemas en la coparticipación en tareas del otro y también la superposición de ramas, decidimos establecer una máxima: no debemos codear en el archivo del compañero/a.
+
+

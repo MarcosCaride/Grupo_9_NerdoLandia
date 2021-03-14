@@ -1,0 +1,83 @@
+[
+ {
+  "id": 1,
+  "name": "Marvel Black Widow Funko Pop",
+  "price": "3500",
+  "color": "black",
+  "category": "Marvel",
+  "description": "Figura de colección Black Widow",
+  "image": "Marvel-Black-Widow-Funko-POP.jpg"
+ },
+ {
+  "name": "Scarlet Witch",
+  "description": "Figura coleccionable de Marvel, Scarlet Witch. La cabeza de la figura tiene 9cm de alto y 7cm",
+  "category": "Marvel",
+  "price": "4000",
+  "image": "file-1615508648255.jpg",
+  "id": "2"
+ },
+ {
+  "name": "Alien Maggie",
+  "description": "Figura coleccionable de Los Simpmsons, Maggie. La cabeza de la figura tiene 9cm de alto y 7cm",
+  "category": "Los Simpsons",
+  "price": "3500",
+  "image": "file-1615508853635.jpg",
+  "id": "3"
+ },
+ {
+  "name": "Captain Marvel",
+  "description": "Figura coleccionable de Marvel, Capitana Marvel. La cabeza de la figura tiene 9cm de alto y 7cm",
+  "category": "Marvel",
+  "price": "3500",
+  "image": "file-1615509019715.jpg",
+  "id": "4"
+ },
+ {
+  "name": "Razor Crest LEGO",
+  "description": "Revive las batallas del Mandaloriano y el Niño contra el soldado explorador y otros enemigos con el Transporte de Cazarrecompensas de The Mandalorian (75292). Esta lanzadera de transporte blindada para construir con ladrillos LEGO® Star Wars™ cuenta con una bodega de carga con elementos que representan botines de carbonita en su interior y con laterales que se abren que sirven también como rampas de acceso; además, está equipada con cabina para dos minifiguras LEGO, cañones automáticos, cápsula de escape y más detalles de gran realismo para fomentar el juego creativo..",
+  "category": "Star Wars",
+  "price": "6000",
+  "id": 5,
+  "image": "file-1615696316928.jpg"
+ },
+ {
+  "name": "Sith Trooper",
+  "description": "En su último impulso hacia la conquista galáctica, la Primera Orden prepara un ejército de soldados de élite que se inspiran en un legado oscuro y antiguo.",
+  "category": "Star Wars",
+  "price": "5000",
+  "id": 6,
+  "image": "file-1615696417176.jpeg"
+ },
+ {
+  "name": "Ashoka Tano y AAT Lego",
+  "description": "Los fans pueden recrear el icónico AAT de Star Wars: Las guerras clonadas y juegan contra Battle Droid vs. Conflictos de la Legión 501.",
+  "category": "Star Wars",
+  "price": "3500",
+  "image": "file-1615697591149.jpg",
+  "id": "7"
+ },
+ {
+  "name": "Casa Simpson LEGO",
+  "description": "Basado en la residencia original de Springfield, este asombroso modelo replica hasta el último detalle con ladrillos LEGO.",
+  "category": "Los Simpsons",
+  "price": "6000",
+  "id": 8,
+  "image": "file-1615696873429.jpg"
+ },
+ {
+  "name": "Sr. Burns Funko POP",
+  "description": "Muñeco Funko Pop Mr. Burns 501 Los Simpsons Original",
+  "category": "Los Simpsons",
+  "price": "3000",
+  "image": "file-1615697153348.webp",
+  "id": "9"
+ },
+ {
+  "name": "Grogu LEGO",
+  "description": "Construye y expón la maqueta LEGO® Star Wars™ El Niño (75318): ¡no puede ser más adorable! Este popular personaje, cariñosamente conocido como \"Baby Yoda\", se ha recreado al estilo LEGO con detalles de gran realismo, adopta diferentes expresiones al moverle la cabeza, las orejas y la boca articuladas, y puede sujetar el pomo de la palanca de cambios incluido, su juguete favorito, igual que en Star Wars: The Mandalorian.",
+  "category": "Star Wars",
+  "price": "6000",
+  "image": "file-1615697302262.jpeg",
+  "id": "10"
+ }
+]

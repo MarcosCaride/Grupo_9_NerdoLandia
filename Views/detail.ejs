@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+<body>
+  <%- include('./partials/header') %>
+  <br>
+  <br>
+    <main class="mainDetail">
+    <section class="section-producto">
+        <article class="contenedor1"> 
+            <img src="/Imagenes/products/<%= product.image %>" alt= "<%= product.name %>" class="fotoProducto1">
+        </article>  
+
+        <article class="data1-producto">
+            <h4 class="nombre-producto"> <%= product.name %> </h4>
+            <p class="desc"><%= product.description %></p>
+
+            <br>
+            <br>
+
+            <article class="data2-producto">
+                <p class="precio">$<%= product.price %></p>
+                <p class="cuotas">12 cuotas sin interés</p>
+                <input type="button" value="Envío a domicilio" name="B4" OnClick=>
+                <div class="envío-a-domicilio">
+                    <div class="camion">
+                        <i class="fas fa-truck"></i>
+                    </div> 
+                    <br>
+                </div>
+    
+                <input type="button" value="Retiralo en el local" name="B4" OnClick=>
+    
+                <div class="nuestro-local">
+                    <!-- icono + dirección + gratis -->
+                    <div class="local">
+                        <i class="fas fa-store"></i>
+                    </div>
+                </div>
+        </article>
+      </article>
+    </main>
+    <div class="total-carrito">   
+        <a href="/productDetail/edit/<%= product.id %>" ><button>Editar</button></a>
+        <form action="/productDetail/<%= product.id %>?_method=DELETE" method='POST'>
+            <button>Borrar Producto</button>
+        </form>
+    </div>  
+    <br>
+    <br>
+      <%- include('./partials/footer') %> 
+</body>
+</html>
+  

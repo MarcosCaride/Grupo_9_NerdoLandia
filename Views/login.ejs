@@ -4,40 +4,43 @@
 <body> 
   <%- include('./partials/header') %>     
       <div class="titulo-section"> 
-        <h2>Ingresa a tu cuenta!</h2> 
-      </div>
+        <h2>Ingresa</h2> 
+      </div> 
  
-      <div class="login">
-<form action="/" method="POST" id=login>
-     
-    <label for="celectronico">Correo electrónico</label><br>
-    <input type="text" id="celectronico" name="celectronico" required><br><br> 
-    <label for="contraseña">Contraseña</label><br> 
-    <input type="text" id="contraseña" name="contraseña" required><br> 
-  
-     
-</form> 
- 
-<span><input type="checkbox" name="No soy un robot"></span><div>No soy un robot</div> 
-<span><i class="fas fa-sync-alt"></i><br></span> 
- 
- <button type="submit" form="login"><h3>Ingresar</h3></button><br><br> 
- 
- <div class="podes-ingresar-con-google"> 
-  <label> Podes ingresar con tu cuenta de Google 
-      <button type="submit"> 
-          <div class="google"> 
-              <i class="fab fa-google"> 
-                  <a href="https://www.google.com/"></a> 
-              </i> 
-          </div> 
-      </button> 
-  </label>
-  <br>
-  <button><a href="/users/register" style="color: black; text-decoration: none;">Crea tu cuenta ahora!</a></button>    
-</div> 
-</div><br> 
- 
+      <div class="register"> 
+        <main class="register-form">
+          <form action="/" method="POST" id=login> 
+               
+              <label for="celectronico">Correo electrónico</label><br> 
+              <input type="text" id="celectronico" name="celectronico" required><br><br> 
+              <label for="contraseña">Contraseña</label><br> 
+              <input type="text" id="contraseña" name="contraseña" required><br> 
+            
+              <input type="checkbox" name="No soy un robot"><div>No soy un robot</div> 
+              <i class="fas fa-sync-alt"></i><br> 
+               
+               <button type="submit" form="login"><h3>Ingresar</h3></button><br><br> 
+               
+               <div class="podes-ingresar-con-google"> 
+                  <label> Podes ingresar con tu cuenta de Google</label> 
+                  <button type="submit"> 
+                      <div class="google"> 
+                          <i class="fab fa-google"> 
+                              <a href="https://www.google.com/"></a> 
+                          </i> 
+                      </div> 
+                  </button> 
+              </div>
+               
+              <br>
+              <button><a href="/users/register">Creá tu cuenta</a></button>
+               
+          </form> 
+           
+        </main>
+      </div> 
+      <br>
+      <br>
 <%- include('./partials/footer') %> 
  
 </body> 

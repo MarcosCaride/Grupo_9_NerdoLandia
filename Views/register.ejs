@@ -2,84 +2,94 @@
 <html lang="en">
     <%- include('./partials/head') %>
 <body>
-    <%- include('./partials/header') %>
-      <div class="titulo-section"> 
-        <h2>Crea tu cuenta!</h2> 
+  <%- include('./partials/header') %>
+
+    <div class="titulo-section">
+        <h2>Creá tu cuenta</h2>
       </div>
-   <main class="register">
-    <form action="/register" method="POST">
-        <br>
-        <div class="nombre-apellido">
-          <label for="nombre">Nombre y apellido:</label>
-        <input type="text" name="nombre-apellido" id="nombre-apellido"> 
-        </div>
-        <br>
 
-        <div class="email">
+    <!-- Formulario de Registro -->
+    <div class="register">
+        <main class="register-form">
+         <form action="/register" method="POST" enctype="multipart/form-data">
+             <br>
+            <label for="nombre">Nombre y apellido:</label>
+               <br>
+            <input type="text" name="nombre-apellido" id="nombre-apellido"> 
+            <br>
+            <br>
+     
             <label for="emaiL"> Email</label>
+            <br>
             <input type="email" name="email" type="email">
-        </div>
-        <br>
 
-        <div class="domicilio">
+             <br>
+             <br>
+     
             <label for="domicilio">Domicilio:</label>
-        <input type="text" name="domicilio" id="domicilio"> 
-        <br>
-        </div>
-        <br>
-
-        <div class="telefono">
+                <br>
+            <input type="text" name="domicilio" id="domicilio"> 
+             <br>
+             <br>
+     
             <label for="telefono">Teléfono:</label>
-        <input type="text" name="telefono" id="telefono"> 
-        </div>
-        <br>
+                <br>
+             <input type="text" name="telefono" id="telefono"> 
+             <br>
+             <br>
+     
 
-        <div class="fecha-nac">
-            <h4>Fecha de nacimiento</h4>
-            <label> Fecha de nacimiento
-                <input type="date" name="fecha" value="2021-07-22" min="2018-01-01" max="2022-12-31">
-            </label>
-        </div>
-        <br>
+            <label> Fecha de nacimiento</label>
+                <br>
+            <input type="date" name="fecha" value="2021-07-22" min="2018-01-01" max="2022-12-31">
 
-        <div class="foto-perfil">
-            <label> <h4>Seleccioná tu foto de perfil </h4>
-                <input type="file" name="avatar" accept=".jpg" multiple>
-            </label>
-        </div>
-        <br>
-        <div class="contraseña"> 
-            <h4>Ingresá tu cotraseña</h4>
-            <label for="contraseña">
-                <input type="text" name="contraseña" id="contraseña">
-            </label>
-        </div>
-        <br>
-        <div class="confirmar-contraseña"> 
-            <h4>Confirmá tu cotraseña</h4>
-            <label for="confirmar-contraseña">
-                <input type="text" name="confirmar-contraseña" id="confirmar-contraseña">
-            </label>
-        </div>
-        <div class="no-soy-un-robot">
-            <label> No soy un robot
-                <input type="checkbox" name="no-soy-un-robot" value="no-soy-un-robot">
-            </label>
-        </div>
-        <br>
-        <div class="podes-ingresar-con-google">
-            <label> 
-                <p>Podes ingresar con tu cuenta de google</p>
-                <button type="submit">
-                    <div class="google">
-                        <i class="fab fa-google"><a href="https://www.google.com/"></a></i>
-                    </div>
-                </button>
-            </label>   
-        </div>
-        <br>
-    </form>
-   </main>
+             <br>
+             <br>
+        
+            <label for="avatar">Seleccioná tu foto de perfil</label>
+                <br>
+            <input type="file" name="avatar" accept=".jpg">
+                 
+             <br>
+             <br>
+                 
+            <label for="contraseña">Ingresá tu cotraseña</label>
+                <br>
+            <input type="text" name="contraseña" id="contraseña">
+                 
+             <br>
+             <br>
+
+            <label for="contraseña">Confirma tu cotraseña</label>
+                <br>
+            <input type="text" name="contraseña" id="contraseña">
+
+                <br>
+                <br>
+            <div class="no-soy-un-robot">
+                <label> No soy un robot
+                    <input type="checkbox" name="no-soy-un-robot" value="no-soy-un-robot">
+                </label>
+            </div>
+            <br>
+            <div class="podes-ingresar-con-google">
+                <label> 
+                    <p>Podes ingresar con tu cuenta de google</p>
+                    <button type="submit">
+                        <div class="google">
+                            <i class="fab fa-google"><a href="https://www.google.com/"></a></i>
+                        </div>
+                    </button>
+                </label>   
+            </div>
+            <br>
+            <button type="submit">REGISTRARSE</button>
+            <br>
+            <br>
+        </form>
+    </main>
+
+    </div>
    <br>
    <br>
    <%- include('./partials/footer') %> 

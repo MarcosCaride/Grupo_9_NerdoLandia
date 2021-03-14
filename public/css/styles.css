@@ -66,7 +66,6 @@ nav a:hover{
     text-decoration: none;
     color: white;
     border-radius: 15px;
-    padding: 0 15px;
     transition: 250ms;
 }
 
@@ -265,12 +264,10 @@ footer h2{
 
 /* productDetail.html */
 .section-producto {
-    background-color: whitesmoke;
+    background-color: white;
     margin: 15px 20px;
-    border-radius: 7%;
     display: flex;
     flex-wrap: wrap;
-    padding: 5px;
 }
 
 
@@ -294,7 +291,8 @@ footer h2{
 }
 
 .data1-producto {
-    font-family: 'Oxanium', cursive;
+    max-width: 40%;
+    font-family: 'Oxanium';
 }
 
 .camion {
@@ -378,35 +376,21 @@ h4.titulo {
     font-size: 25px;
 }
 
-/* register.html */
 
-.register {
-    text-align: center;
-    background-color: whitesmoke;
-    font-family: 'Oxanium', cursive;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-/* ProductCart.html */
-.contenedor-carrito {
-    margin: 20px;
-    width: 320px;
-}
 .caja-producto{
-    width: 320px;
-    height: 300px;
-    display:flex;
-    flex-direction:column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: space-between;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     font-size:20px;
-    background-color: whitesmoke;
     font-family: 'Oxanium', cursive;
-    padding-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.caja-producto a{
+    display: inline-block;
+    padding-right: 10px;
 }
 
 .caja-detalles {
@@ -414,23 +398,70 @@ h4.titulo {
     display: inline-block;
 }
 
+/* ProductCart.html */
+.contenedor-carrito {
+    margin: 20px;
+    padding: 20px;
+    width: 90%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.headerCart{
+    display: none;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
 .total-carrito {
+    background-color: white;
     float: right;
-    margin-right: 20px;
-    background-color: whitesmoke;
+    width: max-content;
+    margin: 20px;
     font-family: 'Oxanium', cursive;
     padding: 15px;
     display: block;
-    
+    border-radius: 10px;
 }
 
-  /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
+.fa-truck{
+    font-size: 20px !important;
+}
 
-  .titulo-section{
+/* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
+
+.titulo-section{
     color:#00c2cb;
     font-family: 'Russo One', sans-serif;
     text-align: center;
-  }
+}
+
+/* register.html */
+
+.register {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Oxanium', cursive;
+}
+
+.titulo-register {
+    color:#00c2cb;
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+    margin: 30px;
+}
+
+.register-form{
+    width: 80%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px;
+    margin: 15px;
+}
+input[type=file]{
+    display: inline-block !important;
+}
 
 @media (min-width: 791px){
     .item{
@@ -500,15 +531,49 @@ h4.titulo {
 
     .section-producto {
         border-radius: 20px;
+        padding: 20px;
+        width: 75%;
+        height: 80%;
+        justify-content: space-around;
+    }
+
+    .mainDetail{
+        display: flex;
+        justify-content: center;
+    }
+
+    .data1-producto{
+        max-width: 35%;
+        padding: 20px;
+        border: solid 1px silver;
+        border-radius: 15px;
+        background-color: whitesmoke;
     }
 
     .contenedor1 {
         display: flex;
-        margin: 5px;
-        width: 50%;
-        height: 201px;
+        margin: 0;
+        max-width: 50%;
+        height: auto;
         color: ivory;
         font-family:'Oxanium', cursive;
+    }
+
+    .nombre-producto{
+        margin: 0;
+        font-size: 40px;
+        font-family: 'Oxanium';
+        font-weight: bold;
+    }
+
+    .data1-producto p{
+        margin: 0;
+        font-size: 35px;
+        font-weight: 300;
+    }
+
+    .desc{
+        border-bottom: solid 1px lightgray;
     }
 
     .fotoProducto2, .fotoProducto3 {
@@ -516,11 +581,8 @@ h4.titulo {
     }
 
     .fotoProducto1 {
-        width: 200px;
-    }
-
-    .data1-producto {
-        margin: 10px;
+        width: 100%;
+        justify-self: center;
     }
 
     .section-producto .data2-producto {
@@ -587,11 +649,6 @@ h4.titulo {
     }
 
 
-    .section-producto {
-        border-radius: 20px;
-    }
-
-
 /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
     .titulo-section{
@@ -601,14 +658,3 @@ h4.titulo {
     }
 }
 
-    .titulo-register {
-    color:#00c2cb;
-    font-family: 'Russo One', sans-serif;
-    text-align: left;
-    margin: 30px;
-}
-
-    .register {
-            margin: 0 20%;
-        border-radius: 30px;
-    }

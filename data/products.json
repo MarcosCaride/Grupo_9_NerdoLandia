@@ -145,27 +145,11 @@
   "image": "file-1615703501421.webp"
  },
  {
-  "name": "Meme Spiderman Funko",
-  "description": "Spider man frente a Spider man: ¿Cuál es el verdadero? ¡Se recrea una escena épica de la caricatura de Marvel. Funko trae a nosotros el exclusivo Pop! Spider man VS Spider man. Añade a tu colección la increíble figura.   ",
-  "category": "Marvel",
-  "price": "3500",
-  "id": 20,
-  "image": "file-1615703584030.jpg"
- },
- {
-  "name": "Radioactivo Man",
-  "description": "Este muñeco Pop tiene el nº 496 de su colección de Los Simpson, su nombre original es Funko Pop Vinyl Radioactive Man de la licencia The Simpsons.",
-  "category": "Los Simpsons",
-  "price": "3500",
-  "id": 20,
-  "image": "file-1615703742653.jpg"
- },
- {
   "name": "Homer Muumuu Funko POP",
   "description": "Este muñeco Pop tiene el nº 502 de su colección de Los Simpson, su nombre original es Funko Pop Vinyl Homer Muumuu de la licencia The Simpsons.",
   "category": "Los Simpsons",
-  "price": "3500",
-  "id": 21,
-  "image": "file-1615703832350.jpg"
+  "price": "4000",
+  "image": "file-1615703832350.jpg",
+  "id": "21"
  }
 ]

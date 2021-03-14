@@ -76,8 +76,8 @@
   "name": "Grogu LEGO",
   "description": "Construye y expón la maqueta LEGO® Star Wars™ El Niño (75318): ¡no puede ser más adorable! Este popular personaje, cariñosamente conocido como \"Baby Yoda\", se ha recreado al estilo LEGO con detalles de gran realismo, adopta diferentes expresiones al moverle la cabeza, las orejas y la boca articuladas, y puede sujetar el pomo de la palanca de cambios incluido, su juguete favorito, igual que en Star Wars: The Mandalorian.",
   "category": "Star Wars",
-  "price": "6500",
-  "id": 10,
-  "image": "file-1615697302262.jpeg"
+  "price": "6000",
+  "image": "file-1615697302262.jpeg",
+  "id": "10"
  }
 ]

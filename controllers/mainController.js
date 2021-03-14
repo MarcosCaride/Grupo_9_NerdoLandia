@@ -8,7 +8,8 @@ const mainController = {
     index: (req, res) => {
 		let losSimpsons = products.filter(product => product.category=='Los Simpsons');
 		let marvel = products.filter(product => product.category=='Marvel');
-		res.render('index',{losSimpsons, marvel})
+		let starWars = products.filter(product => product.category=='Star Wars');
+		res.render('index',{losSimpsons, marvel, starWars})
 	},
 
     carrito:(req, res) => {

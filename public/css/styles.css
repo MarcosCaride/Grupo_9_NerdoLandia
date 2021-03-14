@@ -66,7 +66,6 @@ nav a:hover{
     text-decoration: none;
     color: white;
     border-radius: 15px;
-    padding: 0 15px;
     transition: 250ms;
 }
 
@@ -265,12 +264,10 @@ footer h2{
 
 /* productDetail.html */
 .section-producto {
-    background-color: whitesmoke;
+    background-color: white;
     margin: 15px 20px;
-    border-radius: 7%;
     display: flex;
     flex-wrap: wrap;
-    padding: 5px;
 }
 
 
@@ -294,7 +291,8 @@ footer h2{
 }
 
 .data1-producto {
-    font-family: 'Oxanium', cursive;
+    max-width: 40%;
+    font-family: 'Oxanium';
 }
 
 .camion {
@@ -533,15 +531,49 @@ input[type=file]{
 
     .section-producto {
         border-radius: 20px;
+        padding: 20px;
+        width: 75%;
+        height: 80%;
+        justify-content: space-around;
+    }
+
+    .mainDetail{
+        display: flex;
+        justify-content: center;
+    }
+
+    .data1-producto{
+        max-width: 35%;
+        padding: 20px;
+        border: solid 1px silver;
+        border-radius: 15px;
+        background-color: whitesmoke;
     }
 
     .contenedor1 {
         display: flex;
-        margin: 5px;
-        width: 50%;
-        height: 201px;
+        margin: 0;
+        max-width: 50%;
+        height: auto;
         color: ivory;
         font-family:'Oxanium', cursive;
+    }
+
+    .nombre-producto{
+        margin: 0;
+        font-size: 40px;
+        font-family: 'Oxanium';
+        font-weight: bold;
+    }
+
+    .data1-producto p{
+        margin: 0;
+        font-size: 35px;
+        font-weight: 300;
+    }
+
+    .desc{
+        border-bottom: solid 1px lightgray;
     }
 
     .fotoProducto2, .fotoProducto3 {
@@ -549,11 +581,8 @@ input[type=file]{
     }
 
     .fotoProducto1 {
-        width: 200px;
-    }
-
-    .data1-producto {
-        margin: 10px;
+        width: 100%;
+        justify-self: center;
     }
 
     .section-producto .data2-producto {
@@ -617,11 +646,6 @@ input[type=file]{
     .destacados h2{
         border-radius: 20px;
         padding: 10px 40px;
-    }
-
-
-    .section-producto {
-        border-radius: 20px;
     }
 
 

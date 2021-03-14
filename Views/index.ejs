@@ -133,7 +133,7 @@
       <div class="productos">
         <% for (product of marvel){%>
 
-        <a href="/productDetail/<%= product.id %>">
+        <a href="/productDetail/detail/<%= product.id %>">
           <article>
             <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
             <div class="infoDelProducto">
@@ -161,7 +161,31 @@
       <div class="productos">
         <% for (product of losSimpsons){%>
 
-        <a href="/productDetail/<%= product.id %>">
+        <a href="/productDetail/detail/<%= product.id %>">
+          <article>
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+            <div class="infoDelProducto">
+              <p class="descripcion"><%= product.name %></p>
+              <p class="precio">$<%= product.price %></p>
+            </div>
+          </article>
+        </a>
+
+        <% } %>
+
+      </div>
+
+
+    </section>
+
+    <section class="destacados">
+      <div class="titulo-Section">
+        <h2>Star Wars</h2>
+      </div>
+      <div class="productos">
+        <% for (product of starWars){%>
+
+        <a href="/productDetail/detail/<%= product.id %>">
           <article>
             <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
             <div class="infoDelProducto">

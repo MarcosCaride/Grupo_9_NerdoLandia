@@ -79,5 +79,93 @@
   "price": "6000",
   "image": "file-1615697302262.jpeg",
   "id": "10"
+ },
+ {
+  "name": "Anakin Skywalker Funko POP",
+  "description": "Este muñeco Pop tiene el nº 271 de su colección de Star Wars Clone Wars, su nombre original es Funko Pop Vinyl Anakin de la licencia Star Wars Clone Wars.",
+  "category": "Star Wars",
+  "price": "4000",
+  "id": 11,
+  "image": "file-1615702625567.jpg"
+ },
+ {
+  "name": "Ahsoka Tano Funko POP",
+  "description": "Este muñeco Pop tiene el nº 409 de su colección de Star Wars Clone Wars, su nombre original es Funko Pop Vinyl Ahsoka de la licencia Star Wars Clone Wars.",
+  "category": "Star Wars",
+  "price": "4500",
+  "id": 12,
+  "image": "file-1615702704406.jpg"
+ },
+ {
+  "name": "Obi Wan Kenobi Funko POP",
+  "description": "Este muñeco Pop tiene el nº 270 de su colección de Star Wars Clone Wars, su nombre original es Funko Pop Vinyl Obi Wan Kenobi de la licencia Star Wars Clone Wars.",
+  "category": "Star Wars",
+  "price": "4000",
+  "id": 13,
+  "image": "file-1615702777821.jpg"
+ },
+ {
+  "name": "Villa Ewok Princess Leia Funko POP",
+  "description": "Este muñeco Pop tiene el nº 287 de su colección de Star Wars, su nombre original es Funko Pop Vinyl Ewok Village Leia de la licencia Star Wars.",
+  "category": "Star Wars",
+  "price": "4500",
+  "id": 15,
+  "image": "file-1615702922030.jpg"
+ },
+ {
+  "name": "Rey Skywalker Funko POP",
+  "description": "Este muñeco Pop tiene el nº 307 de su colección de Star Wars Rise of Skywalker, su nombre original es Funko Pop Vinyl Rey de la licencia Star Wars Rise of Skywalker.",
+  "category": "Star Wars",
+  "price": "4500",
+  "id": 16,
+  "image": "file-1615702989230.jpg"
+ },
+ {
+  "name": "Iron Man Funko POP ",
+  "description": "Este muñeco Pop tiene el nº 580 de su colección de Vengadores: Endgame, su nombre original es Funko Pop Vinyl I Am Iron Man Exclusive de la licencia Vengadores: Endgame.",
+  "category": "Marvel",
+  "price": "4500",
+  "id": 17,
+  "image": "file-1615703296943.jpg"
+ },
+ {
+  "name": "Capitan America Con Mjolnir Funko POP ",
+  "description": "Este muñeco Pop tiene el nº 573 de su colección de Vengadores: Endgame, su nombre original es Funko Pop Vinyl Capitan America with Broken Shield & Mjolnir de la licencia Avengers: Endgame.",
+  "category": "Marvel",
+  "price": "4500",
+  "id": 18,
+  "image": "file-1615703390549.jpg"
+ },
+ {
+  "name": "White Vision Funko POP",
+  "description": "Funko Pop! Wandavision The Vision Marvel",
+  "category": "Marvel",
+  "price": "4000",
+  "id": 19,
+  "image": "file-1615703501421.webp"
+ },
+ {
+  "name": "Meme Spiderman Funko",
+  "description": "Spider man frente a Spider man: ¿Cuál es el verdadero? ¡Se recrea una escena épica de la caricatura de Marvel. Funko trae a nosotros el exclusivo Pop! Spider man VS Spider man. Añade a tu colección la increíble figura.   ",
+  "category": "Marvel",
+  "price": "3500",
+  "id": 20,
+  "image": "file-1615703584030.jpg"
+ },
+ {
+  "name": "Radioactivo Man",
+  "description": "Este muñeco Pop tiene el nº 496 de su colección de Los Simpson, su nombre original es Funko Pop Vinyl Radioactive Man de la licencia The Simpsons.",
+  "category": "Los Simpsons",
+  "price": "3500",
+  "id": 20,
+  "image": "file-1615703742653.jpg"
+ },
+ {
+  "name": "Homer Muumuu Funko POP",
+  "description": "Este muñeco Pop tiene el nº 502 de su colección de Los Simpson, su nombre original es Funko Pop Vinyl Homer Muumuu de la licencia The Simpsons.",
+  "category": "Los Simpsons",
+  "price": "3500",
+  "id": 21,
+  "image": "file-1615703832350.jpg"
  }
 ]

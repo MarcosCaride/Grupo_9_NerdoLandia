@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+  <%- include('./partials/header') %>
+
+    <br>
+    <br>
+    <br>
+
+    <section class="destacados">
+      <div class="titulo-Section">
+        <img src="/Imagenes/<%= categoryBanner %>" width="80%" alt="">
+      </div>
+      <br>
+      <br>
+      <div class="productos">
+        <% for (product of categoria){%>
+
+        <a href="/productDetail/detail/<%= product.id %>">
+          <article>
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+            <div class="infoDelProducto">
+              <p class="descripcion"><%= product.name %></p>
+              <p class="precio">$<%= product.price %></p>
+            </div>
+          </article>
+        </a>
+
+        <% } %>
+
+      </div>
+
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <%- include('./partials/footer') %> 
+    
+</body>
+</html>

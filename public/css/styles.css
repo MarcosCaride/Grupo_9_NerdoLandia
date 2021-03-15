@@ -153,29 +153,7 @@ footer h2{
 
         /*  Carousle    */
 
-.carousel-caption h3{
-    font-size: 15px;
-}
 
-.carousel-caption p{
-    font-size: 10px;
-}
-
-.carousel-indicators li{
-    background-color: gray !important;
-}
-
-.item{
-    width: 90vw;
-    height: 50vw;
-}
-
-
-.carousel{
-    display: flex;
-    flex-wrap: initial;
-    justify-content: center;
-}
         /*  Fin Carousel    */
 
 .fas{
@@ -447,6 +425,69 @@ footer h2{
     font-family: 'Russo One', sans-serif;
     text-align: center;
   }
+
+  .titulo-Section img{
+      width: 80%;
+  }
+
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    text-decoration: none;
+    font-size: 2.5vw;
+    background-color: white;
+    color: black;
+    align-content: center;
+    font-family: 'Russo One', sans-serif;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    align-items: center;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5vw;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+      background-color: #00c2cb;
+      border-radius: 0;
+      padding: 0px;
+    }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #00c2cb;}
+
+
+
+
+
 
 @media (min-width: 791px){
     header nav{

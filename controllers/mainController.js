@@ -9,13 +9,20 @@ const mainController = {
 		let losSimpsons = products.filter(product => product.category=='Los Simpsons');
 		let marvel = products.filter(product => product.category=='Marvel');
 		let starWars = products.filter(product => product.category=='Star Wars');
-		res.render('index',{losSimpsons, marvel, starWars})
+        let categoryBanner = req.params.categoriaS + "Banner.jpg"
+
+		res.render('index',{losSimpsons, marvel, starWars, categoryBanner})
 	},
 
     carrito:(req, res) => {
         res.render('productCart')
-    }
+    },
 
+    categorias: (req, res) => {
+        let categoria = products.filter(product => (product.category == req.params.categoriaS))
+        let categoryBanner = req.params.categoriaS + "Banner.jpg"
+        res.render('categorias', {categoria, categoryBanner})
+    }
 }
 
 module.exports = mainController

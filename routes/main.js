@@ -5,6 +5,7 @@ const mainController =require ('../controllers/mainController')
 
 router.get('/', mainController.index);
 router.get('/Carrito', mainController.carrito)
+router.get('/categorias/:categoriaS', mainController.categorias)
 
 
 

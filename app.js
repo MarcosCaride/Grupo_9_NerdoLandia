@@ -6,13 +6,23 @@ const bodyParser = require('body-parser');
 const mainRoutes = require ('./routes/main');
 const productsRoutes = require ('./routes/products');
 const usersRoutes = require ('./routes/users');
+const session = require('express-session');
 const methodOverrride = require('method-override')
+
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 app.use(methodOverrride('_method'))
 app.use(express.static(publicPath));
+app.use(session({
+    secret: 'SECRETO',
+    resave: false,
+    saveUninitialized: true,
+}));
+app.use(cookieParser());
+
 app.listen(3030, () => console.log("Nerdo Landia en funcionamiento"))
 
 app.use('/', mainRoutes);

@@ -5,6 +5,12 @@ const usersController =require ('../controllers/usersController')
 const multer = require('multer')
 const {  body } = require ('express-validator')
 
+
+
+//no anda el check
+const check = require ('express-validator/check').check
+const validationResult = require ('express-validator/check').validationResult;
+
 //validaciones 
 
 const validateRegister = [

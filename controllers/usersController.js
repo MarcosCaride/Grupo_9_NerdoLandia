@@ -6,6 +6,8 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
 
+
+
 const usersController = {
     login:(req, res) => {
         res.render('login')
@@ -24,11 +26,8 @@ const usersController = {
             }
 
             for (let i = 0; i < users.length; i++) {
-                if (users[i].email == req.body.email){
-                    if (bcrypt.compareSync(req.body.password),users[i].password){
-                        let usuarioALoguearse = users[i];
-                        brak
-                    }
+                if (req.body.email == users[i].email && bcrypt.compareSync(req.body.contraseña),users[i].contraseña){
+                    res.send('Estas logueado')
                 } 
             }
 
@@ -67,7 +66,7 @@ const usersController = {
             nombre: req.body.nombre,
             edad: req.body.edad,
             email: req.body.email,
-            password: bcrypt.hashSync (req.body.password, 10)
+            password: bcrypt.hashSync (req.body.contraseña, 10)
         }
         let nuevoUsuario = req.body;
         nuevoUsuario.id = users.length + 1;

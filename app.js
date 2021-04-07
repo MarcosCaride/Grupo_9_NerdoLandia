@@ -8,6 +8,7 @@ const productsRoutes = require ('./routes/products');
 const usersRoutes = require ('./routes/users');
 const session = require('express-session');
 const methodOverrride = require('method-override')
+const cookieParser = require ('cookie-parser');
 
 
 

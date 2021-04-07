@@ -111,20 +111,28 @@ footer h2{
     justify-content: center;
 }
 
+.productos article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
 
 .productos article img{
-    max-width: 90%;
-    margin: 30px 0 10px 0;
+    width: 75%;
+    height: fit-content;
+    align-self: center;
+    margin: 0;
     
 }
 
 .productos a{
     cursor: pointer;
     text-decoration: none;
-    margin: 15px 20px;
-    border-radius: 7%;
+    margin: 10px 15px;
+    border-radius: 15px;
     background-color: white;
-    width: 320px;
+    width: 225px;
     transform: 1s all;
     text-align: center;
 }
@@ -135,16 +143,19 @@ footer h2{
 }
 
 .productos article .infoDelProducto{
-    margin-bottom: 10px;
+    margin: 7px;
+    align-self: flex-end;
 }
 
 .productos article .descripcion{
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     width: 100%;
+    margin: 0;
 }
 
 .productos article .precio{
+    margin: 0;
     font-size: 15px;
     text-align: center;
 }
@@ -431,9 +442,6 @@ footer h2{
   }
 
 
-
-
-
 /* Dropdown Button */
 .dropbtn {
     text-decoration: none;
@@ -702,7 +710,7 @@ footer h2{
     }
 }
 
-@media (min-width: 1290px){
+@media (min-width: 1200px){
 
     header{
         height: 23vh;
@@ -755,6 +763,10 @@ footer h2{
     .destacados h2{
         border-radius: 20px;
         padding: 10px 40px;
+    }
+
+    .productos article{
+        height: 320px;
     }
 
 

@@ -17,14 +17,16 @@ const usersController = {
     guardado:  (req, res) => {
         let errores = validationResult(req)
 
-        if (errores.isEmpty()){
+        if (!errores.isEmpty()){
+            return res.render('register', { errors: errores.mapped(), old: req.body })
+        }else{
             let nuevoUsuario = req.body;
             nuevoUsuario.id = users.length + 1;
             let imag;
-            if(!req.file ){
-                imag = "default-placeholder.png"
+            if(req.file ){
+                imag = req.file.filename;
             }else{
-            imag = req.file.filename;
+                imag = "default-placeholder.png"
             }
             nuevoUsuario.image = imag;
             users.push(nuevoUsuario)
@@ -32,10 +34,7 @@ const usersController = {
             fs.writeFileSync(usersFilePath, nuevosUsuarios)
     
             res.redirect('/')
-        }else{
-            return res.render('register', { errors: errores.mapped(), old: req.body })
         }
-
     }
 
 }

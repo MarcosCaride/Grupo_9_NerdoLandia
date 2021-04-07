@@ -4,10 +4,45 @@ const path = require('path');
 const usersFilePath =  path.join(__dirname, '../data/usersData.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
 const bcrypt = require('bcrypt');
+const { validationResult } = require('express-validator');
 
 const usersController = {
     login:(req, res) => {
         res.render('login')
+    },
+
+    processLogin: function(req, res){
+        let errors = validationResult(req);
+        
+        if (errors.isEmpty()){
+            let usersJSON = fs.readFileSync ('usersData.json', {encoding: UTF-8})
+            let users;
+            if (usersJSON == " "){
+                users = [];
+            } else {
+                users = JSON.parse(usersJSON)
+            }
+
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email == req.body.email){
+                    if (bcrypt.compareSync(req.body.password),users[i].password){
+                        let usuarioALoguearse = users[i];
+                        brak
+                    }
+                } 
+            }
+
+            if (usuarioALoguearse == undefined) {
+                return res.render('login', {errors: [
+                    {msg:'Credenciales inválidas'}
+                ]})
+            }
+            req.session.usuarioLogueado = usuarioALoguearse;
+            res.render('Estas logueado!')
+
+        }else {
+            return res.render('login', {errors: errors.errors})
+        }
     },
 
     register: (req, res) => {
@@ -15,11 +50,24 @@ const usersController = {
     },
 
     guardado:  (req, res, next) => {
+        let errors = validationResult(req);  
+        if (errors.isEmpty()){
+            let usersJSON = fs.readFileSync ('usersData.json', {})
+            let users;
+            if (usersJSON == " "){
+                users = [];
+            } else {
+                users = JSON.parse(usersJSON)
+            }
+
+        }else {
+            return res.render('login', {errors: errors.errors})
+        }
         let usuario = {
             nombre: req.body.nombre,
             edad: req.body.edad,
             email: req.body.email,
-            password: bcrypt.hashSync (req.body.password, 10);
+            password: bcrypt.hashSync (req.body.password, 10)
         }
         let nuevoUsuario = req.body;
         nuevoUsuario.id = users.length + 1;

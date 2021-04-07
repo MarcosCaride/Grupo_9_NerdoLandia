@@ -9,6 +9,16 @@
  
       <div class="register"> 
         <main class="register-form">
+          <% if (type of errors != 'undefined') { %> 
+            <p style= 'color:red'>ERROR</p>
+            <ul>
+              <% for (let i= 0; i < errors.length; i++) { %>
+              <li>
+                <%= errors[i].msg %> 
+              </li>
+            <% } %>   
+            </ul>
+          <% } %> 
           <form action="/" method="POST" id=login> 
                
               <label for="celectronico">Correo electrónico</label><br> 

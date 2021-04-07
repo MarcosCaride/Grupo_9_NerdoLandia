@@ -14,24 +14,18 @@ const usersController = {
     },
 
     processLogin: function(req, res){
+        console.log(users)
         let errors = validationResult(req);
         
         if (errors.isEmpty()){
-            let usersJSON = fs.readFileSync ('usersData.json', {encoding: UTF-8})
-            let users;
-            if (usersJSON == " "){
-                users = [];
-            } else {
-                users = JSON.parse(usersJSON)
-            }
 
             for (let i = 0; i < users.length; i++) {
-                if (req.body.email == users[i].email && bcrypt.compareSync(req.body.contraseña),users[i].contraseña){
-                    res.send('Estas logueado')
-                } 
-            }
-
-            if (usuarioALoguearse == undefined) {
+                if (req.body.email == users[i].email && bcrypt.compareSync(req.body.contraseña, users[i].contraseña)){
+                    let usuarioALoguearse = users[i];
+                    res.send('Estas logueado' + usuarioALoguearse.nombre-apellido)
+                } break
+            } 
+/*          if (usuarioALoguearse == undefined) {
                 return res.render('login', {errors: [
                     {msg:'Credenciales inválidas'}
                 ]})
@@ -41,7 +35,11 @@ const usersController = {
 
         }else {
             return res.render('login', {errors: errors.errors})
+        }  */
+        } else {
+            res.send("Esto no funciona")
         }
+
     },
 
     register: (req, res) => {

@@ -3,44 +3,55 @@
   <%- include('./partials/head') %>
 <body> 
   <%- include('./partials/header') %>     
-      <div class="titulo-section"> 
-        <h2>Ingresa</h2> 
-      </div> 
- 
-      <div class="register"> 
-        <main class="register-form">
-          <form action="/" method="POST" id=login> 
-               
-              <label for="celectronico">Correo electrónico</label><br> 
-              <input type="text" id="celectronico" name="celectronico" required><br><br> 
-              <label for="contraseña">Contraseña</label><br> 
-              <input type="password" id="contraseña" name="contraseña" required><br> 
-            
-              <input type="checkbox" name="No soy un robot"><div>No soy un robot</div> 
-              <i class="fas fa-sync-alt"></i><br> 
-               
-               <button type="submit" form="login"><h3>Ingresar</h3></button><br><br> 
-               
-               <div class="podes-ingresar-con-google"> 
-                  <label> Podes ingresar con tu cuenta de Google</label> 
-                  <button type="submit"> 
-                      <div class="google"> 
-                          <i class="fab fa-google"> 
-                              <a href="https://www.google.com/"></a> 
-                          </i> 
-                      </div> 
-                  </button> 
-              </div>
-               
-              <br>
-              <button><a href="/users/register">Creá tu cuenta</a></button>
-               
-          </form> 
+  <div class="titulo-section"> 
+    <h2>Ingresa</h2> 
+  </div> 
+  <div class="register"> 
+    <main class="register-form">
+      <form action="" method="POST" id=login> 
            
-        </main>
-      </div> 
-      <br>
-      <br>
+          <label for="email">Correo electrónico</label><br> 
+          <input type="email" name="email" value="<%= locals.old && old.email %>">
+          <% if(locals.errors && errors.email){ %>
+            <p><%= errors.email.msg %></p>
+            <% } %>
+            
+          <br>
+        
+        <br>
+          <label for="contraseña">Contraseña</label><br> 
+          <input type="password" name="contraseña" value="<%= locals.old && old.contraseña %>">
+          <br> 
+        
+          <% if(locals.errors && errors.contraseña){ %>
+            <p><%= errors.contraseña.msg %></p>
+        <% } %>
+        <br>
+          <input type="checkbox" name="No soy un robot"><div>No soy un robot</div> 
+          <i class="fas fa-sync-alt"></i><br> 
+           
+           <button type="submit" form="login"><h3>Ingresar</h3></button><br><br> 
+           
+           <div class="podes-ingresar-con-google"> 
+              <label> Podes ingresar con tu cuenta de Google</label> 
+              <button type="submit"> 
+                  <div class="google"> 
+                      <i class="fab fa-google"> 
+                          <a href="https://www.google.com/"></a> 
+                      </i> 
+                  </div> 
+              </button> 
+          </div>
+           
+          <br>
+          
+        </form> 
+        <button><a href="/users/register">Creá tu cuenta</a></button>
+       
+    </main>
+  </div> 
+  <br>
+  <br>
 <%- include('./partials/footer') %> 
  
 </body> 

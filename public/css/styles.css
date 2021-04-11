@@ -50,6 +50,7 @@ header nav{
     margin: 10px 0px 10px 0px;
     text-align: center;
     height: 6vh;
+    background-color: white;
 }
 
 nav a{
@@ -62,12 +63,24 @@ nav a{
     font-family: 'Russo One', sans-serif;
 }
 
-nav a:hover{
-    background-color: #00c2cb;
+nav a .dropdown{
     text-decoration: none;
-    color: white;
-    border-radius: 15px;
-    padding: 0 15px;
+    padding: 0 3.2px 0 3.2px;
+    background-color: white;
+    align-content: center;
+    font-family: 'Russo One', sans-serif;   
+}
+
+nav a .dropbtn{
+    font-size: 2vh;
+    color: black;
+}
+
+nav a:hover{
+    text-decoration: none;
+    color: #00c2cb; 
+    border-bottom: solid;
+    border-color: #00c2cb;
     transition: 250ms;
 }
 
@@ -140,11 +153,13 @@ footer h2{
 .productos article:hover{
     transform: scale(0.95);
     transition: 700ms;
+    color: #00c2cb;
 }
 
 .productos article .infoDelProducto{
     margin: 7px;
     align-self: flex-end;
+    font-family: 'Russo One', sans-serif;   
 }
 
 .productos article .descripcion{
@@ -445,10 +460,10 @@ footer h2{
 /* Dropdown Button */
 .dropbtn {
     text-decoration: none;
-    font-size: 2.5vw;
+    font-size: 2vw;
     background-color: white;
     color: black;
-    align-content: center;
+    align-self: center;
     font-family: 'Russo One', sans-serif;
     border: none;
   }
@@ -459,14 +474,14 @@ footer h2{
     display: inline-block;
     width: auto;
     align-items: center;
+    align-self: baseline;
   }
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+    background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -477,20 +492,29 @@ footer h2{
     text-decoration: none;
     display: block;
     font-size: 1.5vw;
+    padding: 0;
   }
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-      background-color: #00c2cb;
+      background-color: white;
       border-radius: 0;
-      padding: 0px;
+      border-bottom: 0;
     }
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #00c2cb;}
+  .dropdown:hover .dropbtn {
+    text-decoration: none;
+    color: #00c2cb;
+    border-radius: 15px;
+    border-bottom: 1px;
+    border-color: #00c2cb;
+    padding: 0 15px;
+    transition: 250ms;
+    }
 
 
 
@@ -507,11 +531,16 @@ footer h2{
         text-align: center;
         height: 6vh;
     }
-    .item{
-        width: 80vw;
-        height: 50vh;
-        margin: auto;
+
+    .container{
+        width: 60vw;
     }
+
+    /* .item{
+        width: 60vw;
+        height: auto;
+        margin: auto;
+    } */
 
     .item a{
         text-align: center;
@@ -528,7 +557,7 @@ footer h2{
     }
 
     header{
-        height: 23vh;
+        height: auto;
         padding-top: 10px;
     }
     
@@ -713,7 +742,7 @@ footer h2{
 @media (min-width: 1200px){
 
     header{
-        height: 23vh;
+        height: auto;
         padding-top: 10px;
     }
     
@@ -735,6 +764,10 @@ footer h2{
     header nav a{
         font-size: 2vw;
         padding: 3px 20px;
+    }
+
+    .container{
+        width: 65vw !important;
     }
 
     .logo form button{

@@ -22,6 +22,10 @@ const mainController = {
         let categoria = products.filter(product => (product.category == req.params.categoriaS))
         let categoryBanner = req.params.categoriaS + "Banner.jpg"
         res.render('categorias', {categoria, categoryBanner})
+    },
+
+    huesped: (req, res) => {
+        res.send("Hola visitante")
     }
 }
 

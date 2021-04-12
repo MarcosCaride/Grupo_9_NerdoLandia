@@ -5,11 +5,24 @@ const publicPath = path.resolve('./public')
 const bodyParser = require('body-parser');
 const mainRoutes = require ('./routes/main');
 const productsRoutes = require ('./routes/products');
+const session =  require('express-session');
 const usersRoutes = require ('./routes/users');
 const methodOverrride = require('method-override')
+const userLoggedMiddleware = require ('./Middlewares/userLoggedMiddleware')
+const cookies = require('cookie-parser');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
+
+app.use(session( {
+    secret: "secreto",
+    resave: false,
+    saveUninitialized: false,
+}))
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 app.use(methodOverrride('_method'))
 app.use(express.static(publicPath));

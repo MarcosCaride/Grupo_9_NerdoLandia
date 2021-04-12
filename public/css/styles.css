@@ -44,11 +44,13 @@ header p{
 
 header nav{
     display: flex;
+    visibility: hidden;
     justify-content: space-evenly;
     align-items: center;
     margin: 10px 0px 10px 0px;
     text-align: center;
     height: 6vh;
+    background-color: white;
 }
 
 nav a{
@@ -59,13 +61,31 @@ nav a{
     color: black;
     align-content: center;
     font-family: 'Russo One', sans-serif;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid;
+    border-color: white;
+}
+
+nav a .dropdown{
+    text-decoration: none;
+    padding: 0 3.2px 0 3.2px;
+    background-color: white;
+    align-content: center;
+    font-family: 'Russo One', sans-serif;   
+}
+
+nav a .dropbtn{
+    font-size: 2vh;
+    color: black;
 }
 
 nav a:hover{
-    background-color: #00c2cb;
     text-decoration: none;
-    color: white;
-    border-radius: 15px;
+    color: #00c2cb; 
+    border-bottom: solid;
+    border-color: #00c2cb;
     transition: 250ms;
 }
 
@@ -109,20 +129,28 @@ footer h2{
     justify-content: center;
 }
 
+.productos article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
 
 .productos article img{
-    max-width: 90%;
-    margin: 30px 0 10px 0;
+    width: 75%;
+    height: fit-content;
+    align-self: center;
+    margin: 0;
     
 }
 
 .productos a{
     cursor: pointer;
     text-decoration: none;
-    margin: 15px 20px;
-    border-radius: 7%;
+    margin: 10px 15px;
+    border-radius: 15px;
     background-color: white;
-    width: 320px;
+    width: 225px;
     transform: 1s all;
     text-align: center;
 }
@@ -130,19 +158,24 @@ footer h2{
 .productos article:hover{
     transform: scale(0.95);
     transition: 700ms;
+    color: #00c2cb;
 }
 
 .productos article .infoDelProducto{
-    margin-bottom: 10px;
+    margin: 7px;
+    align-self: flex-end;
+    font-family: 'Russo One', sans-serif;   
 }
 
 .productos article .descripcion{
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     width: 100%;
+    margin: 0;
 }
 
 .productos article .precio{
+    margin: 0;
     font-size: 15px;
     text-align: center;
 }
@@ -151,29 +184,7 @@ footer h2{
 
         /*  Carousle    */
 
-.carousel-caption h3{
-    font-size: 15px;
-}
 
-.carousel-caption p{
-    font-size: 10px;
-}
-
-.carousel-indicators li{
-    background-color: gray !important;
-}
-
-.item{
-    width: 90vw;
-    height: 50vw;
-}
-
-
-.carousel{
-    display: flex;
-    flex-wrap: initial;
-    justify-content: center;
-}
         /*  Fin Carousel    */
 
 .fas{
@@ -252,6 +263,9 @@ footer h2{
 .logo form{
     display: flex;
     align-content: center;
+    background-color: white;
+    border-radius: 19px;
+    width: 50vw;
 }
 
 .logo form button{
@@ -263,95 +277,212 @@ footer h2{
 }
 
 /* productDetail.html */
-.section-producto {
+.nav header {
+    display:hidden;
+}
+.logo .carrito {
+    display:none;
+}
+.logo .inicio-sesion {
+    display:none;
+}
+.menuButton {
+    display: block;
+}
+.product-section {
+
+    margin: auto;
+    margin-top: 15px;
+    width: 90%;
+    border: 1px solid gray;
+    padding: 10px;
     background-color: white;
-    margin: 15px 20px;
+    border-radius: 7px;
+    font-family: 'Russo One', sans-serif;
+    display: block;
+}
+
+.product-name {
+    margin-top: 10px;
+    border-top: 2px solid gray;
+}
+
+.price {
+    font-size:24px;
+    color: #00c2cb;
+}
+
+.quantity-addtocart {
+    text-align: center;
+}
+
+.quantity-addtocart input{
+    border-radius: 8px;
+    margin-right: 5px;
+
+}
+
+.quantity-addtocart button{
+    border-radius: 10px;
+    background-color:  #00c2cb;
+    box-sizing: border-box;
+}
+
+.quantity-addtocart button p {
+    margin: auto;
+}
+
+.description {
+    margin-top: 15px;
+    border-top: 2px solid gray;
+    padding: 5px;
+}
+
+.description p {
+    margin-top: 10px;
+}
+
+.title {
+    margin: auto;
+    margin-top: 15px;
+    width: 90%;
+    font-size: 20px;
+    color: black;
+    width: 50%;
+    background-color: #00c2cb;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+    
+}
+.related-products {
+    margin: auto;
+    margin-top: 15px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 7px;
+    font-family: 'Russo One', sans-serif;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-
-.contenedor1 {
-    display: flex;
-    width: 50%;
-    height: 101px;
-    color: ivory;
-    font-family:'Oxanium', cursive;
-    margin: 10px;
+.flex-item .precio{
+    border-radius: 8px;
+    text-align: center;
+}
+.nombre-producto,.precio {
+    background-color: white;
+    padding: 5px;
 }
 
-.contenedor2{
-    display: flex;
-    flex-direction: column;
-}
-
-.data2-producto {
+.delete-edit {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
     justify-content: flex-end;
-    font-family: 'Oxanium', cursive;
+    margin: auto;
+    width:90%;
+}
+.delete-product button {
+    background-color: #00c2cb;
+    margin-right: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 10px;
+}
+.edit-product button {
+    background-color: #00c2cb;
+    margin-right: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 10px;
+}
+.menuButton {
+    display:block;
 }
 
-.data1-producto {
-    max-width: 40%;
-    font-family: 'Oxanium';
-}
 
-.camion {
-    color: gray;
-}
 
-.local {
-    color: gray;
-}
 
-h4.titulo {
-    font-family: 'Oxanium', cursive;
-    color:ivory;
+/* register.html */
+
+.register {
     text-align: center;
-}
-.contenedor4 {
-    display: block;
-    color: ivory;
-    font-family:'Oxanium', cursive;
-    font-size: 12px;
-
-}
-
-.contenedor4 h4 {
-    text-align: center;
-}
-
-
-
-
-.producto {
-    cursor: pointer;
-    text-decoration: none;
-    margin: 15px 20px;
-    border-radius: 7%;
     background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mainAdmin{
+    display: flex;
+    justify-content: center;
+}
+
+main .adminForm{
+    background-color: white;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0;
+    text-align: -webkit-center;
+    padding: 3vh;
+}
+
+#Descripcion{
+    width: 50%;
+}
+
+.radioInputs{
+    width: 20%;
+    text-align: left;
+}
+
+.radioInputs input{
+    margin-right: 10px;
+}
+
+.fileInputs{
+    border: 0;
+    background-color: blue;
+}
+
+
+/* ProductCart.html */
+.contenedor-carrito {
+    margin: 20px;
     width: 320px;
-    transform: 1s all;
-    text-align: center;
-    color: black;
+}
+.caja-producto{
+    width: 320px;
+    height: 300px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: space-between;
+    font-size:20px;
+    background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    padding-top: 15px;
 }
 
-.producto .product-img {
-    max-width: 90%;
-    margin: 30px 0 10px 0;
+.caja-detalles {
+    column-count: 3;
+    display: inline-block;
 }
 
-.producto .nombre-producto {
-    font-family: 'Russo One', sans-serif;
-    border-color: gray;
-    margin: 2px;
-    color: #00C2CB;
-}
-
-.precio {
-    font-family: 'Russo One', sans-serif;
-    border-color: gray;
-    margin: 2px;
-    color:black;
+.total-carrito {
+    float: right;
+    margin-right: 20px;
+    background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    padding: 15px;
+    display: block;
+    
 }
 
   /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
@@ -362,113 +493,153 @@ h4.titulo {
     text-align: center;
   }
 
-/* login.html */
-
-.login{
-    text-align: center;
-    background-color: whitesmoke;
-    font-family: 'Oxanium', cursive;
-    padding-top: 10px ;
-    padding-bottom: 20px;
-}
-
-.fa-sync-alt{
-    font-size: 25px;
-}
+  .titulo-Section img{
+      width: 80%;
+  }
 
 
-.caja-producto{
-    background-color: #e6e6e6;
-    display: flex;
-    flex-wrap: wrap;
+/* Dropdown Button */
+.dropbtn {
+    text-decoration: none;
+    font-size: 1.5vw;
+    background-color: white;
+    color: black;
+    align-self: center;
+    font-family: 'Russo One', sans-serif;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid;
+    border-color: white;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 13vw;
     align-items: center;
-    font-size:20px;
-    font-family: 'Oxanium', cursive;
-    padding: 10px;
-    border-radius: 8px;
-}
+    align-self: center;
+  }
 
-.caja-producto a{
-    display: inline-block;
-    padding-right: 10px;
-}
-
-.caja-detalles {
-    column-count: 3;
-    display: inline-block;
-}
-
-/* ProductCart.html */
-.contenedor-carrito {
-    margin: 20px;
-    padding: 20px;
-    width: 90%;
-    background-color: white;
-    border-radius: 20px;
-}
-
-.headerCart{
+  .navCategorias{
+      display: flex;
+      height: 100%;
+      align-content: center;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
     display: none;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-}
-
-.total-carrito {
+    position: absolute;
     background-color: white;
-    float: right;
-    width: max-content;
-    margin: 20px;
-    font-family: 'Oxanium', cursive;
-    padding: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
     display: block;
+    border-bottom: 0;
+    font-size: 1.5vw;
+    padding: 0;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+      background-color: white;
+      border-radius: 0;
+      border: 0;
+    }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    text-decoration: none;
+    color: #00c2cb;
+    border-color: #00c2cb;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 250ms;
+    }
+
+
+/* PERFIL */
+.cajita {
+    display:flex;
+    flex-wrap: nowrap;
+    background: #00c2cb;
+    width: 90%;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+}
+.saludo-perfil h2 {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 5px;
+    padding: 2px;
+    width: 90%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.saludo-perfil img {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+  }
+.saludo-mail {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 2px;
+    padding: 5px;
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 50px;
+    text-align: center;
     border-radius: 10px;
 }
 
-.fa-truck{
-    font-size: 20px !important;
-}
-
-/* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
-
-.titulo-section{
-    color:#00c2cb;
-    font-family: 'Russo One', sans-serif;
-    text-align: center;
-}
-
-/* register.html */
-
-.register {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Oxanium', cursive;
-}
-
-.titulo-register {
-    color:#00c2cb;
-    font-family: 'Russo One', sans-serif;
-    text-align: left;
-    margin: 30px;
-}
-
-.register-form{
-    width: 80%;
-    background-color: white;
-    border-radius: 30px;
-    padding: 15px;
-    margin: 15px;
-}
-input[type=file]{
-    display: inline-block !important;
-}
 
 @media (min-width: 791px){
-    .item{
-        width: 80vw;
-        height: 50vh;
-        margin: auto;
+    header nav{
+        display: flex;
+        visibility: visible;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
+        height: 6vh;
     }
+
+    .dropbtn{
+        font-size: 2.5vw;
+    }
+
+    .container{
+        width: 60vw;
+    }
+
+    /* .item{
+        width: 60vw;
+        height: auto;
+        margin: auto;
+    } */
 
     .item a{
         text-align: center;
@@ -485,7 +656,7 @@ input[type=file]{
     }
 
     header{
-        height: 23vh;
+        height: auto;
         padding-top: 10px;
     }
     
@@ -497,6 +668,12 @@ input[type=file]{
     .logo a img{
         width: 12vh;
     }
+    .logo .inicio-sesion {
+        display:block;
+    }
+    .logo .carrito {
+        display:block;
+    }
 
     header .logo img:hover{
         transform: scale(0.95);
@@ -505,8 +682,8 @@ input[type=file]{
     }
     
     header .logo a i:hover{
-        background-color: #00c2cb;
-        color: #000059;
+        background-color: white;
+        color: #00c2cb;
         transform: scale(0.85);
         transition: 700ms;
     }
@@ -528,74 +705,130 @@ input[type=file]{
         border-radius: 20px;
         padding: 10px 40px;
     }
+    /* productDetail */
+     .product-section {
+        margin: auto;
+        margin-top: 15px;
+        width: 90%;
+        border: 1px solid gray;
+        padding: 10px;
+        background-color: white;
+        border-radius: 7px;
+        font-family: 'Russo One', sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-section section {
+        margin: 0 auto;
+    }
+    .product-name {
+        border-top: 2px;
+    }
+    .product-name h4 {
+        font-size: 36px; 
+        margin-top: 15px;
+    }
+    
+    .price {
+        font-size:40px;
+        color: #00c2cb;
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    .quantity-addtocart {
+        margin-top: 40px;
+        text-align: right;
+    }
+    
+    .quantity-addtocart input{
+        border-radius: 8px;
+        margin-right: 10px;
+        width: 30px;
+        height: 40px;
+    
+    }
+    
+    .quantity-addtocart button{
+        border-radius: 10px;
+        background-color:  #00c2cb;
+        box-sizing: border-box;
+        
+    }
+    
+    .quantity-addtocart button p {
+        margin: auto;
+        font-size: 24px;
+    }
+    .description {
+        margin-top: 15px;
+        border-top: 2px solid gray;
+        padding: 5px;
+    }
+    
+    .description p {
+        margin-top: 15px;
+        font-size: 20px;
+    } 
 
-    .section-producto {
-        border-radius: 20px;
-        padding: 20px;
-        width: 75%;
-        height: 80%;
+    .title {
+        margin: auto;
+        margin-top: 15px;
+        width: 90%;
+        font-size: 35px;
+        color: black;
+        width: 50%;
+        background-color: #00c2cb;
+        text-align: center;
+        border-radius: 8px;
+        
+    }
+    .related-products {
+        margin: auto;
+        margin-top: 15px;
+        width: 90%;
+        padding: 10px;
+        border-radius: 7px;
+        font-family: 'Russo One', sans-serif;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 
-    .mainDetail{
-        display: flex;
-        justify-content: center;
+    .flex-item .precio{
+        border-radius: 8px;
+        text-align: center;
     }
-
-    .data1-producto{
-        max-width: 35%;
-        padding: 20px;
-        border: solid 1px silver;
-        border-radius: 15px;
-        background-color: whitesmoke;
+    .nombre-producto,.precio {
+        background-color: white;
     }
-
-    .contenedor1 {
-        display: flex;
-        margin: 0;
-        max-width: 50%;
-        height: auto;
-        color: ivory;
-        font-family:'Oxanium', cursive;
-    }
-
-    .nombre-producto{
-        margin: 0;
-        font-size: 40px;
-        font-family: 'Oxanium';
-        font-weight: bold;
-    }
-
-    .data1-producto p{
-        margin: 0;
-        font-size: 35px;
-        font-weight: 300;
-    }
-
-    .desc{
-        border-bottom: solid 1px lightgray;
-    }
-
-    .fotoProducto2, .fotoProducto3 {
-        width: 100px;
-    }
-
-    .fotoProducto1 {
-        width: 100%;
-        justify-self: center;
-    }
-
-    .section-producto .data2-producto {
-        justify-content: flex-end;
-    }
-
-    .contenedor4 {
-        display: flex;
+    .delete-edit {
+        display:flex;
         flex-wrap: wrap;
-        color: ivory;
-        font-family:'Oxanium', cursive;
-        font-size: 12px;
+        flex-direction: row;
+        box-sizing: border-box;
+        justify-content: flex-end;
+        margin: auto;
+        width: 90%;
     }
+    .delete-product button {
+        background-color: #00c2cb;
+        margin-right: 10px;
+        margin-top: 15px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    .edit-product button {
+        background-color: #00c2cb;
+        margin-right: 10px;
+        margin-top: 15px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    .menuButton {
+        display:none;
+    }
+    
     /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
 .titulo-section{
@@ -604,34 +837,109 @@ input[type=file]{
     text-align: center;
     }
 }
+/* perfil */
+.saludo-perfil h2 {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 5px;
+    padding: 2px;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.saludo-perfil img {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+  }
+.saludo-mail {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 2px;
+    padding: 5px;
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
 
-@media (min-width: 1290px){
+@media (min-width: 1000px){
 
     header{
-        height: 23vh;
+        height: auto;
         padding-top: 10px;
+        background-color: #000059;
     }
     
     header .logo{
-        height: 13vh;
+        height: auto;
         max-height: none;
     }
 
+    header .logo a img{
+        width: 4vw;
+    }
+
     header nav{
+        display: flex;
+        visibility: visible;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
         height: 7vh;
     }
 
     header nav a{
-        font-size: 2vw;
+        font-size: 1.5vw;
         padding: 3px 20px;
+    }
+
+    .container{
+        width: 65vw !important;
     }
 
     .logo form button{
         min-width: 2vw;
+        border: 0;
+        background-color: white;
+    }
+
+    .logo form button i{
+        font-size: 1em;
+        background-color: white;
     }
 
     #searchBar {
         font-size: 20px;
+        border: 0;
+        border-radius: 19px;
+        padding-left: 2vw;
+        width: 46vw;
+        font-family: 'Russo One', sans-serif;
+        text-align: inherit;
+    }
+
+    .logo i{
+        font-size: 2vw;
+    }
+
+    .logo .inicio-sesion {
+        display:block;
+    }
+    .logo .carrito {
+        display:block;
     }
 
     .logo a img{
@@ -643,11 +951,165 @@ input[type=file]{
         border-radius: 30px;
     }
 
+    .dropbtn{
+        font-size: 1.5vw;
+    }
+
+    .navCategorias{
+        display: flex;
+        height: 100%;
+        align-content: center;
+    }
+
     .destacados h2{
         border-radius: 20px;
         padding: 10px 40px;
     }
 
+    .productos article{
+        height: 320px;
+    }
+
+
+    .section-producto {
+        border-radius: 20px;
+    }
+    /* productDetail */
+    .product-section {
+        margin:auto;
+        margin-top: 15px;
+        width: 90%;
+        border: 1px solid gray;
+        padding: 10px;
+        background-color: white;
+        border-radius: 15px;
+        font-family: 'Russo One', sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    .product-section .product-img {
+        width: 55%;
+        margin: 15px;
+    }
+
+    .product-img img {
+        width:90%;
+    }
+    .product-section section {
+        width:40%;
+        margin-right: 10px;
+        margin-top: 50px;
+
+    }
+    .quantity-addtocart {
+        margin-right: 30px;
+    }
+    .product-name h4 {
+        font-size: 50px; 
+        margin-top: 15px;
+    }
+    .price {
+        font-size:60px;
+        color: #00c2cb;
+        text-align: left;
+        margin-top: 60px;
+    }
+    
+    .quantity-addtocart {
+        margin-top: 150px;
+        text-align: right;
+    }
+    
+    .quantity-addtocart input{
+        border-radius: 8px;
+        margin-right: 10px;
+        width: 50px;
+        height: 55px;
+    
+    }
+    
+    .quantity-addtocart button{
+        border-radius: 10px;
+        background-color:  #00c2cb;
+        box-sizing: border-box;
+        
+    }
+    
+    .quantity-addtocart button p {
+        margin: auto;
+        font-size: 36px;
+        padding: 5px;
+    }
+    .description {
+        width: 100%;
+    }
+    .description p {
+        font-size: 36px;
+    }
+    .delete-edit {
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        box-sizing: border-box;
+        justify-content: flex-end;
+        margin: auto;
+        width:90%;
+
+    }
+    .delete-product button {
+        background-color: #00c2cb;
+        margin-right: 10px;
+        margin-top: 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        text-align: right;
+    }
+    .edit-product button {
+        background-color: #00c2cb;
+        margin-right: 10px;
+        margin-top: 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        text-align: right;
+    }
+    
+/* perfil */
+.saludo-perfil h2 {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 5px;
+    padding: 2px;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.saludo-perfil img {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+  }
+.saludo-mail {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 2px;
+    padding: 5px;
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
 
 /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
@@ -658,3 +1120,14 @@ input[type=file]{
     }
 }
 
+    .titulo-register {
+    color:#00c2cb;
+    font-family: 'Russo One', sans-serif;
+    text-align: left;
+    margin: 30px;
+}
+
+.register {
+    margin: 0 20%;
+    border-radius: 30px;
+}

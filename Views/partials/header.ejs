@@ -1,19 +1,28 @@
 <header>
     <div class="logo">
-        <a href="/"><img width="60px" src="/imagenes/LaCantinaDelAndroideLogo.png" alt=""></a>
+        <a href="/"><img width="60px" src="/imagenes/LogoMarcos.png" alt=""></a>
         <form action="/" method="POST">
           <input type="text" placeholder="¿Qué estas buscando?" id="searchBar">
           <button id="serachBttn"><i class="fas fa-search"></i></button>
         </form>
-        <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
-        <a href="/users"><i class="fas fa-user-circle"></i></a>
+        <button class="menuButton"><i class="fas fa-bars"></i></button>
+        <a href="Carrito" class="carrito"><i class="fas fa-shopping-cart"></i></a>
+        <a href="/users" class="inicio-sesion"><i class="fas fa-user-circle"></i></a>
     </div>
     <nav>
-        <a href="/">Home</a>
-        <a href="categorias">Categorias</a>
-        <a href="heroinas">Heroínas</a>
-        <a href="blog">Blog</a>
-        <a href="nosotros">Sobre Nosotros</a>
+        <a href="/">HOME</a>
+          <div class="dropdown">
+            <div class="navCategorias">
+              <button class="dropbtn">CATEGORIAS</button>
+            </div>
+              <div class="dropdown-content">
+                <a href="/categorias/Star Wars">Star Wars</a>
+                <a href="/categorias/Los Simpsons">Los Simpsons</a>
+                <a href="/categorias/Marvel">Marvel</a>
+              </div>
+            </div>
+        <a href="heroinas">HEROINAS</a>
+        <a href="blog">BLOG</a>
+        <a href="nosotros">SOBRE NOSOTROS</a>
     </nav>
 </header>
-

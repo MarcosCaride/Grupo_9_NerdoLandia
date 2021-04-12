@@ -1,35 +1,102 @@
 const fs = require('fs')
 const path = require('path');
-
-const usersFilePath =  path.join(__dirname, '../data/usersData.json')
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
+const { validationResult } = require('express-validator')
+const bcryptjs = require('bcryptjs')
+const session = require ('express-session');
+const User = require('../models/User');
+const { send } = require('process');
 
 const usersController = {
-    login:(req, res) => {
-        res.render('login')
-    },
-
+    
     register: (req, res) => {
         res.render('register')
     },
-
+    
     guardado:  (req, res) => {
-        let nuevoUsuario = req.body;
-        nuevoUsuario.id = users.length + 1;
-        let imag;
-        if(!req.file ){
-            imag = "default-placeholder.png"
-        }else{
-        imag = req.file.filename;
+        let errores = validationResult(req)
+        
+        if (errores.errors.length > 0){
+            return res.render('register', {
+                errors: errores.mapped(),
+                old: req.body 
+            })
         }
-        nuevoUsuario.image = imag;
-        users.push(nuevoUsuario)
-        let nuevosUsuarios = JSON.stringify(users, null, " ")
-        fs.writeFileSync(usersFilePath, nuevosUsuarios)
-
-        res.redirect('/')
+        
+        let userInDB = User.findByField('email', req.body.email)
+        
+        if (userInDB){
+            return res.render('register', { errors: {
+                'email':{
+                    msg: 'Ya hay un usuarion con este email'
+                }
+            },
+            old: req.body
+        })
+        
     }
+    let userToCreate= {
+        ...req.body,
+        avatar: req.file.filename,
+        contraseña: bcryptjs.hashSync(req.body.contraseña, 10)
+    }
+    
+    User.create(userToCreate)
+    return res.redirect('/')
 
+    },
+
+    login:(req, res) => {
+        console.log(req.session)
+        res.render('login')
+    },
+
+    loginProcess: (req, res) => {
+        let userToLogIn = User.findByField('email', req.body.email)
+        //res.send(userToLogIn)
+
+        let isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogIn.contraseña)
+
+        if (isOkThePassword) {
+            delete userToLogIn.contraseña;
+            req.session.userLogged = userToLogIn;
+
+            if (req.body.recordarme){
+                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2 })
+            }
+
+            return res.redirect ('/users/perfil');   
+        }    
+            return res.render('login', {
+                errors: {
+                    contraseña: {
+                        msg: 'Contraseña incorrecta'
+                    }
+                }
+            })
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'Email incorrecto'
+                }
+            }
+        })
+    },
+
+    perfil: (req, res) => {
+        console.log(req.cookies.userEmail);
+        //console.log('Estas en LOGIN')
+       //console.log(req.session);
+        return res.render ('perfil', {
+            user: req.session.userLogged
+        })
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        //console.log(req.session)
+        return res.redirect ('index');
+    }
 }
 
 module.exports = usersController

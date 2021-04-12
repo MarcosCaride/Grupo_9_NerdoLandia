@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+  <%- include('./partials/header') %>
+
+    <br>
+    <br>
+    <br>
+
+    <section class="destacados">
+        <h2>Heroinas</h2>
+  
+        <div class="productos">
+          <% for (product of Heroinas){%>
+  
+          <a href="/productDetail/detail/<%= product.id %>">
+            <article>
+              <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
+              <div class="infoDelProducto">
+                <p class="descripcion"><%= product.Nombre %></p>
+                <p class="precio">$<%= product.Precio %></p>
+              </div>
+            </article>
+          </a>
+  
+          <% } %>
+  
+        </div>
+      </section>
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <%- include('./partials/footer') %> 
+    
+</body>
+</html>

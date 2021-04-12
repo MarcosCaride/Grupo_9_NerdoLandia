@@ -4,7 +4,6 @@
 <body>
     <%- include('./partials/header') %>
 
-    <form action="/users" method="POST" enctype="multipart/form-data">
 
     <div class="titulo-section">
         <h2>Creá tu cuenta</h2>
@@ -13,58 +12,73 @@
     <!-- Formulario de Registro -->
     <div class="register">
 
-        <form action="/register" method="POST" enctype="multipart/form-data">
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
             <main class="register-form">
+                
                 <br>
                 <label for="nombre">Nombre y apellido:</label>
                 <br>
-                <input type="text" name="nombre-apellido" id="nombre-apellido"> 
+                <input type="text" name="nombreApellido" value="<%= locals.old && old.nombreApellido %>"> 
+                <% if(locals.errors && errors.nombreApellido){ %>
+                <p><%= errors.nombreApellido.msg %></p>
+                <% } %>
                 <br>
                 <br>
                 
                 <label for="emaiL"> Email</label>
                 <br>
-                <input type="email" name="email" type="email">
-                
+                <input type="email" name="email" value="<%= locals.old && old.email %>">
+                <% if(locals.errors && errors.email){ %>
+                    <p><%= errors.email.msg %></p>
+                <% } %>
                 <br>
                 <br>
                 
             <label for="domicilio">Domicilio:</label>
             <br>
-            <input type="text" name="domicilio" id="domicilio"> 
+            <input type="text" name="domicilio" value="<%= locals.old && old.domicilio %>"> 
+            <% if(locals.errors && errors.domicilio){ %>
+                <p><%= errors.domicilio.msg %></p>
+            <% } %>
             <br>
             <br>
             
             <label for="telefono">Teléfono:</label>
             <br>
-            <input type="text" name="telefono" id="telefono"> 
+            <input type="text" name="telefono" value="<%= locals.old && old.telefono %>"> 
+            <% if(locals.errors && errors.telefono){ %>
+                <p><%= errors.telefono.msg %></p>
+            <% } %>
             <br>
             <br>
             
             
             <label> Fecha de nacimiento</label>
             <br>
-            <input type="date" name="fecha" value="2021-07-22" min="2018-01-01" max="2022-12-31">
-            
+            <input type="date" name="fecha" value="<%= locals.old && old.fecha %>">
+            <% if(locals.errors && errors.fecha){ %>
+                <p><%= errors.fecha.msg %></p>
+            <% } %>
             <div class="foto-perfil">
                 <label> <h4>Seleccioná tu foto de perfil </h4>
-                    <input type="file" name="file" >
+                    <input type="file" name="file" value="<%= locals.old && old.file %>">
                 </label>
+                <% if(locals.errors && errors.file){ %>
+                    <p><%= errors.file.msg %></p>
+                <% } %>
             </div>
             <br>
             <div class="contraseña"> 
-                <h4>Ingresá tu cotraseña</h4>
+                <h4>Ingresá una cotraseña</h4>
                 <label for="contraseña">
-                    <input type="text" name="contraseña" id="contraseña">
+                    <input type="password" name="contraseña" value="<%= locals.old && old.contraseña %>">
                 </label>
+                <% if(locals.errors && errors.contraseña){ %>
+                    <p><%= errors.contraseña.msg %></p>
+                <% } %>
             </div>
             <br>
-            <div class="confirmar-contraseña"> 
-                <h4>Confirmá tu cotraseña</h4>
-                <label for="confirmar-contraseña">
-                    <input type="text" name="confirmar-contraseña" id="confirmar-contraseña">
-                </label>
-            </div>
+            <br>    
             <div class="no-soy-un-robot">
                 <label> No soy un robot
                     <input type="checkbox" name="no-soy-un-robot" value="no-soy-un-robot">

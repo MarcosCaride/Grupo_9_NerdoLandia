@@ -1,91 +1,34 @@
 [
  {
-  "id": 1,
-  "nombre": "Marcos",
-  "apellido": "Caride",
-  "e-mail": "marcoscaride72@gmail.com",
-  "contraseña": "Marcos004",
-  "rol": "Admin",
-  "fotoPerfil": "/users/Linus.jpg"
- },
- {
-  "nombre-apellido": "Daniela De Lellis",
-  "email": "danieladelellis@gmail.com",
-  "domicilio": "dlkfs",
-  "telefono": "9888",
-  "fecha": "2021-07-22",
-  "contraseña": "",
-  "confirmar-contraseña": "",
   "id": 2,
-  "image": "default-placeholder.png"
- },
- {
-  "nombre-apellido": "Marcos Caride",
+  "nombreApellido": "Marcos Caride",
   "email": "marcoscaride72@gmail.com",
-  "domicilio": "isoriwe",
-  "telefono": "847584",
-  "fecha": "2021-06-22",
-  "contraseña": "12345",
-  "confirmar-contraseña": "12345",
-  "no-soy-un-robot": "no-soy-un-robot",
+  "domicilio": "Pueyrredon 1780 5A",
+  "telefono": "0111539063944",
+  "fecha": "2004-01-03",
+  "contraseña": "$2a$10$dktUcZBMGFALyInGBzqPmuNAWcZ.w3P15AasKkqquDQLh4IXCFz4u",
+  "avatar": "file-1618004136724.jpg"
+ },
+ {
   "id": 3,
-  "image": "default-placeholder.png"
+  "nombreApellido": "Daniela De Lellis",
+  "email": "danieladelellis@gmail.com",
+  "domicilio": "Palacios 1330",
+  "telefono": "47251111",
+  "fecha": "1990-04-01",
+  "contraseña": "$2a$10$BcTRAJ1LbP1BP6eDZK2RHuWK1eu3U6DAy8Hhz7RdUvnhnnvqdv/za",
+  "no-soy-un-robot": "no-soy-un-robot",
+  "avatar": "file-1618189334003.jpg"
  },
  {
-  "nombre-apellido": "",
-  "email": "",
-  "domicilio": "",
-  "telefono": "",
-  "fecha": "2021-07-22",
-  "contraseña": "",
-  "confirmar-contraseña": "",
   "id": 4,
-  "image": "file-1615594528959.jpg"
- },
- {
-  "nombre-apellido": "",
-  "email": "",
-  "domicilio": "",
-  "telefono": "",
-  "fecha": "2021-07-22",
-  "contraseña": "",
-  "confirmar-contraseña": "",
-  "id": 5,
-  "image": "file-1615594621715.jpg"
- },
- {
-  "nombre-apellido": "",
-  "email": "",
-  "domicilio": "",
-  "telefono": "",
-  "fecha": "2021-07-22",
-  "contraseña": "",
-  "confirmar-contraseña": "",
-  "id": 6,
-  "image": "file-1615594705794.jpg"
- },
- {
-  "nombre-apellido": "Marina Gle",
-  "email": "mgle@gmailcom",
-  "domicilio": "dfs",
-  "telefono": "684",
-  "fecha": "2021-07-07",
-  "contraseña": "dyt",
-  "confirmar-contraseña": "dyt",
+  "nombreApellido": "Gerardo Schafer",
+  "email": "schafergerardo@gmail.com",
+  "domicilio": "a 123",
+  "telefono": "8290",
+  "fecha": "1989-03-02",
+  "contraseña": "$2a$10$pN.JvCT0IOWQZ1UgbwH29uaFkDBoV2.JwHcIsowmpdLal9tMmyHg.",
   "no-soy-un-robot": "no-soy-un-robot",
-  "id": 7,
-  "image": "file-1615595480856.jpg"
- },
- {
-  "nombre-apellido": "maria gle",
-  "email": "mariagl@gmail.com",
-  "domicilio": "gdkljf",
-  "telefono": "475348",
-  "fecha": "2021-07-14",
-  "contraseña": "123",
-  "confirmar-contraseña": "123",
-  "no-soy-un-robot": "no-soy-un-robot",
-  "id": 8,
-  "image": "file-1615595592145.jpg"
+  "avatar": "file-1618191391482.JPG"
  }
 ]

@@ -1,15 +1,5 @@
 [
  {
-  "nombre-apellido": "Daniela De Lellis",
-  "email": "danieladelellis@gmail.com",
-  "domicilio": "dlkfs",
-  "telefono": "9888",
-  "fecha": "2021-07-22",
-  "contraseña": "",
-  "id": 1,
-  "avatar": "default-placeholder.png"
- },
- {
   "id": 2,
   "nombreApellido": "Marcos Caride",
   "email": "marcoscaride72@gmail.com",
@@ -18,5 +8,27 @@
   "fecha": "2004-01-03",
   "contraseña": "$2a$10$dktUcZBMGFALyInGBzqPmuNAWcZ.w3P15AasKkqquDQLh4IXCFz4u",
   "avatar": "file-1618004136724.jpg"
+ },
+ {
+  "id": 3,
+  "nombreApellido": "Daniela De Lellis",
+  "email": "danieladelellis@gmail.com",
+  "domicilio": "Palacios 1330",
+  "telefono": "47251111",
+  "fecha": "1990-04-01",
+  "contraseña": "$2a$10$BcTRAJ1LbP1BP6eDZK2RHuWK1eu3U6DAy8Hhz7RdUvnhnnvqdv/za",
+  "no-soy-un-robot": "no-soy-un-robot",
+  "avatar": "file-1618189334003.jpg"
+ },
+ {
+  "id": 4,
+  "nombreApellido": "Gerardo Schafer",
+  "email": "schafergerardo@gmail.com",
+  "domicilio": "a 123",
+  "telefono": "8290",
+  "fecha": "1989-03-02",
+  "contraseña": "$2a$10$pN.JvCT0IOWQZ1UgbwH29uaFkDBoV2.JwHcIsowmpdLal9tMmyHg.",
+  "no-soy-un-robot": "no-soy-un-robot",
+  "avatar": "file-1618191391482.JPG"
  }
 ]

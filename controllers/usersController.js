@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path');
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
-
+const session = require ('express-session');
 const User = require('../models/User');
 const { send } = require('process');
 
@@ -46,16 +46,21 @@ const usersController = {
     },
 
     login:(req, res) => {
+        console.log(req.session)
         res.render('login')
     },
 
     loginProcess: (req, res) => {
         let userToLogIn = User.findByField('email', req.body.email)
-        if(userToLogIn) {
-            let comparePasswords = bcryptjs.compareSync(req.body.contraseña, userToLogIn.contraseña)
-            if(comparePasswords){
-                return res.send('Log in exitoso')
-            }
+        //res.send(userToLogIn)
+
+        let isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogIn.contraseña)
+
+        if (isOkThePassword) {
+            delete userToLogIn.contraseña;
+            req.session.userLogged = userToLogIn;
+            return res.redirect ('/users/perfil');   
+        }    
             return res.render('login', {
                 errors: {
                     contraseña: {
@@ -63,7 +68,6 @@ const usersController = {
                     }
                 }
             })
-        }
         return res.render('login', {
             errors: {
                 email: {
@@ -72,6 +76,14 @@ const usersController = {
             }
         })
     },
+
+    perfil: (req, res) => {
+        console.log('Estas en LOGIN')
+        console.log(req.session);
+        return res.render ('perfil', {
+            user: req.session.userLogged
+        })
+    }
 }
 
 module.exports = usersController

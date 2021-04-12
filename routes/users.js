@@ -12,6 +12,6 @@ router.get('/', usersController.login);
 router.post('/', usersController.loginProcess);
 router.get('/register', usersController.register);
 router.post('/register', uploadFile.single('file'), validationRegister, usersController.guardado)
-
+router.get ('/perfil', usersController.perfil)
 
 module.exports = router

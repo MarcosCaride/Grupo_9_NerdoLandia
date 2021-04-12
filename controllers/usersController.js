@@ -83,6 +83,12 @@ const usersController = {
         return res.render ('perfil', {
             user: req.session.userLogged
         })
+    },
+
+    logout: (req, res) => {
+        req.session.destroy();
+        console.log(req.session)
+        return res.redirect ('index');
     }
 }
 

@@ -9,14 +9,14 @@
         <a href="Carrito" class="carrito"><i class="fas fa-shopping-cart"></i></a>
         <% if (locals.isLogged) { %> 
         <div class="dropdown">
-            <button class="dropbtn"><img src="Imagenes/Users/default.png" witdh='40' style="border-radius: 100%;" </button>
+            <button class="dropbtn"><img src="Imagenes/Users/default.png" witdh='40' style="border-radius: 100%"></button>
             Hola <%= locals.userLogged %> 
             <ul class="dropdown-content">
-              <a class='dropdown-item" href="/users/perfil">Perfil</a>
+              <a class="dropdown-item" href="/users/perfil">Perfil</a>
               <li><hr class="dropdown-divider"></li>
-              <a class="dropdown-item" href="user/logout"> Logout </a>
+              <a class="dropdown-item" href="user/logout">Logout </a>
             </ul> 
-        <% } %>       
+        <% } else %>       
         </div>
     </div>
     <nav>

@@ -54,6 +54,16 @@ const usersController = {
         let userToLogIn = User.findByField('email', req.body.email)
         //res.send(userToLogIn)
 
+        if(!userToLogIn){
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'Email incorrecto'
+                    }
+                }
+            })
+        }
+
         let isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogIn.contraseña)
 
         if (isOkThePassword) {
@@ -73,13 +83,6 @@ const usersController = {
                     }
                 }
             })
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'Email incorrecto'
-                }
-            }
-        })
     },
 
     perfil: (req, res) => {

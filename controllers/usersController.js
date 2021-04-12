@@ -95,7 +95,7 @@ const usersController = {
         res.clearCookie('userEmail');
         req.session.destroy();
         //console.log(req.session)
-        return res.redirect ('index');
+        return res.redirect ('/');
     }
 }
 

@@ -4,6 +4,10 @@ const router = express.Router();
 const productsController =require ('../controllers/productsController')
 const multer = require('multer')
 
+
+// Middlewares
+const authMiddleware = require('../Middlewares/authMiddleware')
+
 let storage = multer.diskStorage({
     destination: (req, res, cb) => {
         cb(null, './public/Imagenes/products');
@@ -21,7 +25,7 @@ router.get('/', productsController.productDetail);
 router.get('/detail/:id', productsController.detail)
 
 // Creacion de Productos
-router.get('/administrador', productsController.creador)
+router.get('/administrador', authMiddleware, productsController.creador)
 router.post('/', upload.single('file'), productsController.guardado)
 
 // Edicion de Productos

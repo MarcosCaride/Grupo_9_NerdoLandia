@@ -13,6 +13,6 @@ router.post('/', usersController.loginProcess);
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', uploadFile.single('file'), validationRegister, usersController.guardado)
 router.get ('/perfil', authMiddleware, usersController.perfil)
-router.post('/logout', usersController.logout);
+router.post('/perfil', usersController.logout);
 
 module.exports = router

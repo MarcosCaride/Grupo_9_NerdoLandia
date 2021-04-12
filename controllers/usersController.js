@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path');
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
-
+const session = require ('express-session');
 const User = require('../models/User');
 const { send } = require('process');
 
@@ -46,16 +46,26 @@ const usersController = {
     },
 
     login:(req, res) => {
+        console.log(req.session)
         res.render('login')
     },
 
     loginProcess: (req, res) => {
         let userToLogIn = User.findByField('email', req.body.email)
-        if(userToLogIn) {
-            let comparePasswords = bcryptjs.compareSync(req.body.contraseña, userToLogIn.contraseña)
-            if(comparePasswords){
-                return res.send('Log in exitoso')
+        //res.send(userToLogIn)
+
+        let isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogIn.contraseña)
+
+        if (isOkThePassword) {
+            delete userToLogIn.contraseña;
+            req.session.userLogged = userToLogIn;
+
+            if (req.body.recordarme){
+                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2 })
             }
+
+            return res.redirect ('/users/perfil');   
+        }    
             return res.render('login', {
                 errors: {
                     contraseña: {
@@ -63,7 +73,6 @@ const usersController = {
                     }
                 }
             })
-        }
         return res.render('login', {
             errors: {
                 email: {
@@ -72,6 +81,22 @@ const usersController = {
             }
         })
     },
+
+    perfil: (req, res) => {
+        console.log(req.cookies.userEmail);
+        //console.log('Estas en LOGIN')
+       //console.log(req.session);
+        return res.render ('perfil', {
+            user: req.session.userLogged
+        })
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        //console.log(req.session)
+        return res.redirect ('index');
+    }
 }
 
 module.exports = usersController

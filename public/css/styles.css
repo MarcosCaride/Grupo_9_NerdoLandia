@@ -522,8 +522,52 @@ footer h2{
     }
 
 
+/* PERFIL */
+.cajita {
+    display:flex;
+    flex-wrap: nowrap;
+    background: #00c2cb;
+    width: 90%;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
 
-
+}
+.saludo-perfil h2 {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 5px;
+    padding: 2px;
+    width: 90%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.saludo-perfil img {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+  }
+.saludo-mail {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 2px;
+    padding: 5px;
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
 
 
 @media (min-width: 791px){
@@ -748,6 +792,42 @@ footer h2{
     text-align: center;
     }
 }
+/* perfil */
+.saludo-perfil h2 {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 5px;
+    padding: 2px;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.saludo-perfil img {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+  }
+.saludo-mail {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 2px;
+    padding: 5px;
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
 
 @media (min-width: 1000px){
 
@@ -949,7 +1029,42 @@ footer h2{
         text-align: right;
     }
     
-
+/* perfil */
+.saludo-perfil h2 {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 5px;
+    padding: 2px;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.saludo-perfil img {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+  }
+.saludo-mail {
+    font-family: 'Russo One', sans-serif;
+    background-color: #00c2cb;
+    border-color: gray;
+    border: 2px;
+    padding: 5px;
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
 
 /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 

@@ -47,60 +47,23 @@
     <br>
 
     <section class="destacados">
-      <div class="titulo-Section">
-        <h2>Los Androides Del Mes</h2>
-      </div>
+      <h2>Los Androides Del Mes</h2>
+
       <div class="productos">
-        <a href="productDetail">
-          <article>
-            <img src="Imagenes/time-turner3.jpg" alt=>
-            <div class="infoDelProducto">
-              <p class="descripcion">Giratiempo</p>
-              <p class="precio">$2.500</p>
-            </div>
-          </article>
+        <% for (product of androidesDelMes){%>
 
-        <a href="homerMuumuu">
+        <a href="/productDetail/detail/<%= product.id %>">
           <article>
-            <img src="Imagenes/The-Simpsons-Homer-Muumuu-Funko-POP.jpg" alt="">
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
             <div class="infoDelProducto">
-              <p class="descripcion">Homer Muumuu Funko POP</p>
-              <p class="precio">$3.500</p>
+              <p class="descripcion"><%= product.Nombre %></p>
+              <p class="precio">$<%= product.Precio %></p>
             </div>
           </article>
         </a>
 
-        </a>
-        <a href="sithTrooper">
-          <article>
-            <img src="Imagenes/Star-Wars-Sith-Trooper-Action-Figure.jpeg" alt="">
-            <div class="infoDelProducto">
-              <p class="descripcion">Sith Trooper Action Figure</p>
-              <p class="precio">$5.000</p>
-            </div>
-          </article>
-        </a>
+        <% } %>
 
-        <a href="captainMarvel">
-          <article>
-            <img src="Imagenes/Marvel-Captain-Marvel-Funko-POP.jpg" alt="">
-            <div class="infoDelProducto">
-              <p class="descripcion">Capitana Marvel Funko POP</p>
-              <p class="precio">$3.500</p>
-            </div>
-          </article>
-        </a>
-
-        <a href="simpsonsHouse">
-          <article>
-            <img src="Imagenes/The-Simpsons-LEGO-The-Simpsons-House.jpg" alt="">
-            <div class="infoDelProducto">
-              <p class="descripcion">La Casa de Los Simpsons Lego</p>
-              <p class="precio">$6.000</p>
-            </div>
-          </article>
-        </a>
-        
       </div>
     </section>
 
@@ -120,10 +83,10 @@
 
         <a href="/productDetail/detail/<%= product.id %>">
           <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
             <div class="infoDelProducto">
-              <p class="descripcion"><%= product.name %></p>
-              <p class="precio">$<%= product.price %></p>
+              <p class="descripcion"><%= product.Nombre %></p>
+              <p class="precio">$<%= product.Precio %></p>
             </div>
           </article>
         </a>
@@ -151,10 +114,10 @@
 
         <a href="/productDetail/detail/<%= product.id %>">
           <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
             <div class="infoDelProducto">
-              <p class="descripcion"><%= product.name %></p>
-              <p class="precio">$<%= product.price %></p>
+              <p class="descripcion"><%= product.Nombre %></p>
+              <p class="precio">$<%= product.Precio %></p>
             </div>
           </article>
         </a>
@@ -182,10 +145,10 @@
 
         <a href="/productDetail/detail/<%= product.id %>">
           <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
             <div class="infoDelProducto">
-              <p class="descripcion"><%= product.name %></p>
-              <p class="precio">$<%= product.price %></p>
+              <p class="descripcion"><%= product.Nombre %></p>
+              <p class="precio">$<%= product.Precio %></p>
             </div>
           </article>
         </a>

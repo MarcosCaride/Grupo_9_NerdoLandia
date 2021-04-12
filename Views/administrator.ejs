@@ -7,54 +7,89 @@
       <div class="titulo-section">
         <h2>Creación de Productos</h2>
       </div>
-      <div class="register">
         
-        <main class="register-form">
-           <form action="/productDetail" method="POST" id=administrator enctype="multipart/form-data">
-             <br>
-             <div class="name">
-               <label for="name">Nombre del Producto</label>
-               <br>
-               <input type="text" name="name" id="name"> 
+        <main class="mainAdmin">
+           <form action="/productDetail" class="adminForm" method="POST" enctype="multipart/form-data">
+<br>
+  <!-- Nombre -->
+              <label for="Nombre">Nombre del Producto</label>
+<br>
+                <input type="text" name="Nombre" id="Nombre"> 
+  <!-- Nombre -->
+             
+<br>
+<br>
+
+  <!-- Descripcion -->
+                <label for="Descripcion">Ingersar descripción del producto</label>
+            <br>
+                <textarea name="Descripcion" id="Descripcion" rows="4"></textarea>
+  <!-- Descripcion -->
+
+<br>
+<br>
+
+  <!-- Categoria -->
+
+            <label>Ingresar la Categoria</label>
+<br>
+             <div class="radioInputs">
+              <label><input type="radio" name="Categoria" value="Marvel">  Marvel</label>
+<br>
+                <label><input type="radio" name="Categoria" value="LosSimpsons">  Los Simpsons</label>
+<br>
+                <label><input type="radio" name="Categoria" value="StarWars">  Star Wars</label>
              </div>
-             <br>
-   
-             <div class="description">
-               <label for="description">Ingersar descripción del producto</label>
-               <br>
-               <input type="text" name="description" type="description">
+             
+  <!-- Categoria -->
+
+<br>
+<br>
+
+  <!-- Tags -->
+            <label>Ingresa los Tags</label>
+            <br>
+             <div class="radioInputs">
+              <label><input type="checkbox" name="AndroideDelMes" value=true>  Androide del Mes</label>
+<br>
+                <label><input type="checkbox" name="Heroina" value=true>  Heroína</label>
+<br>
+                <label><input type="checkbox" name="Funko" value=true>  Funko</label>
+<br>
+                <label><input type="checkbox" name="Lego" value=true>  LEGO</label>
              </div>
-               <br>
-   
-             <div class="category">
-                 <label for="category">Ingresar Categoria</label>
-                 <br>
-                 <input type="text" name="category" id="category"> 
-                 <br>
-             </div>
-             <br>
+  <!-- Tags -->
            
-             <div class="image">
-                 <label for="category"> Cargar Imagen</label>
-                 <br>
-                 <input type="file" alt="Submit" name="file">
-             </div>
-             <br>
-           
-             <div class="price">
-                 <label for="price">Ingresar Precio</label>
-                 <br>
-                 <input type="number" name="price" id="price"> 
-             </div>
-             <br>
-   
+<br>
+<br>
+
+  <!-- Imagen -->
+            
+            <label for="file">Imagen del producto</label>
+<br>
+            <div class="">
+              <input type="file" alt="Submit" name="file" id="file">
+            </div>
+
+  <!-- Imagen -->
+<br>
+<br>
+  <!-- Precio -->
+            <label for="Precio">Ingresar Precio</label>
+<br>
+            <input type="number" name="Precio"> 
+          
+  <!-- Precio -->
+          
+          <br>
+          <br>
+          <br>
+             
              <button type="submit" value="Submit">Submit</button>
              <button type="reset" value="Reset">Reset</button>
              <br>
            </form>
          </main>
-
-      </div>
 
       <br>
       <br>

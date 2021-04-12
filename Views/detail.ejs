@@ -8,18 +8,18 @@
     <main class="mainDetail">
     <section class="section-producto">
         <article class="contenedor1"> 
-            <img src="/Imagenes/products/<%= product.image %>" alt= "<%= product.name %>" class="fotoProducto1">
+            <img src="/Imagenes/products/<%= product.image %>" alt= "<%= product.Nombre %>" class="fotoProducto1">
         </article>  
 
         <article class="data1-producto">
-            <h4 class="nombre-producto"> <%= product.name %> </h4>
-            <p class="desc"><%= product.description %></p>
+            <h4 class="nombre-producto"> <%= product.Nombre %> </h4>
+            <p class="desc"><%= product.Descripcion %></p>
 
             <br>
             <br>
 
             <article class="data2-producto">
-                <p class="precio">$<%= product.price %></p>
+                <p class="precio">$<%= product.Precio %></p>
                 <p class="cuotas">12 cuotas sin interés</p>
                 <input type="button" value="Envío a domicilio" name="B4" OnClick=>
                 <div class="envío-a-domicilio">

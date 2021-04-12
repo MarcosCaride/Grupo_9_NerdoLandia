@@ -258,6 +258,9 @@ footer h2{
 .logo form{
     display: flex;
     align-content: center;
+    background-color: white;
+    border-radius: 19px;
+    width: 50vw;
 }
 
 .logo form button{
@@ -460,7 +463,7 @@ footer h2{
 /* Dropdown Button */
 .dropbtn {
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 1.5vw;
     background-color: white;
     color: black;
     align-self: center;
@@ -472,7 +475,7 @@ footer h2{
   .dropdown {
     position: relative;
     display: inline-block;
-    width: auto;
+    width: 13vw;
     align-items: center;
     align-self: baseline;
   }
@@ -512,7 +515,9 @@ footer h2{
     border-radius: 15px;
     border-bottom: 1px;
     border-color: #00c2cb;
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 19px;
     transition: 250ms;
     }
 
@@ -530,6 +535,11 @@ footer h2{
         margin: 10px 0px 10px 0px;
         text-align: center;
         height: 6vh;
+    }
+
+    .dropbtn{
+        padding-top: 19px;
+        font-size: 2.5vw;
     }
 
     .container{
@@ -583,8 +593,8 @@ footer h2{
     }
     
     header .logo a i:hover{
-        background-color: #00c2cb;
-        color: #000059;
+        background-color: white;
+        color: #00c2cb;
         transform: scale(0.85);
         transition: 700ms;
     }
@@ -739,16 +749,21 @@ footer h2{
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1000px){
 
     header{
         height: auto;
         padding-top: 10px;
+        background-color: #000059;
     }
     
     header .logo{
-        height: 13vh;
+        height: auto;
         max-height: none;
+    }
+
+    header .logo a img{
+        width: 4vw;
     }
 
     header nav{
@@ -762,7 +777,7 @@ footer h2{
     }
 
     header nav a{
-        font-size: 2vw;
+        font-size: 1.5vw;
         padding: 3px 20px;
     }
 
@@ -772,11 +787,29 @@ footer h2{
 
     .logo form button{
         min-width: 2vw;
+        border: 0;
+        background-color: white;
+    }
+
+    .logo form button i{
+        font-size: 1em;
+        background-color: white;
     }
 
     #searchBar {
         font-size: 20px;
+        border: 0;
+        border-radius: 19px;
+        padding-left: 2vw;
+        width: 46vw;
+        font-family: 'Russo One', sans-serif;
+        text-align: inherit;
     }
+
+    .logo i{
+        font-size: 2vw;
+    }
+
     .logo .inicio-sesion {
         display:block;
     }
@@ -791,6 +824,16 @@ footer h2{
     .login{
         margin: 0 20%;
         border-radius: 30px;
+    }
+
+    .dropbtn{
+        font-size: 1.5vw;
+    }
+
+    .navCategorias{
+        display: flex;
+        height: 100%;
+        align-content: center;
     }
 
     .destacados h2{

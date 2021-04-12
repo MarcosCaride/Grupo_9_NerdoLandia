@@ -8,7 +8,8 @@ const productsRoutes = require ('./routes/products');
 const session =  require('express-session');
 const usersRoutes = require ('./routes/users');
 const methodOverrride = require('method-override')
-const userLoggedMiddleware = require ('../Middlewares/userLoggedMiddleware')
+const userLoggedMiddleware = require ('./Middlewares/userLoggedMiddleware')
+const cookies = require('cookie-parser');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
@@ -19,7 +20,9 @@ app.use(session( {
     saveUninitialized: false,
 }))
 
-app.use (userLoggedMiddleware)
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 app.use(methodOverrride('_method'))
 app.use(express.static(publicPath));

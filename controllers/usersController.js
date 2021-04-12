@@ -59,6 +59,11 @@ const usersController = {
         if (isOkThePassword) {
             delete userToLogIn.contraseña;
             req.session.userLogged = userToLogIn;
+
+            if (req.body.recordarme){
+                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2 })
+            }
+
             return res.redirect ('/users/perfil');   
         }    
             return res.render('login', {
@@ -78,16 +83,18 @@ const usersController = {
     },
 
     perfil: (req, res) => {
-        console.log('Estas en LOGIN')
-        console.log(req.session);
+        console.log(req.cookies.userEmail);
+        //console.log('Estas en LOGIN')
+       //console.log(req.session);
         return res.render ('perfil', {
             user: req.session.userLogged
         })
     },
 
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
-        console.log(req.session)
+        //console.log(req.session)
         return res.redirect ('index');
     }
 }

@@ -1,0 +1,36 @@
+<header>
+    <div class="logo">
+        <a href="/"><img width="60px" src="/imagenes/LaCantinaDelAndroideLogo.png" alt=""></a>
+        <form action="/" method="POST">
+          <input type="text" placeholder="¿Qué estas buscando?" id="searchBar">
+          <button id="serachBttn"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="menuButton"><i class="fas fa-bars"></i></button>
+        <a href="Carrito" class="carrito"><i class="fas fa-shopping-cart"></i></a>
+        <% if (locals.isLogged) { %> 
+        <div class="dropdown">
+            <button class="dropbtn"><img src="Imagenes/Users/default.png" witdh='40' style="border-radius: 100%;" </button>
+            Hola <%= locals.userLogged %> 
+            <ul class="dropdown-content">
+              <a class='dropdown-item" href="/users/perfil">Perfil</a>
+              <li><hr class="dropdown-divider"></li>
+              <a class="dropdown-item" href="user/logout"> Logout </a>
+            </ul> 
+        <% } %>       
+        </div>
+    </div>
+    <nav>
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Categorias</button>
+            <div class="dropdown-content">
+              <a href="/categorias/Star Wars">Star Wars</a>
+              <a href="/categorias/Los Simpsons">Los Simpsons</a>
+              <a href="/categorias/Marvel">Marvel</a>
+            </div>
+          </div>
+        <a href="heroinas">Heroínas</a>
+        <a href="blog">Blog</a>
+        <a href="nosotros">Sobre Nosotros</a>
+    </nav>
+</header>

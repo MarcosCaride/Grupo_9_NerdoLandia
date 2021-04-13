@@ -27,7 +27,7 @@ const usersController = {
         if (userInDB){
             return res.render('register', { errors: {
                 'email':{
-                    msg: 'Ya hay un usuarion con este email'
+                    msg: 'Ya hay un usuario con este email'
                 }
             },
             old: req.body
@@ -46,13 +46,11 @@ const usersController = {
     },
 
     login:(req, res) => {
-        console.log(req.session)
         res.render('login')
     },
 
     loginProcess: (req, res) => {
         let userToLogIn = User.findByField('email', req.body.email)
-        //res.send(userToLogIn)
 
         if(!userToLogIn){
             return res.render('login', {
@@ -75,7 +73,7 @@ const usersController = {
             }
 
             return res.redirect ('/users/perfil');   
-        }    
+        }
             return res.render('login', {
                 errors: {
                     contraseña: {

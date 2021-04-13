@@ -34,8 +34,8 @@
  },
  {
   "Nombre": "Razor Crest LEGO",
-  "Descripcion": "Este kit de construcción de una nave estelar de 1023 piezas, un desafiante modelo para mayores de 10 años, incluye 5 personajes LEGO StarWars coleccionables, entre ellos el Mandaloriano y el Niño. Es fantástico para jugar a interpretar y puede combinarse con otros sets LEGO StarWars para disfrutar de más dosis de acción todavía.",
-  "Categoria": "StarWars",
+  "Descripcion": "Este kit de construcción de una nave estelar de 1023 piezas, un desafiante modelo para mayores de 10 años, incluye 5 personajes LEGO Star Wars coleccionables, entre ellos el Mandaloriano y el Niño. Es fantástico para jugar a interpretar y puede combinarse con otros sets LEGO Star Wars para disfrutar de más dosis de acción todavía.",
+  "Categoria": "Star Wars",
   "Precio": "6000",
   "image": "file-1615696316928.jpg",
   "id": "5"
@@ -43,15 +43,15 @@
  {
   "Nombre": "Sith Trooper",
   "Descripcion": "En su último impulso hacia la conquista galáctica, la Primera Orden prepara un ejército de soldados de élite que se inspiran en un legado oscuro y antiguo.",
-  "Categoria": "StarWars",
+  "Categoria": "Star Wars",
   "Precio": "5000",
   "id": 6,
   "image": "file-1615696417176.jpeg"
  },
  {
   "Nombre": "Ashoka Tano y AAT Lego",
-  "Descripcion": "Los fans pueden recrear el icónico AAT de StarWars: Las guerras clonadas y juegan contra Battle Droid vs. Conflictos de la Legión 501.",
-  "Categoria": "StarWars",
+  "Descripcion": "Los fans pueden recrear el icónico AAT de Star Wars: Las guerras clonadas y juegan contra Battle Droid vs. Conflictos de la Legión 501.",
+  "Categoria": "Star Wars",
   "Precio": "3500",
   "image": "file-1615697591149.jpg",
   "id": "7"
@@ -74,48 +74,48 @@
  },
  {
   "Nombre": "Grogu LEGO",
-  "Descripcion": "Construye y expón la maqueta LEGO® StarWars™ El Niño (75318): ¡no puede ser más adorable! Este popular personaje, cariñosamente conocido como \"Baby Yoda\", se ha recreado al estilo LEGO con detalles de gran realismo, adopta diferentes expresiones al moverle la cabeza, las orejas y la boca articuladas, y puede sujetar el pomo de la palanca de cambios incluido, su juguete favorito, igual que en StarWars: The Mandalorian.",
-  "Categoria": "StarWars",
+  "Descripcion": "Construye y expón la maqueta LEGO® Star Wars™ El Niño (75318): ¡no puede ser más adorable! Este popular personaje, cariñosamente conocido como \"Baby Yoda\", se ha recreado al estilo LEGO con detalles de gran realismo, adopta diferentes expresiones al moverle la cabeza, las orejas y la boca articuladas, y puede sujetar el pomo de la palanca de cambios incluido, su juguete favorito, igual que en Star Wars: The Mandalorian.",
+  "Categoria": "Star Wars",
   "Precio": "6000",
   "image": "file-1615697302262.jpeg",
   "id": "10"
  },
  {
   "Nombre": "Anakin Skywalker Funko POP",
-  "Descripcion": "Este muñeco Pop tiene el nº 271 de su colección de StarWars CloneWars, su nombre original es Funko Pop Vinyl Anakin de la licencia StarWars CloneWars.",
-  "Categoria": "StarWars",
+  "Descripcion": "Este muñeco Pop tiene el nº 271 de su colección de Star Wars CloneWars, su nombre original es Funko Pop Vinyl Anakin de la licencia Star Wars CloneWars.",
+  "Categoria": "Star Wars",
   "Precio": "4000",
   "id": 11,
   "image": "file-1615702625567.jpg"
  },
  {
   "Nombre": "Ahsoka Tano Funko POP",
-  "Descripcion": "Este muñeco Pop tiene el nº 409 de su colección de StarWars CloneWars, su nombre original es Funko Pop Vinyl Ahsoka de la licencia StarWars CloneWars.",
-  "Categoria": "StarWars",
+  "Descripcion": "Este muñeco Pop tiene el nº 409 de su colección de Star Wars CloneWars, su nombre original es Funko Pop Vinyl Ahsoka de la licencia Star Wars CloneWars.",
+  "Categoria": "Star Wars",
   "Precio": "4500",
   "id": 12,
   "image": "file-1615702704406.jpg"
  },
  {
   "Nombre": "Obi Wan Kenobi Funko POP",
-  "Descripcion": "Este muñeco Pop tiene el nº 270 de su colección de StarWars CloneWars, su nombre original es Funko Pop Vinyl Obi Wan Kenobi de la licencia StarWars CloneWars.",
-  "Categoria": "StarWars",
+  "Descripcion": "Este muñeco Pop tiene el nº 270 de su colección de Star Wars CloneWars, su nombre original es Funko Pop Vinyl Obi Wan Kenobi de la licencia Star Wars CloneWars.",
+  "Categoria": "Star Wars",
   "Precio": "4000",
   "id": 13,
   "image": "file-1615702777821.jpg"
  },
  {
   "Nombre": "Villa Ewok Princess Leia Funko POP",
-  "Descripcion": "Este muñeco Pop tiene el nº 287 de su colección de StarWars, su nombre original es Funko Pop Vinyl Ewok Village Leia de la licencia StarWars.",
-  "Categoria": "StarWars",
+  "Descripcion": "Este muñeco Pop tiene el nº 287 de su colección de Star Wars, su nombre original es Funko Pop Vinyl Ewok Village Leia de la licencia Star Wars.",
+  "Categoria": "Star Wars",
   "Precio": "4500",
   "id": 15,
   "image": "file-1615702922030.jpg"
  },
  {
   "Nombre": "Rey Skywalker Funko POP",
-  "Descripcion": "Este muñeco Pop tiene el nº 307 de su colección de StarWars Rise of Skywalker, su nombre original es Funko Pop Vinyl Rey de la licencia StarWars Rise of Skywalker.",
-  "Categoria": "StarWars",
+  "Descripcion": "Este muñeco Pop tiene el nº 307 de su colección de Star Wars Rise of Skywalker, su nombre original es Funko Pop Vinyl Rey de la licencia Star Wars Rise of Skywalker.",
+  "Categoria": "Star Wars",
   "Precio": "4500",
   "id": 16,
   "image": "file-1615702989230.jpg"
@@ -239,5 +239,16 @@
   "Precio": "6000",
   "id": 29,
   "image": "file-1618267092540.jpg"
+ },
+ {
+  "Nombre": "Dark Rey Funko POP",
+  "Descripcion": "fbsdhabfdhabshfbsdjaj",
+  "Categoria": "Star Wars",
+  "AndroideDelMes": "true",
+  "Heroina": "true",
+  "Funko": "true",
+  "Precio": "4000",
+  "id": 30,
+  "image": "file-1618273577204.jpg"
  }
 ]

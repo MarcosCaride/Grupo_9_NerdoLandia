@@ -8,14 +8,13 @@ const mainController = {
     index: (req, res) => {
 		let losSimpsons = products.filter(product => product.Categoria =='Los Simpsons');
 		let marvel = products.filter(product => product.Categoria =='Marvel');
-		let starWars = products.filter(product => product.Categoria == 'StarWars');
-		let legos = products.filter(product => product.Lego == 'true');
-		let Heroinas = products.filter(product => product.Heroinas == 'true');
+		let starWars = products.filter(product => product.Categoria == 'Star Wars');
 		let androidesDelMes = products.filter(product => product.AndroideDelMes == 'true');
-		let funkoPOP = products.filter(product => product.Funko == 'true');
-        let categoryBanner = req.params.Categoria + "Banner.jpg"
+		// let legos = products.filter(product => product.Lego == 'true');
+		// let Heroinas = products.filter(product => product.Heroinas == 'true');
+		// let funkoPOP = products.filter(product => product.Funko == 'true');
 
-		res.render('index', {losSimpsons, marvel, starWars, legos, Heroinas, androidesDelMes, funkoPOP, categoryBanner})
+		res.render('index', {losSimpsons, marvel, starWars, androidesDelMes})
 	},
 
     carrito:(req, res) => {
@@ -23,7 +22,7 @@ const mainController = {
     },
 
     categorias: (req, res) => {
-        let categoria = products.filter(product => (product.category == req.params.categoriaS))
+        let categoria = products.filter(product => (product.Categoria == req.params.categoriaS))
         let categoryBanner = req.params.categoriaS + "Banner.jpg"
         res.render('categorias', {categoria, categoryBanner})
     },

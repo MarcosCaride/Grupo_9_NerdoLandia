@@ -28,6 +28,8 @@ app.use(methodOverrride('_method'))
 app.use(express.static(publicPath));
 app.listen(3030, () => console.log("Nerdo Landia en funcionamiento"))
 
+// Ruteadores
+
 app.use('/', mainRoutes);
 
 app.use('/Carrito', mainRoutes);
@@ -36,6 +38,4 @@ app.use('/productDetail', productsRoutes)
 
 app.use('/users', usersRoutes);
 
-app.post('/register', (req, res) =>{
-    res.send (req.body)
-});
+// Ruteadores

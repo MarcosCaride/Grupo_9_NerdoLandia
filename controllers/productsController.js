@@ -29,7 +29,7 @@ const productsController = {
 		let nuevoProducto = req.body;
 		nuevoProducto.id = products.length + 1;
 		let imag;
-		if(!req.file ){
+		if(!req.file){
 			imag = "default-placeholder.png"
 		}else{
 		imag = req.file.filename;

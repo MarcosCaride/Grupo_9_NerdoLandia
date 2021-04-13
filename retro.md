@@ -36,4 +36,13 @@ LESS OF> utilizar menos cantidad de ramas en Github. Tuvimos varios conflictos l
 
 STOP DOING> depsués de los problemas en la coparticipación en tareas del otro y también la superposición de ramas, decidimos establecer una máxima: no debemos codear en el archivo del compañero/a.
 
+RETROSPECTIVA SPRINT 4
+FORMATO ESTRELLA DE MAR
 
+MORE OF> Encontrar mas tiempo para reunirnos y trabajar juntxs, además de la weekly fija. Detallar mas el archivo de read.me con información útil como venimos haciendo. A la par que vamos resolviendo las consignas de los sprints, continuar de a poco desarrollando el sitio y pendientes, como por ejemplo, mejorar cada vez mas los diseños de todas las vistas responsive.
+
+START DOING> Pensar la división de tareas desde otro lugar, en vez de repartirnos las consignas de los sprints "mitad mitad", usar un criterio diferente, como por ejemplo, uno se ocupa del diseño, otro de la funcionalidad, otro de las rutas (por decir una idea). Por otro lado, a partir de la lectura de la consigna del nuevo sprint, listar todas las tareas en detalle en el trello, es decir cada elemeneto que se necesita para llevar a cabo esa tarea. 
+
+CONTINUE DOING> Utilizar el grupo de whatsapp como principal vía de comunicación. Utilizar el trello para ver las tareas asignadas a cada unx y el proceso en el que se encuentran. Trabajo colaborativo en equipo. La reunión weekly fija y demás encuentros semanales sin horario fijo.
+
+STOP DOING> Trabajar en tantas ramas diferentes a la par e "invadir" las tareas del otrx.

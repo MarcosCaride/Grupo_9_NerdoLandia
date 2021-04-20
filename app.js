@@ -1,17 +1,27 @@
 const express = require('express');
-const path = require('path');
 const app = express()
-const publicPath = path.resolve('./public')
+const path = require('path');
 const bodyParser = require('body-parser');
-const mainRoutes = require ('./routes/main');
-const productsRoutes = require ('./routes/products');
 const session =  require('express-session');
-const usersRoutes = require ('./routes/users');
 const methodOverrride = require('method-override')
-const userLoggedMiddleware = require ('./Middlewares/userLoggedMiddleware')
 const cookies = require('cookie-parser');
 
+const publicPath = path.resolve('./public')
+
+
+// ROUTES
+const usersRoutes = require ('./src/routes/users');
+const mainRoutes = require ('./src/routes/main');
+const productsRoutes = require ('./src/routes/products');
+
+
+
+// MIDDLEWARES
+const userLoggedMiddleware = require ('./src/Middlewares/userLoggedMiddleware')
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'ejs');
 
 app.use(session( {

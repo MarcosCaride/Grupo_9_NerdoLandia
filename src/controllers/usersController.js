@@ -1,8 +1,5 @@
-const fs = require('fs')
-const path = require('path');
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
-const session = require ('express-session');
 const User = require('../models/User');
 const { send } = require('process');
 

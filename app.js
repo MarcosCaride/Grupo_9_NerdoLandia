@@ -44,7 +44,7 @@ app.use('/', mainRoutes);
 
 app.use('/Carrito', mainRoutes);
 
-app.use('/productDetail', productsRoutes)
+app.use('/detail', productsRoutes)
 
 app.use('/users', usersRoutes);
 

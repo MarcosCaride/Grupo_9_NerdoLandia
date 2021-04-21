@@ -109,6 +109,82 @@ footer h2{
     border-radius: 10px;
 }
 
+.productD{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5% 2%;
+    width: 90%;
+    background-color: white;
+    border-radius: 15px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.productD .Imagen{
+    width: 50%;
+    justify-self: flex-start;
+}
+
+.productD .Imagen img{
+    width: 100%;
+    justify-self: flex-start;
+}
+
+.productD .Info{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-end;
+    text-align: right;
+    width: 50%;
+}
+
+.productD .Info h1{
+    color: #00c2cb;
+    font-size: 25px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.productD .Info h2{
+    color: #00153D;
+    font-size: 25px;
+    margin: 0;
+    margin-left: 70%;
+    height: fit-content;
+}
+
+.productD .Info form{
+    display: block;
+    width: 100%;
+    height: fit-content;
+    margin-right: 5%;
+    margin: 3% 3%;
+}
+
+.productD .Info form button{
+    font-size: 20px;
+    border: solid 2px;
+    border-color: #2CD1FF;
+    background-color: white;
+}
+
+.productD .Info form button:hover{
+    border: solid 2px;
+    border-radius: 15px;
+    border-color: #00c2cb;
+    color: #00153D;
+    transition: 400ms;
+}
+
+.productD .Info p{
+    display: inline-block;
+    max-width: 70%;
+    font-size: 16px;
+    margin-left: auto;
+    width: fit-content;
+}
+
 /*  CLASES  */
 
 .logo a img{
@@ -477,12 +553,34 @@ main .adminForm{
 
 .total-carrito {
     float: right;
-    margin-right: 20px;
-    background-color: whitesmoke;
+    margin: 20px;
+    border-radius: 20px;
+    border: solid;
+    width: 10%;
+    background-color: #2CD1FF;
     font-family: 'Oxanium', cursive;
     padding: 15px;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     
+}
+
+.total-carrito button{
+    font-size: 16px;
+    border: solid;
+    background-color: white;
+    color: #00c2cb;
+    border-color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.total-carrito button:hover{
+    border-radius: 15px;
+    border-color: white;
+    text-decoration: none;
+    transition: 250ms;
 }
 
   /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
@@ -904,6 +1002,18 @@ main .adminForm{
     header nav a{
         font-size: 1.5vw;
         padding: 3px 20px;
+    }
+
+    .productD{
+        width: 60%
+    }
+
+    .productD .Info h1{
+        font-size: 35px;
+    }
+
+    .productD .Info p{
+        max-width: 90%;
     }
 
     .container{

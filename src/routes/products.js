@@ -20,9 +20,7 @@ let storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 // Mostrar un producto
-router.get('/', productsController.productDetail);
-
-router.get('/detail/:id', productsController.detail)
+router.get('/product/:id', productsController.detail)
 
 // Creacion de Productos
 router.get('/administrador', authMiddleware, productsController.creador)

@@ -5,16 +5,32 @@
     <%- include('./partials/header') %>
 
       <div class="titulo-section">
-        <h2>Creación de Productos</h2>
+        <% if(productEdit){ %> 
+          <h2>Editor del producto: "<%= productEdit.Nombre %>" </h2>
+        <% }else{ %>
+          <h2>Creación de Productos</h2>
+        <% } %> 
       </div>
         
         <main class="mainAdmin">
-           <form action="/productDetail" class="adminForm" method="POST" enctype="multipart/form-data">
-<br>
+          <% if(productEdit){ %> 
+            <form action="/detail/<%= productEdit.id %>?_method=PUT" class="adminForm" method="POST" enctype="multipart/form-data">
+          <% }else{ %>
+
+           <form action="/detail" class="adminForm" method="POST" enctype="multipart/form-data">
+          <% } %> 
+
+            <br>
   <!-- Nombre -->
               <label for="Nombre">Nombre del Producto</label>
 <br>
-                <input type="text" name="Nombre" id="Nombre"> 
+
+            <% if(productEdit){ %> 
+              <input type="text" name="Nombre" id="Nombre" value="<%= productEdit.Nombre %> "> 
+            <% }else{ %>
+              <input type="text" name="Nombre" id="Nombre"> 
+            <% } %> 
+                
   <!-- Nombre -->
              
 <br>
@@ -23,7 +39,11 @@
   <!-- Descripcion -->
                 <label for="Descripcion">Ingersar descripción del producto</label>
             <br>
-                <textarea name="Descripcion" id="Descripcion" rows="4"></textarea>
+            <% if(productEdit){ %> 
+                <textarea name="Descripcion" id="Descripcion" rows="4"><%= productEdit.Descripcion %></textarea>
+            <% }else{ %>
+            <textarea name="Descripcion" id="Descripcion" rows="4"></textarea>
+            <% } %> 
   <!-- Descripcion -->
 
 <br>
@@ -34,11 +54,11 @@
             <label>Ingresar la Categoria</label>
 <br>
              <div class="radioInputs">
-              <label><input type="radio" name="Categoria" value="Marvel">  Marvel</label>
+              <label><input type="radio" name="Categoria" value="Marvel" <% if(productEdit.Categoria == "Marvel"){ %> <%= "checked" %> <% } %> >  Marvel</label>
 <br>
-                <label><input type="radio" name="Categoria" value="LosSimpsons">  Los Simpsons</label>
+                <label><input type="radio" name="Categoria" value="LosSimpsons" <% if(productEdit.Categoria == "LosSimpsons"){ %> <%= "checked" %> <% } %>>  Los Simpsons</label>
 <br>
-                <label><input type="radio" name="Categoria" value="Star Wars">  Star Wars</label>
+                <label><input type="radio" name="Categoria" value="Star Wars" <% if(productEdit.Categoria == "Star Wars"){ %> <%= "checked" %> <% } %>>  Star Wars</label>
              </div>
              
   <!-- Categoria -->
@@ -50,13 +70,13 @@
             <label>Ingresa los Tags</label>
             <br>
              <div class="radioInputs">
-              <label><input type="checkbox" name="AndroideDelMes" value=true>  Androide del Mes</label>
+              <label><input type="checkbox" name="AndroideDelMes" value=true <% if(productEdit.AndroideDelMes){ %> <%= "checked" %> <% } %>>  Androide del Mes</label>
 <br>
-                <label><input type="checkbox" name="Heroina" value=true>  Heroína</label>
+                <label><input type="checkbox" name="Heroina" value=true <% if(productEdit.Heroina){ %> <%= "checked" %> <% } %>>  Heroína</label>
 <br>
-                <label><input type="checkbox" name="Funko" value=true>  Funko</label>
+                <label><input type="checkbox" name="Funko" value=true <% if(productEdit.Funko){ %> <%= "checked" %> <% } %>>  Funko</label>
 <br>
-                <label><input type="checkbox" name="Lego" value=true>  LEGO</label>
+                <label><input type="checkbox" name="Lego" value=true <% if(productEdit.Lego){ %> <%= "checked" %> <% } %>>  LEGO</label>
              </div>
   <!-- Tags -->
            
@@ -77,8 +97,11 @@
   <!-- Precio -->
             <label for="Precio">Ingresar Precio</label>
 <br>
+        <% if(productEdit){ %> 
+            <input type="text" name="Precio" value="<%= productEdit.Precio %>"> 
+          <% }else{ %>
             <input type="number" name="Precio"> 
-          
+          <% } %> 
   <!-- Precio -->
           
           <br>

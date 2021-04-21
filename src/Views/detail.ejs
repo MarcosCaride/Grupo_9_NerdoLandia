@@ -5,47 +5,40 @@
   <%- include('./partials/header') %>
   <br>
   <br>
-    <main class="mainDetail">
-    <section class="section-producto">
-        <article class="contenedor1"> 
-            <img src="/Imagenes/products/<%= product.image %>" alt= "<%= product.Nombre %>" class="fotoProducto1">
-        </article>  
 
-        <article class="data1-producto">
-            <h4 class="nombre-producto"> <%= product.Nombre %> </h4>
-            <p class="desc"><%= product.Descripcion %></p>
+  <main class="productD">
+    <div class="Imagen">
+        <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+    </div>
+    <div class="Info">
+        <h1><%= product.Nombre %></h1>
+        <br>
+        <br>
+        <h2>$<%= product.Precio %> </h2>
+        <br>
+        <br>
+        <form action="">
+            <button>Comprar</button>
+        </form>
+        <p><%= product.Descripcion %> </p>
 
-            <br>
-            <br>
+    </div>
 
-            <article class="data2-producto">
-                <p class="precio">$<%= product.Precio %></p>
-                <p class="cuotas">12 cuotas sin interés</p>
-                <input type="button" value="Envío a domicilio" name="B4" OnClick=>
-                <div class="envío-a-domicilio">
-                    <div class="camion">
-                        <i class="fas fa-truck"></i>
-                    </div> 
-                    <br>
-                </div>
-    
-                <input type="button" value="Retiralo en el local" name="B4" OnClick=>
-    
-                <div class="nuestro-local">
-                    <!-- icono + dirección + gratis -->
-                    <div class="local">
-                        <i class="fas fa-store"></i>
-                    </div>
-                </div>
-        </article>
-      </article>
-    </main>
+  </main>
+
+  <br>
+  <br>
+  <br>
+  <br>
+    <% if(user){ %> 
     <div class="total-carrito">   
-        <a href="/productDetail/edit/<%= product.id %>" ><button>Editar</button></a>
-        <form action="/productDetail/<%= product.id %>?_method=DELETE" method='POST'>
+        <a href="/detail/edit/<%= product.id %>" ><button>Editar</button></a>
+        <form action="/detail/<%= product.id %>?_method=DELETE" method='POST'>
             <button>Borrar Producto</button>
         </form>
-    </div>  
+    </div>
+
+    <% } %> 
     <br>
     <br>
       <%- include('./partials/footer') %> 

@@ -7,27 +7,26 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"))
 // CONTROLADOR
 
 const productsController = {
-    productDetail:(req, res) => {
-        res.render('productDetail')
-    },
-
 	detail: (req,res) =>{
 		let product = products.find(product => product.id == req.params.id)
-		res.render('detail', {product})
+		res.render('detail', {
+			product,
+            user: req.session.userLogged
+        })
 	},
 
     creador: (req, res) => {
-        res.render('administrator')
+        res.render('administrator',  {productEdit: ""})
     },
 
 	editor: (req, res) => {
 		let productEdit = products.find(product => product.id == req.params.id)
-		res.render('product-edit', {productEdit})
+		res.render('administrator', {productEdit})
 	},
 	
     guardado:  (req, res) => {
 		let nuevoProducto = req.body;
-		nuevoProducto.id = products.length + 1;
+		nuevoProducto.id = products.length +1;
 		let imag;
 		if(!req.file){
 			imag = "default-placeholder.png"

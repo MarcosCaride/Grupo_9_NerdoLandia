@@ -81,9 +81,6 @@ const usersController = {
     },
 
     perfil: (req, res) => {
-        console.log(req.cookies.userEmail);
-        //console.log('Estas en LOGIN')
-       //console.log(req.session);
         return res.render ('perfil', {
             user: req.session.userLogged
         })
@@ -92,7 +89,6 @@ const usersController = {
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
-        //console.log(req.session)
         return res.redirect ('/');
     }
 }

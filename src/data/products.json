@@ -49,9 +49,11 @@
   "image": "file-1615696417176.jpeg"
  },
  {
-  "Nombre": "Ashoka Tano y AAT Lego",
+  "Nombre": "Ashoka Tano y AAT Lego ",
   "Descripcion": "Los fans pueden recrear el icónico AAT de Star Wars: Las guerras clonadas y juegan contra Battle Droid vs. Conflictos de la Legión 501.",
   "Categoria": "Star Wars",
+  "AndroideDelMes": "true",
+  "Lego": "true",
   "Precio": "3500",
   "image": "file-1615697591149.jpg",
   "id": "7"
@@ -209,28 +211,6 @@
   "image": "file-1618252659708.jpg"
  },
  {
-  "Nombre": "dsadsa",
-  "Descripcion": "true",
-  "Categoria": "Marvel",
-  "AndroideDelMes": "true",
-  "Heroina": "true",
-  "Funko": "true",
-  "Lego": "true",
-  "Precio": "4500",
-  "id": 27,
-  "image": "file-1618265474923.png"
- },
- {
-  "Nombre": "dasdsadas",
-  "Descripcion": "dsadasdas",
-  "Categoria": "LosSimpsons",
-  "AndroideDelMes": "true",
-  "Funko": "true",
-  "Precio": "455",
-  "id": 28,
-  "image": "file-1618265721461.png"
- },
- {
   "Nombre": "Spiderman vs spiderman Funko POP",
   "Descripcion": "sajbdsahbdhsa",
   "Categoria": "Marvel",
@@ -241,7 +221,7 @@
   "image": "file-1618267092540.jpg"
  },
  {
-  "Nombre": "Dark Rey Funko POP",
+  "Nombre": "Dark Rey Funko POP  ",
   "Descripcion": "fbsdhabfdhabshfbsdjaj",
   "Categoria": "Star Wars",
   "AndroideDelMes": "true",
@@ -249,6 +229,15 @@
   "Funko": "true",
   "Precio": "4000",
   "id": 30,
-  "image": "file-1618273577204.jpg"
+  "image": "file-1618965082192.jpg"
+ },
+ {
+  "Nombre": "Mochila de Grogu ",
+  "Descripcion": "¡La fuerza está contigo y es súper adorable cuando llevas esta mini mochila de personajes \"Grogu\". ¡El accesorio para fans de la serie de TV Mandalorian de Star Wars Baby Yoda es la mejor manera de transmitir tu fandom! Esta mini mochila de cuero de alta calidad como PU y acogedora sherpa material mixto mide 11.0 in de alto x 8.3 in de ancho x 3.9 in de profundidad, un montón de espacio para guardar tu sable y un montón de huevos de rana y macarrones para arrancar! Las correas de hombro ajustables hacen un gran ajuste y el diseño está realmente fuera de este mundo! Los fans del personaje llaman \"Baby Yoda\" cobra vida con orejas 3D. La mini mochila infantil con personajes Mandalorian TV tiene mucho almacenamiento y es el accesorio perfecto para regalar a cualquier fan!",
+  "Categoria": "Star Wars",
+  "AndroideDelMes": "true",
+  "Precio": "6000",
+  "image": "file-1618968142766.jpg",
+  "id": "31"
  }
 ]

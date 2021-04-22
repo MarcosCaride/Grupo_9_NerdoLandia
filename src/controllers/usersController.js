@@ -66,7 +66,7 @@ const usersController = {
             req.session.userLogged = userToLogIn;
 
             if (req.body.recordarme){
-                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2 })
+                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 600) * 2 })
             }
 
             return res.redirect ('/users/perfil');   

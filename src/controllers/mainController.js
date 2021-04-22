@@ -6,7 +6,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
     index: (req, res) => {
-		let losSimpsons = products.filter(product => product.Categoria =='Los Simpsons');
+		let losSimpsons = products.filter(product => product.Categoria =='LosSimpsons');
 		let marvel = products.filter(product => product.Categoria =='Marvel');
 		let starWars = products.filter(product => product.Categoria == 'Star Wars');
 		let androidesDelMes = products.filter(product => product.AndroideDelMes == 'true');

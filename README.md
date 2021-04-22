@@ -1,6 +1,39 @@
 # La Cantina del Androide
  Por el Grupo_9_NerdoLandia
 
+# Indice:
+
+## Introducciones:
+
+- [Marcos Caride](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#marcos-caride)
+
+- [Daniela De Lellis](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#daniela-de-lellis)
+
+## Tematica:
+
+- [Temática del sitio](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#tem%C3%A1tica-del-sitio)
+
+## Links externos:
+
+- [Sitios de referencia](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#sitios-de-referencia)
+
+- [Links relacionados](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#links-relacionados)
+
+## Implementacion:
+
+- [Sprint 1](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#sprint-1)
+
+- [Sprint 2](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#sprint-2)
+
+## URLS del sitio:
+
+- [Main](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#main)
+
+- [Productos](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#products)
+
+- [Usuarios](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#users)
+
+
 <br>
 
 ## Daniela Baffaro:
@@ -53,41 +86,69 @@ Buscamos brindarle a todos los fanáticos de estas increíbles sagas todos los a
 
 # Implementación:
 
+## Sprint 1
+
+En este Sprint la idea general era tneer que diseñar el diseño, tema y toda la idea general de la pagina que los siguientes 6 meses estaríamos desarrollando. El dia que este sprint fue lanzado en la misma clase tuvimos la oportunidad de conocernos entre los integrantes del grupo y emepzar a pensar que gustos teniamos en comun los 3. En esta clase fue cuando empezamos el proyecto en github y creamos el tablero de Trello para organizar las tareas. En esta clase tambien nos dedicamos a 
+
+## Sprint 2
+
+En este sprint La idea fue la implementacion de todo lo visto de HTML y Css para crear la aplicación. Debíamos crear el Home(index), la pagina con el detalle, el carrito de compras, un formulario de registro y otro para el logIn. Y lo principal de este sprint era usar los diseños de los Wireframes y ponerlos en practica con codigo, todo pensando en la experiencia del Usuario.
+
 El proyecto fue empezado con una visión de Mobile first a diferencia de como habíamos diseñado los wireframes. lo que en sí nos presentó un desafío no esperado ya que debíamos adaptar los wireframes a una versión Mobile y de ahí diseñarlos para representar la visión original del sitio. 
 
 Al momento de escribir el código para la pagina como equipo nos reunimos para definir lo que vendría a ser la paleta de colores, las imágenes con logos, y más importante la temática que el sitio iba a tener. En la misma reunión llegamos a conocer unos intereses que compartimos y nos decidimos por un Ecommerce donde se podrían encontrar productos geeks, esto incluye todo lo relacionado con Star Wars, Los Simpsons, Marvel, etc. Los productos que se venderían serian figuras de acción, artefactos e incluso set de armado como los LEGO.
+
 
 # URLS:
 
 ## Main:
 
-Index
+Index:
 <br>
-localhost:3030/
+
+- [localhost:3030/](localhost:3030/)
+
+Carrito:
 <br>
-Carrito
-<br>
-localhost:3030/Carrito
-<br>
+
+- [localhost:3030/Carrito](localhost:3030/Carrito)
+
 
 ## Products:
 
-ProductDetail
+ProductDetail:
 <br>
-localhost:3030/productDetail
+
+- [localhost:3030/detail/product/:id](localhost:3030/detail/product/:id)
+
+Administrator:
 <br>
-Administrator
+
+- [localhost:3030/detail/administrador](localhost:3030/detail/administrador)
+
+Edicion:
 <br>
-localhost:3030/productDetail/administrador
+
+- [localhost:3030/detail/edit/:id](localhost:3030/detail/edit/:id)
+
 <br>
 
 ## Users:
 
-Log In
+Log In:
 <br>
-localhost:3030/users/
+
+- [localhost:3030/users/](localhost:3030/users/)
+
 <br>
-Register
+Register:
 <br>
-localhost:3030/users/register
+
+- [localhost:3030/users/register](localhost:3030/users/register)
+
+<br>
+Prefil:
+<br>
+
+- [localhost:3030/users/perfil](localhost:3030/users/perfil)
 <br>

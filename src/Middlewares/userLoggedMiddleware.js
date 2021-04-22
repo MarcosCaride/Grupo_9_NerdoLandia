@@ -6,8 +6,6 @@ function userLoggedMiddleware (req, res, next) {
     let emailInCookie = req.cookies.userEmail;
     let userFromCookie = User.findByField('email', emailInCookie)
 
-    console.log(userFromCookie);
-
     if (userFromCookie){
         req.session.userLogged = userFromCookie;
     }

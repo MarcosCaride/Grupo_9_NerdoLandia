@@ -1,41 +1,49 @@
 [
  {
-  "id": 1,
-  "Nombre": "Marvel Black Widow Funko Pop",
-  "Precio": "3500",
-  "color": "black",
-  "Categoria": "Marvel",
+  "Nombre": "Marvel Black Widow Funko Pop  ",
   "Descripcion": "Figura de colección Black Widow",
-  "image": "Marvel-Black-Widow-Funko-POP.jpg"
+  "Categoria": "Marvel",
+  "Heroina": "true",
+  "Funko": "true",
+  "Precio": "3500",
+  "image": "Marvel-Black-Widow-Funko-POP.jpg",
+  "id": "1"
  },
  {
-  "Nombre": "Scarlet Witch",
+  "Nombre": "Scarlet Witch  ",
   "Descripcion": "Figura coleccionable de Marvel, Scarlet Witch. La cabeza de la figura tiene 9cm de alto y 7cm",
   "Categoria": "Marvel",
+  "Heroina": "true",
+  "Funko": "true",
   "Precio": "4000",
   "image": "file-1615508648255.jpg",
   "id": "2"
  },
  {
-  "Nombre": "Alien Maggie",
+  "Nombre": "Alien Maggie  ",
   "Descripcion": "Figura coleccionable de Los Simpmsons, Maggie. La cabeza de la figura tiene 9cm de alto y 7cm",
-  "Categoria": "Los Simpsons",
+  "Categoria": "LosSimpsons",
+  "Heroina": "true",
+  "Funko": "true",
   "Precio": "3500",
   "image": "file-1615508853635.jpg",
   "id": "3"
  },
  {
-  "Nombre": "Captain Marvel",
+  "Nombre": "Captain Marvel  ",
   "Descripcion": "Figura coleccionable de Marvel, Capitana Marvel. La cabeza de la figura tiene 9cm de alto y 7cm",
   "Categoria": "Marvel",
+  "Heroina": "true",
+  "Funko": "true",
   "Precio": "3500",
   "image": "file-1615509019715.jpg",
   "id": "4"
  },
  {
-  "Nombre": "Razor Crest LEGO",
+  "Nombre": "Razor Crest LEGO ",
   "Descripcion": "Este kit de construcción de una nave estelar de 1023 piezas, un desafiante modelo para mayores de 10 años, incluye 5 personajes LEGO Star Wars coleccionables, entre ellos el Mandaloriano y el Niño. Es fantástico para jugar a interpretar y puede combinarse con otros sets LEGO Star Wars para disfrutar de más dosis de acción todavía.",
   "Categoria": "Star Wars",
+  "Lego": "true",
   "Precio": "6000",
   "image": "file-1615696316928.jpg",
   "id": "5"
@@ -49,7 +57,7 @@
   "image": "file-1615696417176.jpeg"
  },
  {
-  "Nombre": "Ashoka Tano y AAT Lego ",
+  "Nombre": "Ashoka Tano y AAT Lego  ",
   "Descripcion": "Los fans pueden recrear el icónico AAT de Star Wars: Las guerras clonadas y juegan contra Battle Droid vs. Conflictos de la Legión 501.",
   "Categoria": "Star Wars",
   "AndroideDelMes": "true",
@@ -59,76 +67,91 @@
   "id": "7"
  },
  {
-  "Nombre": "Casa Simpson LEGO",
+  "Nombre": "Casa Simpson LEGO  ",
   "Descripcion": "Basado en la residencia original de Springfield, este asombroso modelo replica hasta el último detalle con ladrillos LEGO.",
-  "Categoria": "Los Simpsons",
+  "Categoria": "LosSimpsons",
+  "AndroideDelMes": "true",
+  "Lego": "true",
   "Precio": "6000",
-  "id": 8,
-  "image": "file-1615696873429.jpg"
+  "image": "file-1615696873429.jpg",
+  "id": "8"
  },
  {
-  "Nombre": "Sr. Burns Funko POP",
+  "Nombre": "Sr. Burns Funko POP  ",
   "Descripcion": "Muñeco Funko Pop Mr. Burns 501 Los Simpsons Original",
-  "Categoria": "Los Simpsons",
+  "Categoria": "LosSimpsons",
+  "Funko": "true",
   "Precio": "3000",
   "image": "file-1615697153348.webp",
   "id": "9"
  },
  {
-  "Nombre": "Grogu LEGO",
+  "Nombre": "Grogu LEGO ",
   "Descripcion": "Construye y expón la maqueta LEGO® Star Wars™ El Niño (75318): ¡no puede ser más adorable! Este popular personaje, cariñosamente conocido como \"Baby Yoda\", se ha recreado al estilo LEGO con detalles de gran realismo, adopta diferentes expresiones al moverle la cabeza, las orejas y la boca articuladas, y puede sujetar el pomo de la palanca de cambios incluido, su juguete favorito, igual que en Star Wars: The Mandalorian.",
   "Categoria": "Star Wars",
+  "AndroideDelMes": "true",
+  "Lego": "true",
   "Precio": "6000",
   "image": "file-1615697302262.jpeg",
   "id": "10"
  },
  {
-  "Nombre": "Anakin Skywalker Funko POP",
+  "Nombre": "Anakin Skywalker Funko POP ",
   "Descripcion": "Este muñeco Pop tiene el nº 271 de su colección de Star Wars CloneWars, su nombre original es Funko Pop Vinyl Anakin de la licencia Star Wars CloneWars.",
   "Categoria": "Star Wars",
+  "Funko": "true",
   "Precio": "4000",
-  "id": 11,
-  "image": "file-1615702625567.jpg"
+  "image": "file-1615702625567.jpg",
+  "id": "11"
  },
  {
-  "Nombre": "Ahsoka Tano Funko POP",
+  "Nombre": "Ahsoka Tano Funko POP  ",
   "Descripcion": "Este muñeco Pop tiene el nº 409 de su colección de Star Wars CloneWars, su nombre original es Funko Pop Vinyl Ahsoka de la licencia Star Wars CloneWars.",
   "Categoria": "Star Wars",
+  "Heroina": "true",
+  "Funko": "true",
   "Precio": "4500",
-  "id": 12,
-  "image": "file-1615702704406.jpg"
+  "image": "file-1615702704406.jpg",
+  "id": "12"
  },
  {
-  "Nombre": "Obi Wan Kenobi Funko POP",
+  "Nombre": "Obi Wan Kenobi Funko POP ",
   "Descripcion": "Este muñeco Pop tiene el nº 270 de su colección de Star Wars CloneWars, su nombre original es Funko Pop Vinyl Obi Wan Kenobi de la licencia Star Wars CloneWars.",
   "Categoria": "Star Wars",
+  "Funko": "true",
   "Precio": "4000",
-  "id": 13,
-  "image": "file-1615702777821.jpg"
+  "image": "file-1615702777821.jpg",
+  "id": "13"
  },
  {
-  "Nombre": "Villa Ewok Princess Leia Funko POP",
+  "Nombre": "Villa Ewok Princess Leia Funko POP  ",
   "Descripcion": "Este muñeco Pop tiene el nº 287 de su colección de Star Wars, su nombre original es Funko Pop Vinyl Ewok Village Leia de la licencia Star Wars.",
   "Categoria": "Star Wars",
+  "Heroina": "true",
+  "Funko": "true",
   "Precio": "4500",
-  "id": 15,
-  "image": "file-1615702922030.jpg"
+  "image": "file-1615702922030.jpg",
+  "id": "15"
  },
  {
-  "Nombre": "Rey Skywalker Funko POP",
+  "Nombre": "Rey Skywalker Funko POP ",
   "Descripcion": "Este muñeco Pop tiene el nº 307 de su colección de Star Wars Rise of Skywalker, su nombre original es Funko Pop Vinyl Rey de la licencia Star Wars Rise of Skywalker.",
   "Categoria": "Star Wars",
+  "Heroina": "true",
+  "Funko": "true",
   "Precio": "4500",
-  "id": 16,
-  "image": "file-1615702989230.jpg"
+  "image": "file-1615702989230.jpg",
+  "id": "16"
  },
  {
-  "Nombre": "Iron Man Funko POP ",
+  "Nombre": "Iron Man Funko POP  ",
   "Descripcion": "Este muñeco Pop tiene el nº 580 de su colección de Vengadores: Endgame, su nombre original es Funko Pop Vinyl I Am Iron Man Exclusive de la licencia Vengadores: Endgame.",
   "Categoria": "Marvel",
+  "AndroideDelMes": "true",
+  "Funko": "true",
   "Precio": "4500",
-  "id": 17,
-  "image": "file-1615703296943.jpg"
+  "image": "file-1615703296943.jpg",
+  "id": "17"
  },
  {
   "Nombre": "Capitan America Con Mjolnir Funko POP ",
@@ -139,76 +162,68 @@
   "image": "file-1615703390549.jpg"
  },
  {
-  "Nombre": "White Vision Funko POP",
+  "Nombre": "White Vision Funko POP ",
   "Descripcion": "Funko Pop! Wandavision The Vision Marvel",
   "Categoria": "Marvel",
+  "Funko": "true",
   "Precio": "4000",
-  "id": 19,
-  "image": "file-1615703501421.webp"
+  "image": "file-1615703501421.webp",
+  "id": "19"
  },
  {
-  "Nombre": "Homer Muumuu Funko POP",
-  "Descripcion": "Este muñeco Pop tiene el nº 502 de su colección de Los Simpson, su nombre original es Funko Pop Vinyl Homer Muumuu de la licencia The Simpsons.",
-  "Categoria": "Los Simpsons",
-  "Precio": "4000",
-  "image": "file-1615703832350.jpg",
-  "id": "21"
- },
- {
-  "Nombre": "Lisa Simpson",
+  "Nombre": "Lisa Simpson  ",
   "Descripcion": "De Simpsons, lisa-saxofón, como un estilizado vinilo POP de Funko! La figura mide 3 3/4 pulgadas y viene en una caja de visualización de ventana. ¡Echa un vistazo a las otras figuras de Simpson de Funko! ¡Colecciónalos todos!",
-  "Categoria": "Los Simpsons",
+  "Categoria": "LosSimpsons",
+  "Heroina": "true",
+  "Funko": "true",
   "Precio": "3500",
-  "id": 20,
-  "image": "file-1618252031262.jpg"
+  "image": "file-1618252031262.jpg",
+  "id": "20"
  },
  {
-  "Nombre": "Devil Flanders Funko POP",
-  "Descripcion": "Funko Pop! Animación: Simpsons Devil Flanders - Figura decorativa, diseño de demonio, multicolor",
-  "Categoria": "Los Simpsons",
-  "Precio": "3500",
-  "id": 21,
-  "image": "file-1618252110251.jpg"
- },
- {
-  "Nombre": "Gangster Bart Funko POP",
+  "Nombre": "Gangster Bart Funko POP ",
   "Descripcion": "El programa de televisión de sitcom animado Simpsons ha estado en marcha desde 1989. Revivir, recordar y unir a la familia para su colección con The Simpsons Pop! Gángster Bart. La figura de vinilo mide aproximadamente 3.5 pulgadas de alto.",
-  "Categoria": "Los Simpsons",
+  "Categoria": "LosSimpsons",
+  "Funko": "true",
   "Precio": "3500",
-  "id": 22,
-  "image": "file-1618252182540.jpg"
+  "image": "file-1618252182540.jpg",
+  "id": "22"
  },
  {
-  "Nombre": "Hombre Radioactivo Funko POP",
+  "Nombre": "Hombre Radioactivo Funko POP ",
   "Descripcion": "From Simpsons, Homer-Radioactive Man, as a stylized POP vinyl from Funko! Figure stands 3 3/4 inches and comes in a window display box. Check out the other Simpsons figures from Funko! Collect them all!",
-  "Categoria": "Los Simpsons",
+  "Categoria": "LosSimpsons",
+  "Funko": "true",
   "Precio": "3500",
-  "id": 23,
-  "image": "file-1618252321507.jpg"
+  "image": "file-1618252321507.jpg",
+  "id": "23"
  },
  {
-  "Nombre": "Picazón 903 Funko POP",
+  "Nombre": "Picazón 903 Funko POP ",
   "Descripcion": "El programa de televisión de sitcom animado Simpsons ha estado en marcha desde 1989. Revivir, recordar y unir a la familia para su colección con The Simpsons Pop! Picazón. La figura de vinilo mide aproximadamente 3.9 in de alto.",
-  "Categoria": "Los Simpsons",
+  "Categoria": "LosSimpsons",
+  "Funko": "true",
   "Precio": "3500",
-  "id": 24,
-  "image": "file-1618252499820.jpg"
+  "image": "file-1618252499820.jpg",
+  "id": "24"
  },
  {
-  "Nombre": "Bart Austronauta Funko POP",
+  "Nombre": "Bart Austronauta Funko POP  ",
   "Descripcion": "From Simpsons, Bart w/Chestburster Maggie, as a stylized Pop! vinyl from Funko! Figure stands 3 3/4 inches and comes in a window display box. Check out the other Simpsons figures from Funko! Collect them all!",
-  "Categoria": "Los Simpsons",
+  "Categoria": "LosSimpsons",
+  "Funko": "true",
   "Precio": "3500",
-  "id": 25,
-  "image": "file-1618252570285.png"
+  "image": "file-1618252570285.png",
+  "id": "25"
  },
  {
-  "Nombre": "LEGO Avengers Tower",
+  "Nombre": "LEGO Avengers Tower ",
   "Descripcion": "Regalo ideal para los fans de los Vengadores. Lleva a los niños al corazón de la acción de Marvel Avengers con la torre Marvel Avengers de 5 pisos.",
   "Categoria": "Marvel",
+  "Lego": "true",
   "Precio": "4000",
-  "id": 26,
-  "image": "file-1618252659708.jpg"
+  "image": "file-1618252659708.jpg",
+  "id": "26"
  },
  {
   "Nombre": "Spiderman vs spiderman Funko POP",

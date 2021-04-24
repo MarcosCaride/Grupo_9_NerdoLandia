@@ -30,6 +30,11 @@ const mainController = {
     heroinas: (req,res) => {
 		let Heroinas = products.filter(product => product.Heroina == 'true');
         res.render('heroinas', {Heroinas})
+    },
+
+    contacto: (req, res) => {
+        res.render('aboutUs')
+
     }
 }
 

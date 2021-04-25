@@ -1,0 +1,14 @@
+Qué hice hasta ahora.
+
+1. Creé las 4 carpetas adentro de database con sequelize init.
+2. Config listo. Atención, duda de qué poner en 'nombre de base de datos'; ojo con la contraseña, es la mía. 
+3. Creé los modelos de cada tabla.
+4. Arranqué con los controladores de products. Método create, update y destroy. Incompletos.
+5. Cree estructura de carpetas y arhivos API (aún vacíos).
+
+DUDAS 
+
+- Etiquetas ejs y vistas dinámicas en relacion a la base de datos, que todo funcione.
+- En vista product-edit.ejs deberíamos agregar TODOS los atributos en relación a columnas de tablas (ej franchise, etc..)
+- mil dudas en relación a la nomenclatura de Model (mayuscula y singular), que luego sequelize interpreta que en minúscula y plural es la tabla.
+Debería aclarar el nombre de la tabla per se? en este momento esta declarado. OJO, nombres en ingles, el plural no funciona como el castellano.

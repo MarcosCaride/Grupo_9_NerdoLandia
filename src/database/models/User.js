@@ -7,34 +7,34 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
         },
         name: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(50)
         },
         surname: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(50)
         },
         email: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(30)
         },
         password: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100)
         },
         id_provice: {
-            type: dataTypes.INT
+            type: dataTypes.INT(10)
         },
         address: {
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(30)
         },
         avatar: {   
-            type: dataTypes.VARCHAR
+            type: dataTypes.VARCHAR(100)
         },
        
         dateOfBirth: {
-            type: dataTypes.DATE 
+            type: dataTypes.DATE
         },
         phoneNumber: {
             type: dataTypes.INT
         },
-        created_ad: {
+        created_at: {
             type: dataTypes.DATETIME
         },
     };

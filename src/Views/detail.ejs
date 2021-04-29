@@ -8,18 +8,18 @@
     <main class="mainDetail">
     <section class="section-producto">
         <article class="contenedor1"> 
-            <img src="/Imagenes/products/<%= product.image %>" alt= "<%= product.Nombre %>" class="fotoProducto1">
+            <img src="/Imagenes/products/<%= producto.image %>" alt= "<%= product.Nombre %>" class="fotoProducto1">
         </article>  
 
         <article class="data1-producto">
-            <h4 class="nombre-producto"> <%= product.Nombre %> </h4>
-            <p class="desc"><%= product.Descripcion %></p>
+            <h4 class="nombre-producto"> <%= producto.name %> </h4>
+            <p class="desc"><%= producto.description %></p>
 
             <br>
             <br>
 
             <article class="data2-producto">
-                <p class="precio">$<%= product.Precio %></p>
+                <p class="precio">$<%= producto.price %></p>
                 <p class="cuotas">12 cuotas sin interés</p>
                 <input type="button" value="Envío a domicilio" name="B4" OnClick=>
                 <div class="envío-a-domicilio">
@@ -41,8 +41,8 @@
       </article>
     </main>
     <div class="total-carrito">   
-        <a href="/productDetail/edit/<%= product.id %>" ><button>Editar</button></a>
-        <form action="/productDetail/<%= product.id %>?_method=DELETE" method='POST'>
+        <a href="/productDetail/edit/<%= producto.id %>" ><button>Editar</button></a>
+        <form action="/productDetail/<%= producto.id %>?_method=DELETE" method='POST'>
             <button>Borrar Producto</button>
         </form>
     </div>  

@@ -3,39 +3,59 @@ const fs = require('fs')
 const path = require('path');
 
 //para DB
-const db = requiere ('../database/models')
+const db = require ('../database/models')
 
 // CONTROLADOR
 
 const productsController = {
     productDetail:(req, res) => {
         res.render('productDetail')
-    },
+	},
+	
 
+	//se muetra el detall de un producto por id, o sea, /detail/:id
 	detail: (req,res) =>{
-		let product = products.find(product => product.id == req.params.id)
-		res.render('detail', {product})
+		db.Product.findByPk(req.params.id), {
+			include: [{association: "franquicia-producto"}, {association:"producto-categoria"}]
+		}
+			.then (function(producto) {
+				res.render("detail", {producto:producto})
+			})
 	},
 
+	//solamente se muestra el formulario, GET
     creador: (req, res) => {
         res.render('administrator')
     },
 
+	//mas de un pedido asincronico, ojo
 	editor: (req, res) => {
-		let productEdit = products.find(product => product.id == req.params.id)
-		res.render('product-edit', {productEdit})
+	
+		let pedidoProducto = db.Product.findByPk(req.params.id)
+
+		let pedidoCategorias = db.Product.findAll();
+
+		let pedidoFranchise = db.Product.findAll();
+
+		let pedidoPivotProductsCategory= db.ProductsCategory.findAll();
+
+		Promise.all([pedidoProducto, pedidoCategorias,pedidoFranchise, pedidoPivotProductsCategory])
+			.then(function([producto, categoria, franchise, pivot]){
+				res.render("product-edit", {producto:producto, categoria:categoria, franchise:franchise, pivot:pivot})
+			})
 	},
 	
+	//se guarda lo del form, POST
     guardado:  (req, res) => {
-		db.Products.create({
-			name:req.body.name,
-			description:req.body.description,
-			price:req.body.price,
-			image:req.body.image,
-			id_franchise:req.body.id_franchise,
-			id_productsCategory:req.body.id_productsCategory,
+		db.Product.create({
+			name: req.body.name,
+			description: req.body.descripcion,
+			price: req.body.precio,
+			image: req.body.file,
+			id_franchise: req.body.id_franchise,
+			id_productsCategory: req.body.id_productsCategory,
 			//tiene created_at, deberia ser timestamps TRUE?
-			created_at:req.body.created_at,
+			created_at: req.body.created_at,
 		})
 		res.redirect('/');
 /* 		let nuevoProducto = req.body;
@@ -57,42 +77,27 @@ const productsController = {
 
 	updateproducto: (req, res) => {
 
-		db.Products.update(
+		db.Product.uodate({
+			name: req.body.name,
+			description: req.body.descripcion,
+			price: req.body.precio,
+			image: req.body.file,
+			id_franchise: req.body.id_franchise,
+			id_productsCategory: req.body.id_productsCategory,
+			//tiene created_at, deberia ser timestamps TRUE?
+			created_at: req.body.created_at,
+		},
 		{
-			name:
-		}, 
-		{
-			where:{id: }
-
+			where: { id: req.params.id}
 		})
-/* 		let productoARemplazar = products.find(product => product.id == req.params.id)
-		let infoNueva = req.body;
-		let imag;
-		if(req.file != undefined){
-			imag = req.file.filename;
-		}else{
-			imag = productoARemplazar.image
-		}
-		infoNueva.image = imag;
-		infoNueva.id = req.params.id;
-
-		let productsActualizados = products.map(product => {
-			if (product.id == productoARemplazar.id) {
-				return product = {...infoNueva};
-			}
-			return product;
-		})
-
-		productsActualizados = JSON.stringify(productsActualizados, null, ' ')
-		fs.writeFileSync(productsFilePath, productsActualizados) */
+		
 		res.redirect('/')
-
 	},
 
 	delete: (req, res) => {
-		db.Products.destroy({
-			where:{id: }
-		})
+		//db.Products.destroy({
+			//where:{id: }
+		//})
 /* 		let productsActualizados = products.filter(aBorrar => aBorrar.id != req.params.id)
 		productsActualizados = JSON.stringify(productsActualizados, null, ' ')
 		fs.writeFileSync(productsFilePath, productsActualizados) */

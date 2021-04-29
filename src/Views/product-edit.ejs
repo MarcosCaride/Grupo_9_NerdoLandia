@@ -5,17 +5,17 @@
     <%- include('./partials/header') %>
 
       <div class="titulo-section">
-        <h2>Edita el producto: <%= productEdit.name %></h2>
+        <h2>Edita el producto: <%= producto.name %></h2>
       </div>
       <div class="register">
         
         <main class="register-form">
-           <form action="/productDetail/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+           <form action="/productDetail/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
              <br>
              <div class="name">
                <label for="name">Nombre del Producto</label>
                <br>
-               <input type="text" name="name" id="name" value="<%= productEdit.name %>"> 
+               <input type="text" name="name" id="name" value="<%= producto.name %>"> 
              </div>
              <br>
    
@@ -29,7 +29,7 @@
              <div class="category">
                  <label for="category">Ingresar Categoria</label>
                  <br>
-                 <input type="text" name="category" id="category" value="<%= productEdit.category %>"> 
+                 <input type="text" name="category" id="category" value="<%= producto.category %>"> 
                  <br>
              </div>
              <br>
@@ -37,18 +37,18 @@
              <div class="image">
                  <label for="category"> Cargar Imagen</label>
                  <br>
-                 <input type="file" alt="Submit" name="file" value="<%= productEdit.image %>">
+                 <input type="file" alt="Submit" name="file" value="<%= producto.image %>">
              </div>
              <br>
            
              <div class="price">
                  <label for="price">Ingresar Precio</label>
                  <br>
-                 <input type="number" name="price" id="price" value="<%= productEdit.price %>"> 
+                 <input type="number" name="price" id="price" value="<%= producto.price %>"> 
              </div>
              <br>
    
-             <button type="submit" value="Submit">Submit</button>
+             <button type="submit" value="Submit">Editar</button>
              <button type="reset" value="Reset">Reset</button>
              <br>
            </form>

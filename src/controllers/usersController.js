@@ -3,6 +3,8 @@ const bcryptjs = require('bcryptjs')
 const User = require('../models/User');
 const { send } = require('process');
 
+const db = require ("../database/models")
+
 const usersController = {
     
     register: (req, res) => {
@@ -10,6 +12,7 @@ const usersController = {
     },
     
     guardado:  (req, res) => {
+        
         let errores = validationResult(req)
         
         if (errores.errors.length > 0){
@@ -18,6 +21,23 @@ const usersController = {
                 old: req.body 
             })
         }
+
+
+        db.User.findOne({
+            where: {
+             email: req.body.email
+            
+        }
+            }).then((usuario)=> { 
+            console.log(usuario);
+            });
+        
+
+
+
+
+
+        
         
         let userInDB = User.findByField('email', req.body.email)
         

@@ -4,49 +4,39 @@
 <body> 
 
   <%- include('./partials/header') %>     
-
-      <div class="titulo-section"> 
-        <h2>Carrito</h2> 
-      </div> 
- 
-   <section class="contenedor-carrito"> 
-    <div class="headerCart">
-      <h3>Producto</h3>
-      <h3>Precio</h3>
-      <h3>Cantidad</h3>
-      <h3>Subtotal</h3>
-    </div>
- 
-    <div class="caja-producto"> 
-      <a href="/"><img width="200px" src="imagenes/The-Simpsons-Homer-Muumuu-Funko-POP.jpg" alt=""></a> 
-      <div class="infoCarrito">
-        <p>Información del producto</p>
-        <p>Precio</p>
-        <p>Cantidad</p>
-        <p>Subtotal</p>
+  
+  
+  <div class="carrito">
+    <% for (product of marvel){%>
+      <div class="carritoDetail">
+        <a href="/detail/product/<%= product.id %>">
+          <article>
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
+            <div class="infoDelProducto">
+              <p class="descripcion"><%= product.Nombre %></p>
+              <p class="precio">$<%= product.Precio %></p>
+              <p class="precio"> Cantidad: 2</p>
+            </div>
+          </article>
+        </a>
       </div>
-  </div><br> 
-       
-    <div class="caja-producto"> 
-        <a href="/productDetail"><img width="200px" src="imagenes/LEGO-Star-Wars-75292-The-Mandalorian-Bounty-Hunter-Transport-The-Razor-Crest.jpg" alt=""></a>
-        <div class="infoCarrito">
-          <p>Información del producto</p>
-          <p>Precio</p>
-          <p>Cantidad</p>
-          <p>Subtotal</p>
+      
+      <% precioTotal = precioTotal + (product.Precio * 2) %> 
+        <% } %>
+        <div class="totalCarrito">
+          <p class="descripcion">Precio Total <%= precioTotal %></p>
         </div>
-    </div><br> 
-  </section> 
-<div class="total-carrito">   
-<h3>Total del Carrito</h3> 
-<div>Subtotal - Precio</div> 
-<span>Envío</span> 
-<span><i class="fas fa-truck"></i></span><span>Calcular envío</span>  
-<div>Total - Precio</div> 
-</div>   
-<br> 
-<br> 
-<%- include('./partials/footer') %> 
+
+
+  </div>
+  
+    <br> 
+    <br> 
+    <br>
+    <br>
+    <br>
+  
+    <%- include('./partials/footer') %> 
  
 </body> 
 </html>

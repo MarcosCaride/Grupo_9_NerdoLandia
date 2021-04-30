@@ -18,7 +18,9 @@ const mainController = {
 	},
 
     carrito:(req, res) => {
-        res.render('productCart')
+		let marvel = products.filter(product => product.Categoria =='Marvel');
+        let precioTotal = 0;
+        res.render('productCart', {marvel, precioTotal})
     },
 
     categorias: (req, res) => {

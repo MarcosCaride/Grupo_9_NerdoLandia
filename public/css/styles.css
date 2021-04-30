@@ -528,10 +528,65 @@ main .adminForm{
 
 
 /* ProductCart.html */
-.contenedor-carrito {
-    margin: 20px;
-    width: 320px;
+
+.carrito{
+    display: flex;
+    width: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+.carritoDetail{
+    display: flex;
+    width: 90%;
+    height: 15vw;
+    margin: 1% 0;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.carritoDetail a{
+    width: 100%;
+}
+
+.carritoDetail a article{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.carritoDetail a article img{
+    height: 100%;
+    width: 22%;
+}
+
+.carritoDetail a article .infoDelProducto{
+    height: 100%;
+    width: 80%;
+    margin: 0;
+    font-family: 'Russo One', sans-serif;
+}
+
+.carritoDetail a article .infoDelProducto .descripcion{
+    font-size: 2vw;
+    color: black;
+}
+
+.totalCarrito
+
+.descripcion{
+    text-align: center;
+    font-size: 2vw;
+    color: #337ab7;
+    font-family: 'Russo One', sans-serif;
+    margin: 0;
+}
+
 .caja-producto{
     width: 320px;
     height: 300px;
@@ -551,7 +606,7 @@ main .adminForm{
     display: inline-block;
 }
 
-.total-carrito {
+.botonesDetail {
     float: right;
     margin: 20px;
     border-radius: 20px;
@@ -566,7 +621,7 @@ main .adminForm{
     
 }
 
-.total-carrito button{
+.botonesDetail button{
     font-size: 16px;
     border: solid;
     background-color: white;
@@ -576,7 +631,7 @@ main .adminForm{
     margin: 5px 0;
 }
 
-.total-carrito button:hover{
+.botonesDetail button:hover{
     border-radius: 15px;
     border-color: white;
     text-decoration: none;
@@ -769,7 +824,7 @@ main .adminForm{
     .logo .inicio-sesion {
         display:block;
     }
-    .logo .carrito {
+    .logo .carritoE {
         display:block;
     }
 

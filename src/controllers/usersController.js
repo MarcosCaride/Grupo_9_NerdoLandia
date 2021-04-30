@@ -3,13 +3,17 @@ const bcryptjs = require('bcryptjs')
 const User = require('../models/User');
 const { send } = require('process');
 
+const db = require ("../database/models");
+//const { DATE } = require('sequelize/types');
+
 const usersController = {
     
     register: (req, res) => {
         res.render('register')
     },
     
-    guardado:  (req, res) => {
+    guardado:  async (req, res) => {
+        
         let errores = validationResult(req)
         
         if (errores.errors.length > 0){
@@ -18,26 +22,45 @@ const usersController = {
                 old: req.body 
             })
         }
-        
-        let userInDB = User.findByField('email', req.body.email)
-        
-        if (userInDB){
-            return res.render('register', { errors: {
-                'email':{
-                    msg: 'Ya hay un usuario con este email'
-                }
-            },
-            old: req.body
-        })
-        
-    }
-    let userToCreate= {
-        ...req.body,
-        avatar: req.file.filename,
-        contraseña: bcryptjs.hashSync(req.body.contraseña, 10)
-    }
-    
-    User.create(userToCreate)
+
+
+        await db.User.findOne({
+            where: {
+             email: req.body.email
+            
+        }
+            }).then((usuario)=> { 
+                if (usuario){
+                    return res.render('register', { errors: {
+                        'email':{
+                            msg: 'Ya hay un usuario con este email'
+                        }
+                    },
+                    old: req.body
+                })
+              }
+                 });
+
+                 let imag;
+		if(!req.file){
+			imag = "default-placeholder.png"
+		}else{
+		imag = req.file.filename;
+		}
+                 await db.User.create({
+                     name: req.body.name,
+                     surname: req.body.surname, 
+                     email: req.body.email,
+                     password: bcryptjs.hashSync(req.body.contraseña, 10),
+                     id_provice: "",
+                     address: req.body.domicilio,
+                     avatar: imag,
+                     dateOfBirth: req.body.fecha,
+                     phoneNumber: req.body.telefono,
+                     created_at: Date.now()
+                     
+                 })
+
     return res.redirect('/')
 
     },

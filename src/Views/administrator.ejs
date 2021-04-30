@@ -14,7 +14,7 @@
   <!-- Nombre -->
               <label for="Nombre">Nombre del Producto</label>
 <br>
-                <input type="text" name="Nombre" id="Nombre"> 
+                <input type="text" name="name" id="Nombre"> 
   <!-- Nombre -->
              
 <br>
@@ -23,7 +23,7 @@
   <!-- Descripcion -->
                 <label for="Descripcion">Ingersar descripción del producto</label>
             <br>
-                <textarea name="Descripcion" id="Descripcion" rows="4"></textarea>
+                <textarea name="descripcion" id="Descripcion" rows="4"></textarea>
   <!-- Descripcion -->
 
 <br>
@@ -31,15 +31,14 @@
 
   <!-- Categoria -->
 
-            <label>Ingresar la Categoria</label>
+            <label>Ingresar la Franquicia</label>
 <br>
-             <div class="radioInputs">
-              <label><input type="radio" name="Categoria" value="Marvel">  Marvel</label>
-<br>
-                <label><input type="radio" name="Categoria" value="LosSimpsons">  Los Simpsons</label>
-<br>
-                <label><input type="radio" name="Categoria" value="Star Wars">  Star Wars</label>
-             </div>
+            <select name="id_franchise" id="">
+              <% franquicias.forEach(franquicia => { %>
+                <option value="<%= franquicia.id %> "><%= franquicia.franchise_name %> </option>
+              <% }) %>
+            </select>
+
              
   <!-- Categoria -->
 
@@ -47,17 +46,25 @@
 <br>
 
   <!-- Tags -->
-            <label>Ingresa los Tags</label>
+            <label>Ingresa los Categorias</label>
             <br>
              <div class="radioInputs">
-              <label><input type="checkbox" name="AndroideDelMes" value=true>  Androide del Mes</label>
-<br>
-                <label><input type="checkbox" name="Heroina" value=true>  Heroína</label>
-<br>
-                <label><input type="checkbox" name="Funko" value=true>  Funko</label>
-<br>
-                <label><input type="checkbox" name="Lego" value=true>  LEGO</label>
-             </div>
+              <label><input type="checkbox" name="id_productsCategory" value="1">  Funko POP</label>
+              <br>
+                <label><input type="checkbox" name="id_productsCategory" value="2">  LEGO</label>
+              <br>
+                <label><input type="checkbox" name="id_productsCategory" value="3">  Accesorios</label>
+              <br>
+                <label><input type="checkbox" name="id_productsCategory" value="4">  Mochilas</label>
+              <br>
+                <label><input type="checkbox" name="id_productsCategory" value="5">  Remeras</label>
+              <br>
+                <label><input type="checkbox" name="id_productsCategory" value="6">  Figuras de Accion</label>
+              <br>
+                <label><input type="checkbox" name="id_productsCategory" value="7">  Heroínas</label>
+              <br>
+                <label><input type="checkbox" name="id_productsCategory" value="8">  Androide Del Mes</label>
+              </div>
   <!-- Tags -->
            
 <br>
@@ -77,7 +84,7 @@
   <!-- Precio -->
             <label for="Precio">Ingresar Precio</label>
 <br>
-            <input type="number" name="Precio"> 
+            <input type="number" name="precio"> 
           
   <!-- Precio -->
           

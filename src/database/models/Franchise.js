@@ -6,7 +6,9 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        franchise_name: dataTypes.STRING(50),
+        franchise_name: {
+            type: dataTypes.STRING(50)
+        },
     };
     let options = {
         tableName: 'franchises',
@@ -17,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
     Franchise.associate = function (models){
         Franchise.hasMany(models.Product, {
             as: "franquicia-producto",
-            foreignKey: "franchise_name"
+            foreignKey: "id_franchise"
         });
     }
 

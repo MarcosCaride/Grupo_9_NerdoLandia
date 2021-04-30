@@ -15,9 +15,9 @@ const productsController = {
 
 	//se muetra el detall de un producto por id, o sea, /detail/:id
 	detail: (req,res) =>{
-			db.Product.findByPk(req.params.id, {
-				include: [{association: "franquicia-producto"},{association:"producto-categoria"}]
-			})
+			db.Product.findByPk(req.params.id, 
+				// {include: [{association: "franquicia-producto"},{association:"producto-categoria"}]}
+			)
 				.then(producto => {
 					res.render('detail', {producto:producto});
 				});
@@ -29,40 +29,47 @@ const productsController = {
 	},
 
 	//solamente se muestra el formulario, GET
-    creador: (req, res) => {
-        res.render('administrator')
+    creador: async (req, res) => {
+		let categorias = await db.Category.findAll()
+		let franquicias = await db.Franchise.findAll()
+
+		res.render('administrator', {categorias, franquicias})
+
     },
 
 	//mas de un pedido asincronico, ojo
 	editor: (req, res) => {
 	
 		let pedidoProducto = db.Product.findByPk(req.params.id)
-
 		let pedidoCategorias = db.Product.findAll();
-
 		let pedidoFranchise = db.Product.findAll();
 
-		let pedidoPivotProductsCategory= db.ProductsCategory.findAll();
-
-		Promise.all([pedidoProducto, pedidoCategorias,pedidoFranchise, pedidoPivotProductsCategory])
-			.then(function([producto, categoria, franchise, pivot]){
-				res.render("product-edit", {producto:producto, categoria:categoria, franchise:franchise, pivot:pivot})
+		Promise.all([pedidoProducto, pedidoCategorias,pedidoFranchise])
+			.then(function([producto, categoria, franchise]){
+				res.render("product-edit", {producto:producto, categoria:categoria, franchise:franchise})
 			})
 	},
 	
 	//se guarda lo del form, POST
-    guardado:  (req, res) => {
-		db.Product.create({
+    guardado: async  (req, res) => {
+		let imag;
+		if(!req.file){
+			imag = "default-placeholder.png"
+		}else{
+		imag = req.file.filename;
+		}
+		await db.Product.create({
 			name: req.body.name,
 			description: req.body.descripcion,
+			image: imag,
 			price: req.body.precio,
-			image: req.body.file,
 			id_franchise: req.body.id_franchise,
 			id_productsCategory: req.body.id_productsCategory,
 			//tiene created_at, deberia ser timestamps TRUE?
-			created_at: req.body.created_at,
+			created_at: Date.now(),
 		})
-		res.redirect('/');
+		let tablaProducts = await db.Product.findAll()
+		res.send(tablaProducts);
 /* 		let nuevoProducto = req.body;
 		nuevoProducto.id = products.length + 1;
 		let imag;

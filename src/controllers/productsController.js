@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path');
 
 //para DB
-const db = require ('../database/models')
+const db = require('../database/models')
 
 // CONTROLADOR
 
@@ -15,12 +15,17 @@ const productsController = {
 
 	//se muetra el detall de un producto por id, o sea, /detail/:id
 	detail: (req,res) =>{
-		db.Product.findByPk(req.params.id), {
-			include: [{association: "franquicia-producto"}, {association:"producto-categoria"}]
-		}
-			.then (function(producto) {
-				res.render("detail", {producto:producto})
+			db.Product.findByPk(req.params.id, {
+				include: [{association: "franquicia-producto"},{association:"producto-categoria"}]
 			})
+				.then(producto => {
+					res.render('detail', {producto:producto});
+				});
+/* 			include: [{association: "franquicia-producto"},{association:"producto-categoria"}]
+		}
+			.then(function (producto) {
+				res.render("detail", {producto:producto})
+			}) */
 	},
 
 	//solamente se muestra el formulario, GET
@@ -77,7 +82,7 @@ const productsController = {
 
 	updateproducto: (req, res) => {
 
-		db.Product.uodate({
+		db.Product.update({
 			name: req.body.name,
 			description: req.body.descripcion,
 			price: req.body.precio,

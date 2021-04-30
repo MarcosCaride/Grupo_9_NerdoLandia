@@ -1,18 +1,18 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = 'Product';
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        name: dataTypes.STRING(50),
-        description: dataTypes.TEXT,
-        price: dataTypes.INTEGER,
-        image:dataTypes.STRING(100) ,
-        id_franchise: dataTypes.INTEGER(10),
-        id_productsCategory:  dataTypes.INTEGER(10),
-        created_at:  dataTypes.DATE,
+        name: DataTypes.STRING(50),
+        description: DataTypes.TEXT,
+        price: DataTypes.INTEGER,
+        image:DataTypes.STRING(100),
+        id_franchise: DataTypes.INTEGER(10),
+        id_productsCategory:  DataTypes.INTEGER(10),
+        created_at:  DataTypes.DATE,
     };
     let options = {
         tableName: 'products',
@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
         }) ,
         Product.belongsToMany(models.Category, {
             as: "producto-categoria",
-            through: "ProductsCategory",
+            through: "products_category",
             foreignKey: "id_productsCategory",
             otherKey: "id_products",
             timestamps: false,

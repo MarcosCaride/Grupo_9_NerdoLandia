@@ -2,7 +2,9 @@ const { body } = require('express-validator')
 const path = require('path')
 
 let validationRegister = [
-    body('nombreApellido')
+    body('name')
+        .notEmpty().withMessage('Debes completar este campo'),
+    body('surname')
         .notEmpty().withMessage('Debes completar este campo'),
     body('telefono')
         .notEmpty().withMessage('Debes completar este campo'),

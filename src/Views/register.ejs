@@ -16,16 +16,24 @@
             <main class="register-form">
                 
                 <br>
-                <label for="nombre">Nombre y apellido:</label>
+                <label for="name">Nombre:</label>
                 <br>
-                <input type="text" name="nombreApellido" value="<%= locals.old && old.nombreApellido %>"> 
-                <% if(locals.errors && errors.nombreApellido){ %>
-                <p><%= errors.nombreApellido.msg %></p>
+                <input type="text" name="name" value="<%= locals.old && old.name %>"> 
+                <% if(locals.errors && errors.name){ %>
+                <p><%= errors.name.msg %></p>
+                <% } %>
+                <br>
+                <br>
+                <label for="surname">Apellido:</label>
+                <br>
+                <input type="text" name="surname" value="<%= locals.old && old.surname %>"> 
+                <% if(locals.errors && errors.surname){ %>
+                <p><%= errors.surname.msg %></p>
                 <% } %>
                 <br>
                 <br>
                 
-                <label for="emaiL"> Email</label>
+                <label for="email"> Email</label>
                 <br>
                 <input type="email" name="email" value="<%= locals.old && old.email %>">
                 <% if(locals.errors && errors.email){ %>

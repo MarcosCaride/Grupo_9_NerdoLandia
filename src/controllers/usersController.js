@@ -12,10 +12,9 @@ const usersController = {
         res.render('register')
     },
     
-    guardado:  async (req, res) => {
+    guardado: async (req, res) => {
         
         let errores = validationResult(req)
-        
         if (errores.errors.length > 0){
             return res.render('register', {
                 errors: errores.mapped(),
@@ -24,7 +23,7 @@ const usersController = {
         }
 
 
-        await db.User.findOne({
+        await db.Users.findOne({
             where: {
              email: req.body.email
             
@@ -47,12 +46,12 @@ const usersController = {
 		}else{
 		imag = req.file.filename;
 		}
-                 await db.User.create({
+        await db.Users.create({
                      name: req.body.name,
                      surname: req.body.surname, 
                      email: req.body.email,
                      password: bcryptjs.hashSync(req.body.contraseña, 10),
-                     id_provice: "",
+                     id_provice: 1,
                      address: req.body.domicilio,
                      avatar: imag,
                      dateOfBirth: req.body.fecha,
@@ -69,9 +68,14 @@ const usersController = {
         res.render('login')
     },
 
-    loginProcess: (req, res) => {
-        let userToLogIn = User.findByField('email', req.body.email)
+    loginProcess: async (req, res) => {
 
+
+        let userToLogIn = await db.Users.findOne({
+            where:  {
+                email: req.body.email
+            }
+        })
         if(!userToLogIn){
             return res.render('login', {
                 errors: {
@@ -82,17 +86,18 @@ const usersController = {
             })
         }
 
-        let isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogIn.contraseña)
+        let isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogIn.password)
+        
+
 
         if (isOkThePassword) {
             delete userToLogIn.contraseña;
             req.session.userLogged = userToLogIn;
 
             if (req.body.recordarme){
-                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 600) * 2 })
+                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2 })
             }
-
-            return res.redirect ('/users/perfil');   
+            res.redirect('users/perfil')
         }
             return res.render('login', {
                 errors: {

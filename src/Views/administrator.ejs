@@ -26,9 +26,9 @@
 <br>
 
             <% if(productEdit){ %> 
-              <input type="text" name="Nombre" id="Nombre" value="<%= productEdit.Nombre %> "> 
+              <input type="text" name="name" id="Nombre" value="<%= productEdit.Nombre %> "> 
             <% }else{ %>
-              <input type="text" name="Nombre" id="Nombre"> 
+              <input type="text" name="name" id="Nombre"> 
             <% } %> 
                 
   <!-- Nombre -->
@@ -37,12 +37,12 @@
 <br>
 
   <!-- Descripcion -->
-                <label for="Descripcion">Ingersar descripción del producto</label>
+                <label for="description">Ingersar descripción del producto</label>
             <br>
             <% if(productEdit){ %> 
-                <textarea name="Descripcion" id="Descripcion" rows="4"><%= productEdit.Descripcion %></textarea>
+                <textarea name="description" id="Descripcion" rows="4"><%= productEdit.description %></textarea>
             <% }else{ %>
-            <textarea name="Descripcion" id="Descripcion" rows="4"></textarea>
+            <textarea name="description" id="Descripcion" rows="4"></textarea>
             <% } %> 
   <!-- Descripcion -->
 
@@ -105,9 +105,9 @@
             <label for="Precio">Ingresar Precio</label>
 <br>
         <% if(productEdit){ %> 
-            <input type="text" name="Precio" value="<%= productEdit.Precio %>"> 
+            <input type="text" name="price" value="<%= productEdit.Precio %>"> 
           <% }else{ %>
-            <input type="number" name="Precio"> 
+            <input type="number" name="price"> 
           <% } %> 
   <!-- Precio -->
           

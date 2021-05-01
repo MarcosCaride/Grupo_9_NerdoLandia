@@ -13,7 +13,10 @@ const productsController = {
 				// {include: [{association: "franquicia-producto"},{association:"producto-categoria"}]}
 			)
 				.then(producto => {
-					res.render('detail', {producto : producto});
+					res.render('detail', {
+						product: producto,
+						user: req.session.userLogged
+					});
 				});
 /* 			include: [{association: "franquicia-producto"},{association:"producto-categoria"}]
 		}
@@ -27,7 +30,7 @@ const productsController = {
 		let categorias = await db.Category.findAll()
 		let franquicias = await db.Franchise.findAll()
 
-		res.render('administrator', {categorias, franquicias})
+		res.render('administrator', {categorias, franquicias, productEdit: ""})
 
     },
 
@@ -54,9 +57,9 @@ const productsController = {
 		}
 		await db.Product.create({
 			name: req.body.name,
-			description: req.body.descripcion,
+			description: req.body.description,
 			image: imag,
-			price: req.body.precio,
+			price: req.body.price,
 			id_franchise: req.body.id_franchise,
 			id_productsCategory: req.body.id_productsCategory,
 			//tiene created_at, deberia ser timestamps TRUE?

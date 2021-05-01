@@ -11,16 +11,16 @@
         <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
     </div>
     <div class="Info">
-        <h1><%= product.Nombre %></h1>
+        <h1><%= product.name %></h1>
         <br>
         <br>
-        <h2>$<%= product.Precio %> </h2>
+        <h2>$<%= product.price %> </h2>
         <br>
         <br>
         <form action="">
             <button>Comprar</button>
         </form>
-        <p><%= product.Descripcion %> </p>
+        <p><%= product.description %> </p>
 
     </div>
 
@@ -33,7 +33,7 @@
     <% if(user){ %> 
     <div class="botonesDetail">   
         <a href="/detail/edit/<%= product.id %>" ><button>Editar</button></a>
-        <form action="/detail/<%= product.id %>?_method=DELETE" method='POST'>
+        <form action="/detail/delete/<%= product.id %>" method='POST'>
             <button>Borrar Producto</button>
         </form>
     </div>

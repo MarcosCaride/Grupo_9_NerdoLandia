@@ -54,7 +54,7 @@
 
         <a href="/detail/product/<%= product.id %>">
           <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
+            <img src="/Imagenes/products/JSON/<%= product.image %>" alt="<%= product.Nombre %>">
             <div class="infoDelProducto">
               <p class="descripcion"><%= product.Nombre %></p>
               <p class="precio">$<%= product.Precio %></p>
@@ -83,7 +83,7 @@
 
         <a href="/detail/product/<%= product.id %>">
           <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
+            <img src="/Imagenes/products/JSON/<%= product.image %>" alt="<%= product.Nombre %>">
             <div class="infoDelProducto">
               <p class="descripcion"><%= product.Nombre %></p>
               <p class="precio">$<%= product.Precio %></p>
@@ -104,7 +104,7 @@
 
     <section class="destacados">
       <div class="titulo-Section">
-        <img src="/Imagenes/Los SimpsonsBanner.jpg" style="width:80%; text-align: center;" alt="">
+        <img src="/Imagenes/LosSimpsonsBanner.jpg" style="width:80%; text-align: center;" alt="">
         <!-- <h2>Los Simpsons</h2> -->
       </div>
       <br>
@@ -114,7 +114,7 @@
 
         <a href="/detail/product/<%= product.id %>">
           <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
+            <img src="/Imagenes/products/JSON/<%= product.image %>" alt="<%= product.Nombre %>">
             <div class="infoDelProducto">
               <p class="descripcion"><%= product.Nombre %></p>
               <p class="precio">$<%= product.Precio %></p>
@@ -145,7 +145,7 @@
 
         <a href="/detail/product/<%= product.id %>">
           <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
+            <img src="/Imagenes/products/JSON/<%= product.image %>" alt="<%= product.Nombre %>">
             <div class="infoDelProducto">
               <p class="descripcion"><%= product.Nombre %></p>
               <p class="precio">$<%= product.Precio %></p>
@@ -172,7 +172,7 @@
       <br>
       <div class="productos">
         <% productosdb.forEach(product => { %>
-          <a href="/productDetail/detail/<%= product.id %>">
+          <a href="/detail/product/<%= product.id %>">
             <article>
               <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
               <div class="infoDelProducto">

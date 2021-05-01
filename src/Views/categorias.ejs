@@ -10,24 +10,32 @@
 
     <section class="destacados">
       <div class="titulo-Section">
-        <img src="/Imagenes/<%= categoryBanner %>" width="80%" alt="">
+        <% if(param == 1){ %> 
+          <img src="/Imagenes/<%= marvelBanner %>" width="80%" alt="">
+        <% }if(param == "2"){ %>
+            <img src="/Imagenes/<%= starWarsBanner %> " alt="">  
+        <% }if(param == "3"){ %> 
+          <img src="/Imagenes/<%= losSimpsonsBanner %> " alt="">  
+        <% } %> 
+        
+        
       </div>
       <br>
       <br>
       <div class="productos">
         <% for (product of categoria){%>
-
+          <% if( product.id_franchise == param ){ %> 
         <a href="/productDetail/detail/<%= product.id %>">
           <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
             <div class="infoDelProducto">
-              <p class="descripcion"><%= product.Nombre %></p>
-              <p class="precio">$<%= product.Precio %></p>
+              <p class="descripcion"><%= product.name %></p>
+              <p class="precio">$<%= product.price %></p>
             </div>
           </article>
         </a>
 
-        <% } %>
+        <% }} %>
 
       </div>
 

@@ -7,7 +7,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
     index: async (req, res) => {
-		let losSimpsons = products.filter(product => product.Categoria =='Los Simpsons');
+		let losSimpsons = products.filter(product => product.Categoria =='LosSimpsons');
 		let marvel = products.filter(product => product.Categoria =='Marvel');
 		let starWars = products.filter(product => product.Categoria == 'Star Wars');
 		let androidesDelMes = products.filter(product => product.AndroideDelMes == 'true');
@@ -29,10 +29,16 @@ const mainController = {
         res.render('productCart', {marvel, precioTotal})
     },
 
-    categorias: (req, res) => {
-        let categoria = products.filter(product => (product.Categoria == req.params.categoriaS))
-        let categoryBanner = req.params.categoriaS + "Banner.jpg"
-        res.render('categorias', {categoria, categoryBanner})
+    categorias: async (req, res) => {
+        let categoria = await db.Product.findAll()
+        let param = req.params.categoriaS
+        // res.send(categoria)
+        // let categoria = products.filter(product => (product.Categoria == req.params.categoriaS))
+        let marvelBanner = "MarvelBanner.jpg"
+        let starWarsBanner =  "Star WarsBanner.jpg"
+        let losSimpsonsBanner =  "LosSimpsonsBanner.jpg"
+
+        res.render('categorias', {categoria, marvelBanner, starWarsBanner, losSimpsonsBanner, param})
     },
 
     heroinas: (req,res) => {

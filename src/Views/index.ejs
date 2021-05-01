@@ -162,6 +162,31 @@
 
     <br>
     <br>
+
+    <section class="destacados">
+      <div class="titulo-Section">
+        <!-- <img src="/Imagenes/Los SimpsonsBanner.jpg" style="width:80%; text-align: center;" alt=""> -->
+        <h2>Productos en DB</h2>
+      </div>
+      <br>
+      <br>
+      <div class="productos">
+        <% productosdb.forEach(product => { %>
+          <a href="/productDetail/detail/<%= product.id %>">
+            <article>
+              <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+              <div class="infoDelProducto">
+                <p class="descripcion"><%= product.name %></p>
+                <p class="precio">$<%= product.price %></p>
+              </div>
+            </article>
+          </a>
+        <% }) %>
+
+      </div>
+
+
+    </section>
     <br>
 
     <%- include('./partials/footer') %> 

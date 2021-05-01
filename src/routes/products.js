@@ -34,7 +34,7 @@ router.put('/:id', upload.single('file'), productsController.updateproducto)
 
 
 // Borrar un producto
-router.delete('/:id', productsController.delete)
+router.post('/delete/:id', productsController.delete)
 
 
 module.exports = router

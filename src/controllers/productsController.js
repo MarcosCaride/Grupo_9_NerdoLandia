@@ -19,7 +19,7 @@ const productsController = {
 				// {include: [{association: "franquicia-producto"},{association:"producto-categoria"}]}
 			)
 				.then(producto => {
-					res.render('detail', {producto:producto});
+					res.render('detail', {producto : producto});
 				});
 /* 			include: [{association: "franquicia-producto"},{association:"producto-categoria"}]
 		}
@@ -106,15 +106,14 @@ const productsController = {
 		res.redirect('/')
 	},
 
-	delete: (req, res) => {
-		//db.Products.destroy({
-			//where:{id: }
-		//})
-/* 		let productsActualizados = products.filter(aBorrar => aBorrar.id != req.params.id)
-		productsActualizados = JSON.stringify(productsActualizados, null, ' ')
-		fs.writeFileSync(productsFilePath, productsActualizados) */
-		res.redirect('/')
-	}
+	delete: async (req, res) => {
+			let productId = req.params.id;
+			db.Product
+			.destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
+			.then(()=>{
+				return res.redirect('/')})
+			.catch(error => res.send(error)) 
+		}
 
 
 }

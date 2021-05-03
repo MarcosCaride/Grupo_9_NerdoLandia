@@ -25,7 +25,7 @@
       <div class="productos">
         <% for (product of categoria){%>
           <% if( product.id_franchise == param ){ %> 
-        <a href="/productDetail/detail/<%= product.id %>">
+        <a href="/detail/product/<%= product.id %>">
           <article>
             <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
             <div class="infoDelProducto">

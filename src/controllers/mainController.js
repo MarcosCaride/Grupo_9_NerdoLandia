@@ -7,10 +7,25 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
     index: async (req, res) => {
-		let losSimpsons = products.filter(product => product.Categoria =='LosSimpsons');
-		let marvel = products.filter(product => product.Categoria =='Marvel');
-		let starWars = products.filter(product => product.Categoria == 'Star Wars');
-		let androidesDelMes = products.filter(product => product.AndroideDelMes == 'true');
+        let marvel = await db.Product.findAll({
+            where: {
+                id_franchise: 1
+            }
+        });
+
+		let starWars = await db.Product.findAll({
+            where: {
+                id_franchise: 2
+            }
+        });
+
+        let losSimpsons = await db.Product.findAll({
+            where: {
+                id_franchise: 3
+            }
+        });
+		
+        let androidesDelMes = products.filter(product => product.AndroideDelMes == 'true');
 		// let legos = products.filter(product => product.Lego == 'true');
 		// let Heroinas = products.filter(product => product.Heroinas == 'true');
 		// let funkoPOP = products.filter(product => product.Funko == 'true');
@@ -23,14 +38,22 @@ const mainController = {
 		res.render('index', {losSimpsons, marvel, starWars, androidesDelMes, productosdb, categorias, franquicias})
 	},
 
-    carrito:(req, res) => {
-		let marvel = products.filter(product => product.Categoria =='Marvel');
+    carrito: async (req, res) => {
+        let marvel = await db.Product.findAll({
+            where: {
+                id_franchise: 1
+            }
+        });
         let precioTotal = 0;
         res.render('productCart', {marvel, precioTotal})
     },
 
     categorias: async (req, res) => {
-        let categoria = await db.Product.findAll()
+        let categoria = await db.Product.findAll({
+            where: {
+                id_franchise: req.params.categoriaS
+            }
+        })
         let param = req.params.categoriaS
         // res.send(categoria)
         // let categoria = products.filter(product => (product.Categoria == req.params.categoriaS))

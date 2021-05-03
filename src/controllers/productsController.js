@@ -37,13 +37,13 @@ const productsController = {
 	//mas de un pedido asincronico, ojo
 	editor: (req, res) => {
 	
-		let pedidoProducto = db.Product.findByPk(req.params.id)
-		let pedidoCategorias = db.Product.findAll();
-		let pedidoFranchise = db.Product.findAll();
+		let productEdit = db.Product.findByPk(req.params.id);
+		let pedidoCategorias = db.Category.findAll();
+		let franquicias =  db.Franchise.findAll()
 
-		Promise.all([pedidoProducto, pedidoCategorias,pedidoFranchise])
-			.then(function([producto, categoria, franchise]){
-				res.render("product-edit", {producto:producto, categoria:categoria, franchise:franchise})
+		Promise.all([productEdit, pedidoCategorias, franquicias])
+			.then(function([productEdit, categoria, franquicias]){
+				res.render("administrator", { productEdit , categorias:categoria, franquicias })
 			})
 	},
 	

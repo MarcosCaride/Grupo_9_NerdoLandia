@@ -26,7 +26,7 @@
 <br>
 
             <% if(productEdit){ %> 
-              <input type="text" name="name" id="Nombre" value="<%= productEdit.Nombre %> "> 
+              <input type="text" name="name" id="Nombre" value="<%= productEdit.name %> "> 
             <% }else{ %>
               <input type="text" name="name" id="Nombre"> 
             <% } %> 
@@ -55,7 +55,7 @@
 <br>
             <select name="id_franchise" id="">
               <% franquicias.forEach(franquicia => { %>
-                <option value="<%= franquicia.id %> "><%= franquicia.franchise_name %> </option>
+                <option value="<%= franquicia.id %>" <% if( productEdit.id_franchise == franquicia.id ){ %> <%= "selected" %> <% } %>  ><%= franquicia.franchise_name %> </option>
               <% }) %>
             </select>
 
@@ -69,21 +69,11 @@
             <label>Ingresa los Categorias</label>
             <br>
              <div class="radioInputs">
-              <label><input type="checkbox" name="id_productsCategory" value="1">  Funko POP</label>
-              <br>
-                <label><input type="checkbox" name="id_productsCategory" value="2">  LEGO</label>
-              <br>
-                <label><input type="checkbox" name="id_productsCategory" value="3">  Accesorios</label>
-              <br>
-                <label><input type="checkbox" name="id_productsCategory" value="4">  Mochilas</label>
-              <br>
-                <label><input type="checkbox" name="id_productsCategory" value="5">  Remeras</label>
-              <br>
-                <label><input type="checkbox" name="id_productsCategory" value="6">  Figuras de Accion</label>
-              <br>
-                <label><input type="checkbox" name="id_productsCategory" value="7">  Heroínas</label>
-              <br>
-                <label><input type="checkbox" name="id_productsCategory" value="8">  Androide Del Mes</label>
+
+              <% categorias.forEach(categoria => { %>
+                <label><input type= "checkbox" name="id_productsCategory" value="<%= categoria.id %>" <% if( productEdit.id_productsCategory == categoria.id ){ %> <%= "checked" %> <% } %>  ><%= categoria.category_name %> </label>
+                <br>
+              <% }) %>
               </div>
   <!-- Tags -->
            
@@ -105,7 +95,7 @@
             <label for="Precio">Ingresar Precio</label>
 <br>
         <% if(productEdit){ %> 
-            <input type="text" name="price" value="<%= productEdit.Precio %>"> 
+            <input type="text" name="price" value="<%= productEdit.price %>"> 
           <% }else{ %>
             <input type="number" name="price"> 
           <% } %> 

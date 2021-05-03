@@ -11,17 +11,17 @@
       <div class="carritoDetail">
         <a href="/detail/product/<%= product.id %>">
           <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
+            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
             <div class="infoDelProducto">
-              <p class="descripcion"><%= product.Nombre %></p>
-              <p class="precio">$<%= product.Precio %></p>
+              <p class="descripcion"><%= product.name %></p>
+              <p class="precio">$<%= product.price %></p>
               <p class="precio"> Cantidad: 2</p>
             </div>
           </article>
         </a>
       </div>
       
-      <% precioTotal = precioTotal + (product.Precio * 2) %> 
+      <% precioTotal = precioTotal + (product.price * 2) %> 
         <% } %>
         <div class="totalCarrito">
           <p class="descripcion">Precio Total <%= precioTotal %></p>

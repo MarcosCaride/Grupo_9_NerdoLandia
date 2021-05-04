@@ -72,6 +72,10 @@ const mainController = {
     contacto: (req, res) => {
         res.render('aboutUs')
 
+    },
+
+    blog: (req, res) => {
+        res.render('404error')
     }
 }
 

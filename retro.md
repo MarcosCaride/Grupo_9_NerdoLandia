@@ -46,3 +46,16 @@ START DOING> Pensar la división de tareas desde otro lugar, en vez de repartirn
 CONTINUE DOING> Utilizar el grupo de whatsapp como principal vía de comunicación. Utilizar el trello para ver las tareas asignadas a cada unx y el proceso en el que se encuentran. Trabajo colaborativo en equipo. La reunión weekly fija y demás encuentros semanales sin horario fijo.
 
 STOP DOING> Trabajar en tantas ramas diferentes a la par e "invadir" las tareas del otrx.
+
+RETROSPECTIVA SPRINT 5
+FORMATO ESTRELLA DE MAR
+
+MORE OF> Encontrar mas tiempo para reunirnos y trabajar juntxs, además de la weekly fija. Mejorar la comunicación grupal, detallar mas el backlog.
+
+START DOING> Molestarnos más por whatsapp. Dividir mejor los entregables. Hacer un detalle de los pasos que implica cada tarea. Tomar notas y  'ayuda-memoria' de donde están los materiales necesarios para realizar las tareas en playgprudn. Compartir esta información.
+
+CONTINUE DOING> Utilizar el grupo de whatsapp como principal vía de comunicación. Utilizar el trello para ver las tareas asignadas a cada unx y el proceso en el que se encuentran. Trabajo colaborativo en equipo. La reunión weekly fija y demás encuentros semanales sin horario fijo.
+
+STOP DOING> No estar al día con playground. Dividir las ramas por tarea.
+
+LESS OF > Dejar de lado el tablero de Trello.

@@ -53,7 +53,7 @@ Yo tengo 17 años, actualmente estoy estudiando el secundario en el Colegio Card
 Tengo 30 años, soy profe de música y guionista de cine. Soy muy curiosa, me gusta mucho aprender cosas nuevas. Si tengo un rato libre me tiro a leer un libro. Fanática de Los Simpsons.
 
 ## Agos Di Bello:
-dnsjadnsajd
+Tengo 23 años. Soy maquilladora profesional. Actualmente estoy trabajando en un banco y estudiando con ustedes :). Me parece muy interesante y me vuela la cabeza la tecnología, después de esta cursada, voy a seguir otros cursos para enriquecer la cabeza con más, o directamente meterme en la carrera. Me suelo aburrir bastante rápido, constántemente necesito ir más allá, por eso me copa este rubro, ya que se actualiza todo el tiempo.  
 
 <br>
 <br>

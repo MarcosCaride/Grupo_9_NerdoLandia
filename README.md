@@ -9,6 +9,8 @@
 
 - [Daniela De Lellis](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#daniela-de-lellis)
 
+- [Agostina Di Bello](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#agostina-di-bello)
+
 ## Tematica:
 
 - [Temática del sitio](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#tem%C3%A1tica-del-sitio)
@@ -33,17 +35,25 @@
 
 - [Usuarios](https://github.com/MarcosCaride/Grupo_9_NerdoLandia#users)
 
-
 <br>
 
-## Daniela Baffaro:
-Tengo 35 años y soy bióloga vegetal pero trabajo en estudios clínicos de distintas fases para un laboratorio. Me gusta estar en la naturaleza y la tecnología, también pintar con acuarela y leer.
+## Scrip de datos y poblacion:
+
+- [Script de datos](https://drive.google.com/drive/u/1/folders/1rrAsMiiqkBfW2_up8QDvA9pPPzgmwm6n)
+
+>Archivos .sql para importar la base de datos con los datos incluidos
+
+
+<br>
 
 ## Marcos Caride:
 Yo tengo 17 años, actualmente estoy estudiando el secundario en el Colegio Cardenal Newman. Personalmente soy muy nerd, me gusta mucho la tecnologia en especial el armar computadoras, al igual que soy un fan de Star Wars y de los videojuegos en general.
 
 ## Daniela De Lellis: 
 Tengo 30 años, soy profe de música y guionista de cine. Soy muy curiosa, me gusta mucho aprender cosas nuevas. Si tengo un rato libre me tiro a leer un libro. Fanática de Los Simpsons.
+
+## Agos Di Bello:
+Tengo 23 años. Soy maquilladora profesional. Actualmente estoy trabajando en un banco y estudiando con ustedes :). Me parece muy interesante y me vuela la cabeza la tecnología, después de esta cursada, voy a seguir otros cursos para enriquecer la cabeza con más, o directamente meterme en la carrera. Me suelo aburrir bastante rápido, constántemente necesito ir más allá, por eso me copa este rubro, ya que se actualiza todo el tiempo.  
 
 <br>
 <br>

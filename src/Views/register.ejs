@@ -20,7 +20,10 @@
                 <br>
                 <label for="name">Nombre:</label>
                 <br>
-                <input type="text" name="name" value="<%= locals.old && old.name %>" id="inputNombre"> 
+                <input type="text" name="name" value="<%= locals.old && old.name %>" id="inputNombre">
+                    <!-- Validaciones -->
+                <p id="erorresNombre"></p>
+                    <!-- Validaciones --> 
                 <% if(locals.errors && errors.name){ %>
                 <p><%= errors.name.msg %></p>
                 <% } %>
@@ -28,7 +31,10 @@
                 <br>
                 <label for="surname">Apellido:</label>
                 <br>
-                <input type="text" name="surname" value="<%= locals.old && old.surname %>"id="apellido"> 
+                <input type="text" name="surname" value="<%= locals.old && old.surname %>"id="apellido">
+                  <!-- Validaciones -->
+                  <p id="erorresApellido"></p>
+                  <!-- Validaciones -->
                 <% if(locals.errors && errors.surname){ %>
                 <p><%= errors.surname.msg %></p>
                 <% } %>
@@ -38,6 +44,9 @@
                 <label for="email"> Email</label>
                 <br>
                 <input type="email" name="email" value="<%= locals.old && old.email %>" id="mail">
+                  <!-- Validaciones -->
+                  <p id="erorresMail"></p>
+                  <!-- Validaciones -->
                 <% if(locals.errors && errors.email){ %>
                     <p><%= errors.email.msg %></p>
                 <% } %>
@@ -81,7 +90,10 @@
             <div class="contraseña"> 
                 <h4>Ingresá una cotraseña</h4>
                 <label for="contraseña">
-                    <input type="password" name="contraseña" value="<%= locals.old && old.contraseña %>" id="contraseña">
+                <input type="password" name="contraseña" value="<%= locals.old && old.contraseña %>" id="contraseña">
+                <!-- Validaciones -->
+                <p id="erorresContraseña"></p>
+                <!-- Validaciones -->
                 </label>
                 <% if(locals.errors && errors.contraseña){ %>
                     <p><%= errors.contraseña.msg %></p>

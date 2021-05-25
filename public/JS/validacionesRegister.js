@@ -2,6 +2,7 @@ window.addEventListener("load", function() {
     let formulario = document.querySelector ("form.Formu-Registro")
     
     formulario.addEventListener("submit", function(e){
+        e.preventDefault();
         
         let errores = [];
 
@@ -19,33 +20,33 @@ window.addEventListener("load", function() {
         let erroresApellido = document.getElementById("erroresApellido")
 
         if (campoApellido.value= " ") {
-            erroresNombre.innerHTML= "El campo está vacío";
+            erroresApellido.innerHTML= "El campo está vacío"
         }
         else if (campoApellido.value.length<2) {
-            erroresNombre.innerHTML= "El apellido debe contener al menos dos caracteres"
+            erroresApellido.innerHTML= "El apellido debe contener al menos dos caracteres"
         }
 
         let campoContraseña= document.getElementById("contraseña");
         let erroresContraseña = document.getElementById("erorresContraseña")
         
-        if (campoContraseña.value= " ") {
-            erroresNombre.innerHTML= "El campo está vacío";
+        if (campoContraseña.value= "") {
+            erroresContraseña.innerHTML= "El campo está vacío";
         }
         else if (campoContraseña.value.length<8) {
-            erroresNombre.innerHTML= "La contraseña debe contener al menos ocho caracteres"
+            erroresContraseña.innerHTML= "La contraseña debe contener al menos ocho caracteres"
         }
 
         let campoMail= document.getElementById("mail");
         let erroresMail = document.getElementById('erorresMail')
 
         if (campoMail.value= " ") {
-            erroresNombre.innerHTML= "El campo está vacío";
+            erroresMail.innerHTML= "El campo está vacío";
         }  
 
         let fotoPerfil = document.getElementById ("fotoPerfil");
            
         if (errores.length >0){
-            e.preventDefault();
+            
             let ulErrores = document.querySelector("div.errores ul");
             for (let i=0; i< errores.length; i ++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"

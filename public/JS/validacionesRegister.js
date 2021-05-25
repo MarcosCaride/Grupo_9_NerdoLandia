@@ -1,3 +1,3 @@
-window.onload= function() {
-    
-};
+window.addEventListener("load", function() {
+    let formulario = document.querySelector ("form.")
+})

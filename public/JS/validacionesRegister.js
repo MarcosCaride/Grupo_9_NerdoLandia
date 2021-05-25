@@ -5,5 +5,9 @@ window.addEventListener("load", function() {
         let errores = [];
 
         let campoNombre = document.querySelector ("input.name");
+
+        if (campoNombre.value= " ") {
+            errores.push ("El campo está vacío");
+        }
     })
 })

@@ -42,6 +42,8 @@ window.addEventListener("load", function() {
         if (campoContraseña.value= " ") {
             errores.push ("El campo está vacío");
         }
+
+        let fotoPerfil = documento.queryElementById ("fotoPerfil");
            
         if (errores.length >0){
             e.preventDefault();

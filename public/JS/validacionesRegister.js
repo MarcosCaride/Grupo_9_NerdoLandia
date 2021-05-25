@@ -13,7 +13,7 @@ window.addEventListener("load", function() {
             errores.push ("El nombre debe contener al menos dos carecteres")
         }   
 
-        let campoApellido =document.getElementById ("Apellido");
+        let campoApellido =document.getElementById ("apellido");
 
         if (campoApellido.value= "") {
             errores.push ("El campo está vacío");
@@ -21,6 +21,28 @@ window.addEventListener("load", function() {
         else if (campoApellido.value.length<2) {
             errores.push("El apellido debe contener al menos dos caracteres")
         }
+
+        let campoContraseña= document.getElementById("contraseña");
+        
+        if (campoContraseña.value= " ") {
+            errores.push ("El campo está vacío");
+        }
+        else if (campoContraseña.value.length<8) {
+            errores.push("La contraseña debe contener al menos ocho caracteres")
+        }
+
+        let campoMail= document.queryElementById("mail");
+
+        if (campoMail.value= " ") {
+            errores.push ("El campo está vacío");
+        }   
+
+        let campoContraseña= document.queryElementById("contraseña");
+        
+        if (campoContraseña.value= " ") {
+            errores.push ("El campo está vacío");
+        }
+           
         if (errores.length >0){
             e.preventDefault();
             let ulErrores = document.querySelector("div.errores ul");

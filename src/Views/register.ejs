@@ -14,13 +14,13 @@
         <div class="errores">
             <ul></ul>
         </div>
+        <main class="register-form">
         <form action="/users/register" method="POST" enctype="multipart/form-data" class = "Formu-Registro">
-            <main class="register-form">
                 
                 <br>
                 <label for="name">Nombre:</label>
                 <br>
-                <input type="text" name="name" value="<%= locals.old && old.name %>"> 
+                <input type="text" name="name" value="<%= locals.old && old.name %>" id="inputNombre"> 
                 <% if(locals.errors && errors.name){ %>
                 <p><%= errors.name.msg %></p>
                 <% } %>
@@ -28,7 +28,7 @@
                 <br>
                 <label for="surname">Apellido:</label>
                 <br>
-                <input type="text" name="surname" value="<%= locals.old && old.surname %>"> 
+                <input type="text" name="surname" value="<%= locals.old && old.surname %>"id="Apellido"> 
                 <% if(locals.errors && errors.surname){ %>
                 <p><%= errors.surname.msg %></p>
                 <% } %>
@@ -37,7 +37,7 @@
                 
                 <label for="email"> Email</label>
                 <br>
-                <input type="email" name="email" value="<%= locals.old && old.email %>">
+                <input type="email" name="email" value="<%= locals.old && old.email %>" id="mail">
                 <% if(locals.errors && errors.email){ %>
                     <p><%= errors.email.msg %></p>
                 <% } %>
@@ -46,7 +46,7 @@
                 
             <label for="domicilio">Domicilio:</label>
             <br>
-            <input type="text" name="domicilio" value="<%= locals.old && old.domicilio %>"> 
+            <input type="text" name="domicilio" value="<%= locals.old && old.domicilio %>" id="domicilio"> 
             <% if(locals.errors && errors.domicilio){ %>
                 <p><%= errors.domicilio.msg %></p>
             <% } %>
@@ -55,7 +55,7 @@
             
             <label for="telefono">Teléfono:</label>
             <br>
-            <input type="text" name="telefono" value="<%= locals.old && old.telefono %>"> 
+            <input type="text" name="telefono" value="<%= locals.old && old.telefono %>" id="telefono"> 
             <% if(locals.errors && errors.telefono){ %>
                 <p><%= errors.telefono.msg %></p>
             <% } %>
@@ -65,13 +65,13 @@
             
             <label> Fecha de nacimiento</label>
             <br>
-            <input type="date" name="fecha" value="<%= locals.old && old.fecha %>">
+            <input type="date" name="fecha" value="<%= locals.old && old.fecha %>" id="fecha">
             <% if(locals.errors && errors.fecha){ %>
                 <p><%= errors.fecha.msg %></p>
             <% } %>
             <div class="foto-perfil">
                 <label> <h4>Seleccioná tu foto de perfil </h4>
-                    <input type="file" name="file" value="<%= locals.old && old.file %>">
+                    <input type="file" name="file" value="<%= locals.old && old.file %>" id="fotoPerfil">
                 </label>
                 <% if(locals.errors && errors.file){ %>
                     <p><%= errors.file.msg %></p>
@@ -81,7 +81,7 @@
             <div class="contraseña"> 
                 <h4>Ingresá una cotraseña</h4>
                 <label for="contraseña">
-                    <input type="password" name="contraseña" value="<%= locals.old && old.contraseña %>">
+                    <input type="password" name="contraseña" value="<%= locals.old && old.contraseña %>" id="contraseña">
                 </label>
                 <% if(locals.errors && errors.contraseña){ %>
                     <p><%= errors.contraseña.msg %></p>
@@ -91,7 +91,7 @@
             <br>    
             <div class="no-soy-un-robot">
                 <label> No soy un robot
-                    <input type="checkbox" name="no-soy-un-robot" value="no-soy-un-robot">
+                    <input type="checkbox" name="no-soy-un-robot" value="no-soy-un-robot" id="noRobot">
                 </label>
             </div>
             <br>
@@ -109,8 +109,8 @@
             <button type="submit">REGISTRARSE</button>
             <br>
             <br>
-        </main>
-    </form>
+        </form>
+    </main>
     </div>
 </div>
 <br>

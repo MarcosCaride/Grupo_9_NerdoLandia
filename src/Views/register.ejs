@@ -28,7 +28,7 @@
                 <br>
                 <label for="surname">Apellido:</label>
                 <br>
-                <input type="text" name="surname" value="<%= locals.old && old.surname %>"id="Apellido"> 
+                <input type="text" name="surname" value="<%= locals.old && old.surname %>"id="apellido"> 
                 <% if(locals.errors && errors.surname){ %>
                 <p><%= errors.surname.msg %></p>
                 <% } %>
@@ -113,6 +113,7 @@
     </main>
     </div>
 </div>
+<script src="/js/validacionesRegister.js"></script>
 <br>
 <br>
 <%- include('./partials/footer') %> 

@@ -4,19 +4,28 @@ window.addEventListener("load", function() {
     formulario.addEventListener("submit", function(e){
         let errores = [];
 
-        let campoNombre = document.querySelector ("input.name");
+        let campoNombre = document.getElementById ("inputNombre");
 
         if (campoNombre.value= " ") {
             errores.push ("El campo está vacío");
         }
-        else if (campoNombre.value.length <8) {
-            errores.push ("error")
+        else if (campoNombre.value.length <2) {
+            errores.push ("El nombre debe contener al menos dos carecteres")
+        }   
+
+        let campoApellido =document.getElementById ("Apellido");
+
+        if (campoApellido.value= "") {
+            errores.push ("El campo está vacío");
+        }
+        else if (campoApellido.value.length<2) {
+            errores.push("El apellido debe contener al menos dos caracteres")
         }
         if (errores.length >0){
             e.preventDefault();
             let ulErrores = document.querySelector("div.errores ul");
-            for (let i=0; i< errores.lengt; i ++) {
-                ulErrores.innerHTML += "<li>" + errores [i] + "</li>"
+            for (let i=0; i< errores.length; i ++) {
+                ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }
         }
     })

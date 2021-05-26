@@ -1,5 +1,4 @@
 const { body } = require('express-validator')
-const path = require('path')
 
 let validationRegister = [
     body('name')

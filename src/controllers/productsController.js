@@ -2,8 +2,13 @@ const { decodeBase64 } = require('bcryptjs');
 const fs = require('fs')
 const path = require('path');
 
+const CategoryController = require('./Category.controller')
+
 //para DB
-const db = require('../database/models')
+const db = require('../database/models');
+
+const Category = db.Category
+const Product = db.Product
 
 // CONTROLADOR
 
@@ -55,18 +60,37 @@ const productsController = {
 		}else{
 		imag = req.file.filename;
 		}
-		await db.Product.create({
+
+
+
+		let producto = await db.Product.create({
 			name: req.body.name,
 			description: req.body.description,
 			image: imag,
 			price: req.body.price,
 			id_franchise: req.body.id_franchise,
-			id_productsCategory: req.body.id_productsCategory,
-			//tiene created_at, deberia ser timestamps TRUE?
 			created_at: Date.now(),
+			// categorias:  req.body.category_id,
+
 		})
-		let tablaProducts = await db.Product.findAll()
-		res.send(tablaProducts);
+
+		req.body.category_id.forEach(async category => {
+			await CategoryController.addProduct(category, producto.name);
+		});
+		
+
+		// req.body.category_id.forEach(async id_categoria => {
+		// 	const category = await db.Category.findByPk(id_categoria)
+		// 	let resultado = await Product.addCategory(category, { through: "products_category" });
+		// 	res.send(resultado)
+		// });
+
+		// res.redirect('/')
+
+
+		// let tablaProducts = await db.Product.findAll()
+		// return res.send(tablaProducts)
+		// .catch(error => res.send(error))
 /* 		let nuevoProducto = req.body;
 		nuevoProducto.id = products.length + 1;
 		let imag;
@@ -81,6 +105,8 @@ const productsController = {
 		fs.writeFileSync(productsFilePath, nuevoProductos)
 
 		res.redirect('/') */
+
+		// res.redirect('/')
 	},
 
 

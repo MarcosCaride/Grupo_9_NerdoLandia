@@ -17,7 +17,7 @@
             <form action="/detail/<%= productEdit.id %>?_method=PUT" class="adminForm" method="POST" enctype="multipart/form-data">
           <% }else{ %>
 
-           <form action="/detail" class="adminForm" method="POST" enctype="multipart/form-data">
+           <form action="/detail" class="adminForm" method="POST" class="adminForm" enctype="multipart/form-data">
           <% } %> 
 
             <br>
@@ -28,8 +28,12 @@
             <% if(productEdit){ %> 
               <input type="text" name="name" id="Nombre" value="<%= productEdit.name %> "> 
             <% }else{ %>
-              <input type="text" name="name" id="Nombre"> 
+              <input type="text" name="name" id="Nombre">
             <% } %> 
+
+            <!-- Validaciones -->
+              <p id="erorresNombre"></p>
+            <!-- Validaciones -->
                 
   <!-- Nombre -->
              
@@ -37,13 +41,17 @@
 <br>
 
   <!-- Descripcion -->
-                <label for="description">Ingersar descripción del producto</label>
+            <label for="description">Ingersar descripción del producto</label>
             <br>
             <% if(productEdit){ %> 
                 <textarea name="description" id="Descripcion" rows="4"><%= productEdit.description %></textarea>
             <% }else{ %>
-            <textarea name="description" id="Descripcion" rows="4"></textarea>
+                <textarea name="description" id="Descripcion" rows="4"></textarea>
             <% } %> 
+
+            <!-- Validaciones -->
+                <p id="erorresDescripcion"></p>
+            <!-- Validaciones -->
   <!-- Descripcion -->
 
 <br>
@@ -53,11 +61,17 @@
 
             <label>Ingresar la Franquicia</label>
 <br>
-            <select name="id_franchise" id="">
+            <select name="id_franchise" id="franchise">
+              <option value="">Selecciona una Franquicia</option>
               <% franquicias.forEach(franquicia => { %>
                 <option value="<%= franquicia.id %>" <% if( productEdit.id_franchise == franquicia.id ){ %> <%= "selected" %> <% } %>  ><%= franquicia.franchise_name %> </option>
               <% }) %>
             </select>
+
+
+            <!-- Validaciones -->
+              <p id="erorresFranchise"></p>
+            <!-- Validaciones -->
 
              
   <!-- Categoria -->
@@ -71,10 +85,14 @@
              <div class="radioInputs">
 
               <% categorias.forEach(categoria => { %>
-                <label><input type= "checkbox" name="id_productsCategory" value="<%= categoria.id %>" <% if( productEdit.id_productsCategory == categoria.id ){ %> <%= "checked" %> <% } %>  ><%= categoria.category_name %> </label>
+                <label><input type= "checkbox" name="category_id" id="category" value="<%= categoria.id %>" <% if( productEdit.id_productsCategory == categoria.id ){ %> <%= "checked" %> <% } %>  ><%= categoria.category_name %> </label>
                 <br>
               <% }) %>
               </div>
+
+            <!-- Validaciones -->
+              <p id="erorresCategory"></p>
+            <!-- Validaciones -->
   <!-- Tags -->
            
 <br>
@@ -88,6 +106,9 @@
               <input type="file" alt="Submit" name="file" id="file">
             </div>
 
+            <!-- Validaciones -->
+            <p id="erorresFile"></p>
+            <!-- Validaciones -->
   <!-- Imagen -->
 <br>
 <br>
@@ -95,10 +116,15 @@
             <label for="Precio">Ingresar Precio</label>
 <br>
         <% if(productEdit){ %> 
-            <input type="text" name="price" value="<%= productEdit.price %>"> 
+            <input type="text" name="price" id="price" value="<%= productEdit.price %>"> 
           <% }else{ %>
-            <input type="number" name="price"> 
+            <input type="number" name="price" id="price">
           <% } %> 
+
+            <!-- Validaciones -->
+            <p id="erorresPrice"></p>
+            <!-- Validaciones -->
+
   <!-- Precio -->
           
           <br>
@@ -113,6 +139,9 @@
 
       <br>
       <br>
+
+      <script src="/JS/validationsAdmin.js"></script>
+
     <%- include('./partials/footer') %> 
   </body>
 </html>

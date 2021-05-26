@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
         price: {type: DataTypes.INTEGER},
         image:{type: DataTypes.STRING(100)},
         id_franchise: {type: DataTypes.INTEGER(10)},
-        id_productsCategory:  {type: DataTypes.INTEGER(15)},
         created_at:  {type: DataTypes.DATE}
     };
 
@@ -30,10 +29,9 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "id_franchise",
         }) ,
         Product.belongsToMany(models.Category, {
-            as: "producto-categoria",
+            as: "categorias",
             through: "products_category",
-            foreignKey: "id_productsCategory",
-            otherKey: "id_products",
+            foreignKey: "id_products",
             timestamps: false,
         }) 
     }

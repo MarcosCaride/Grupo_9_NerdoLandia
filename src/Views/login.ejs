@@ -11,22 +11,29 @@
       <form action="" method="POST" id=login> 
            
           <label for="email">Correo electrónico</label><br> 
-          <input type="email" name="email" value="<%= locals.old && old.email %>">
+          <input type="email" name="email" id='email' value="<%= locals.old && old.email %>">
           <% if(locals.errors && errors.email){ %>
             <p><%= errors.email.msg %></p>
             <% } %>
             
           <br>
+                      <!-- Validaciones -->
+                      <p id="erroresEmail"></p>
+                      <!-- Validaciones -->
         
         <br>
           <label for="contraseña">Contraseña</label><br> 
-          <input type="password" name="contraseña" value="<%= locals.old && old.contraseña %>">
+          <input type="password" name="contraseña" id="password" value="<%= locals.old && old.contraseña %>">
           <br> 
         
           <% if(locals.errors && errors.contraseña){ %>
             <p><%= errors.contraseña.msg %></p>
         <% } %>
         <br>
+
+                    <!-- Validaciones -->
+                    <p id="erroresContraseña"></p>
+                    <!-- Validaciones -->
            
            <button type="submit" form="login"><h3>Ingresar</h3></button><br><br> 
            <div>Recordarme <input type="checkbox" name="recordarme"></div>
@@ -51,6 +58,6 @@
   <br>
   <br>
 <%- include('./partials/footer') %> 
- 
+<script src='js/login.js'></script> 
 </body> 
 </html>

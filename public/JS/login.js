@@ -15,6 +15,8 @@ window.addEventListener('load', function (){
         let emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
             let erroresEmailFormat = document.getElementById('erroresEmailFormat')
         
+
+        //para revisar si funciona la validación de emailFormat desactivar input email en login.ejs
         if (email.value.length < 1){
                 erroresEmail.innerHTML = "Debes completar el email"      
         } 

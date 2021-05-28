@@ -8,7 +8,7 @@
   </div> 
   <div class="register"> 
     <main class="register-form">
-      <form action="" method="POST" id=login> 
+      <form action="" method="POST" id='login'> 
            
           <label for="email">Correo electrónico</label><br> 
           <input type="email" name="email" id='email' value="<%= locals.old && old.email %>">
@@ -21,6 +21,10 @@
                       <p id="erroresEmail"></p>
                       <!-- Validaciones -->
         
+
+                       <!-- Validaciones mail format-->
+                      <p id="erroresEmailFormat"></p>
+                      <!-- Validaciones -->
         <br>
           <label for="contraseña">Contraseña</label><br> 
           <input type="password" name="contraseña" id="password" value="<%= locals.old && old.contraseña %>">

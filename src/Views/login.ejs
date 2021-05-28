@@ -11,7 +11,7 @@
       <form action="" method="POST" id='login'> 
            
           <label for="email">Correo electrónico</label><br> 
-          <input type="email" name="email" id='email' value="<%= locals.old && old.email %>">
+          <input type="text" name="email" id='email' value="<%= locals.old && old.email %>">
           <% if(locals.errors && errors.email){ %>
             <p><%= errors.email.msg %></p>
             <% } %>

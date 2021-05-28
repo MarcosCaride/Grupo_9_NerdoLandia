@@ -14,11 +14,12 @@ window.addEventListener('load', function (){
             let erroresEmail = document.getElementById('erroresEmail')
         let emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
             let erroresEmailFormat = document.getElementById('erroresEmailFormat')
+        
         if (email.value.length < 1){
                 erroresEmail.innerHTML = "Debes completar el email"      
-        } ;
-
-        if (!email.value.match(emailFormat)) {
+        } 
+        
+        if ((email.value.length > 0) && (!email.value.match(emailFormat))) {
             erroresEmailFormat.innerHTML = "El email no es válido"
         }
         
@@ -35,8 +36,9 @@ window.addEventListener('load', function (){
             erroresContraseña.innerHTML = "Debes completar la contraseña"      
         }
 
-        if (errores.Email.innerText || errores.erroresEmailFormat.innerText || errores.Contraseña.innerText  ) {
+        if (erroresEmail.innerText || erroresEmailFormat.innerText || erroresContraseña.innerText  ) {
             e.preventDefault();
+            //console.log(errores.Email.innerText)
         }
     
     })

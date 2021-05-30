@@ -28,11 +28,11 @@
             <% if(productEdit){ %> 
               <input type="text" name="name" id="Nombre" value="<%= productEdit.name %> "> 
             <% }else{ %>
-              <input type="text" name="name" id="Nombre">
+              <input type="text" name="name" id="Nombre" placeholder="Ingresa un nombre">
             <% } %> 
 
             <!-- Validaciones -->
-              <p id="erorresNombre"></p>
+              <p id="erorresNombre" class="errores"></p>
             <!-- Validaciones -->
                 
   <!-- Nombre -->
@@ -46,11 +46,11 @@
             <% if(productEdit){ %> 
                 <textarea name="description" id="Descripcion" rows="4"><%= productEdit.description %></textarea>
             <% }else{ %>
-                <textarea name="description" id="Descripcion" rows="4"></textarea>
+                <textarea name="description" id="Descripcion" rows="4" placeholder="Ingresa una descripción"></textarea>
             <% } %> 
 
             <!-- Validaciones -->
-                <p id="erorresDescripcion"></p>
+                <p id="erorresDescripcion" class="errores"></p>
             <!-- Validaciones -->
   <!-- Descripcion -->
 
@@ -62,7 +62,7 @@
             <label>Ingresar la Franquicia</label>
 <br>
             <select name="id_franchise" id="franchise">
-              <option value="">Selecciona una Franquicia</option>
+              <option value="0">Selecciona una Franquicia</option>
               <% franquicias.forEach(franquicia => { %>
                 <option value="<%= franquicia.id %>" <% if( productEdit.id_franchise == franquicia.id ){ %> <%= "selected" %> <% } %>  ><%= franquicia.franchise_name %> </option>
               <% }) %>
@@ -70,7 +70,7 @@
 
 
             <!-- Validaciones -->
-              <p id="erorresFranchise"></p>
+              <p id="erorresFranchise" class="errores"></p>
             <!-- Validaciones -->
 
              
@@ -91,7 +91,7 @@
               </div>
 
             <!-- Validaciones -->
-              <p id="erorresCategory"></p>
+              <p id="erorresCategory" class="errores"></p>
             <!-- Validaciones -->
   <!-- Tags -->
            
@@ -103,11 +103,11 @@
             <label for="file">Imagen del producto</label>
 <br>
             <div class="">
-              <input type="file" alt="Submit" name="file" id="file">
+              <input type="file" alt="Submit" name="file" id="file" accept=".png, .jpg, .jpeg, .gif">
             </div>
 
             <!-- Validaciones -->
-            <p id="erorresFile"></p>
+            <p id="erorresFile" class="errores"></p>
             <!-- Validaciones -->
   <!-- Imagen -->
 <br>
@@ -118,11 +118,11 @@
         <% if(productEdit){ %> 
             <input type="text" name="price" id="price" value="<%= productEdit.price %>"> 
           <% }else{ %>
-            <input type="number" name="price" id="price">
+            <input type="number" name="price" id="price" placeholder="Ingresa el precio">
           <% } %> 
 
             <!-- Validaciones -->
-            <p id="erorresPrice"></p>
+            <p id="erorresPrice" class="errores"></p>
             <!-- Validaciones -->
 
   <!-- Precio -->

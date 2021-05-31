@@ -2,7 +2,7 @@ window.addEventListener("load", function() {
     let formulario = document.querySelector ("form.Formu-Registro")
     
     formulario.addEventListener("submit", function(e){
-        e.preventDefault();
+        
         
         let errores = [];
 
@@ -39,15 +39,21 @@ window.addEventListener("load", function() {
         let campoMail= document.getElementById("mail");
         let erroresMail = document.getElementById('erorresMail')
 
-        if (campoMail.value= " ") {
-            erroresMail.innerHTML= "El campo está vacío";
-        }  
+        if (email.value.length < 1){
+            erroresMail.innerHTML = "Debes completar el email"      
+            } /* else if (!email.value.includes('@')) {
+            alert ('El mail es inválido')
+            } else if (!email.value.includes('.com')) {
+            alert ('El mail es inválido')
+            } */
+        })
 
         let fotoPerfil = document.getElementById ("fotoPerfil");
            
         if (errores.length >0){
             
             let ulErrores = document.querySelector("div.errores ul");
+            e.preventDefault()
             for (let i=0; i< errores.length; i ++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }

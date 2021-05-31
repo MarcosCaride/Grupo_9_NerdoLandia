@@ -722,6 +722,42 @@ main .adminForm{
 
 
 /* PERFIL */
+
+/* .register {
+    text-align: center;
+    background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mainAdmin{
+    display: flex;
+    justify-content: center;
+}
+
+main .adminForm{
+    background-color: white;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0;
+    text-align: -webkit-center;
+    padding: 3vh;
+} */
+
+.container {
+    text-align: center;
+    background-color: whitesmoke;
+    font-family: 'Oxanium', cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
 .cajita {
     display:flex;
     flex-wrap: nowrap;
@@ -751,10 +787,12 @@ main .adminForm{
     height: 80px;
     border-radius: 50%;
     margin-top: 10px;
-    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
     box-sizing: border-box;
     margin-right: 5px;
-  }
+}  
+
 .saludo-mail {
     font-family: 'Russo One', sans-serif;
     background-color: #00c2cb;
@@ -763,9 +801,23 @@ main .adminForm{
     padding: 5px;
     width: 90%;
     margin-left: 20px;
-    margin-right: 50px;
+    margin-right: 20px;
     text-align: center;
     border-radius: 10px;
+
+}
+
+#logout button {
+    border-radius: 15px;
+    float: right;
+    margin-right: 75px;
+}
+
+#logout button:hover {
+    background-color: #00c2cb;
+    color: #000059;
+    transform: scale(0.85);
+    transition: 700ms;
 }
 
 

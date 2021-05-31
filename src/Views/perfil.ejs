@@ -2,24 +2,26 @@
 <html lang="en">
 <%- include('./partials/head') %>
 <body>
-  <%- include('./partials/header') %>
+    <%- include('./partials/header') %>
 
-    <section class="saludo-perfil">
-        <div class="cajita">
-            <h2> Hola <%=  user.name + " " + user.surname  %> </h2>
-            <img src="/Imagenes/Users/<%= user.avatar %> ">
-        </div>
+    <div class="container">
+        <section class="saludo-perfil">
+            <div class="cajita">
+                <h2> Hola <%=  user.name + " " + user.surname  %> </h2>
+                <img src="/Imagenes/Users/<%= user.avatar %> ">
+            </div>
+            <br>
+            <br>
+            <div class="saludo-mail"><%= user.email %> </div>
+            <br> 
+        </section>
+        <form action="" method="POST" id=logout>
+            <button type="logout"><h3>Cerrar sesión</h3></button><br><br>
+        </form>    
         <br>
         <br>
-        <div class="saludo-mail"><%= user.email %> </div>
-        <br> 
-    </section>
-    <form action="" method="POST" id=logout> 
-        <button type="logout"><h3>Cerrar sesión</h3></button><br><br>
-    </form>    
-    <br>
-    <br>
-    <br>
+        <br>
+    </div>
 
     <%- include('./partials/footer') %> 
     

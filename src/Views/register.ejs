@@ -22,7 +22,7 @@
                 <br>
                 <input type="text" name="name" value="<%= locals.old && old.name %>" id="inputNombre">
                     <!-- Validaciones -->
-                <p id="erorresNombre"></p>
+                <p id="erroresNombre"></p>
                     <!-- Validaciones --> 
                 <% if(locals.errors && errors.name){ %>
                 <p><%= errors.name.msg %></p>
@@ -43,7 +43,7 @@
                 
                 <label for="email"> Email</label>
                 <br>
-                <input type="email" name="email" value="<%= locals.old && old.email %>" id="mail">
+                <input type="text" name="email" value="<%= locals.old && old.email %>" id="mail">
                   <!-- Validaciones -->
                   <p id="erorresMail"></p>
                   <!-- Validaciones -->
@@ -80,7 +80,7 @@
             <% } %>
             <div class="foto-perfil">
                 <label> <h4>Seleccioná tu foto de perfil </h4>
-                    <input type="file" name="file" value="<%= locals.old && old.file %>" id="fotoPerfil">
+                    <input type="file" name="file" value="<%= locals.old && old.file %>" accept=".png, .jpg, .jpeg, .gif" id="fotoPerfil">
                 </label>
                 <% if(locals.errors && errors.file){ %>
                     <p><%= errors.file.msg %></p>

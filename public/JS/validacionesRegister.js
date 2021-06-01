@@ -7,10 +7,10 @@ window.addEventListener("load", function() {
         let errores = [];
 
         let campoNombre = document.getElementById ("inputNombre");
-        let erroresNombre = document.getElementById("erorresNombre")
+        let erroresNombre = document.getElementById("erroresNombre")
 
-        if (campoNombre.value=" ") {
-            erroresNombre.innerHTML= "El campo está vacío";
+        if (campoNombre.value <1) {
+            erroresNombre.innerHTML= "El campo";
         }
         else if (campoNombre.value.length <2) {
             erroresNombre.innerHTML= "El nombre debe contener al menos dos carecteres"
@@ -19,7 +19,7 @@ window.addEventListener("load", function() {
         let campoApellido =document.getElementById ("apellido");
         let erroresApellido = document.getElementById("erroresApellido")
 
-        if (campoApellido.value= " ") {
+        if (campoApellido.value <1) {
             erroresApellido.innerHTML= "El campo está vacío"
         }
         else if (campoApellido.value.length<2) {
@@ -29,7 +29,7 @@ window.addEventListener("load", function() {
         let campoContraseña= document.getElementById("contraseña");
         let erroresContraseña = document.getElementById("erorresContraseña")
         
-        if (campoContraseña.value= "") {
+        if (campoContraseña.value <1) {
             erroresContraseña.innerHTML= "El campo está vacío";
         }
         else if (campoContraseña.value.length<8) {
@@ -39,25 +39,20 @@ window.addEventListener("load", function() {
         let campoMail= document.getElementById("mail");
         let erroresMail = document.getElementById('erorresMail')
 
-        if (email.value.length < 1){
-            erroresMail.innerHTML = "Debes completar el email"      
-            } /* else if (!email.value.includes('@')) {
-            alert ('El mail es inválido')
-            } else if (!email.value.includes('.com')) {
-            alert ('El mail es inválido')
-            } */
-        })
-
-        let fotoPerfil = document.getElementById ("fotoPerfil");
-           
-        if (errores.length >0){
-            
-            let ulErrores = document.querySelector("div.errores ul");
-            e.preventDefault()
-            for (let i=0; i< errores.length; i ++) {
-                ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-            }
+        let emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+                
+        if (campoMail.value.length < 1){
+                erroresMail.innerHTML = "Debes completar el mail"      
+        } 
+        
+        if ((campoMail.value.length > 0) && (!campoMail.value.match(emailFormat))) {
+            erroresMail.innerHTML = "El email no es válido"
         }
+                       
+        if (erroresMail.innerText || erroresContraseña.innerText || erroresNombre.innerText || erroresApellido.innerText) {
+            e.preventDefault();
+        }
+        
     })
 
 })

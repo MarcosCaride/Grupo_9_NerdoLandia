@@ -512,6 +512,37 @@ main .adminForm{
     width: 50%;
 }
 
+form input{
+    border-radius: 5px;
+    border: solid 2px;
+}
+
+form textarea{
+    border-radius: 5px;
+    border: solid 2px;
+}
+
+form textarea:focus{
+    outline: 0px;
+}
+
+form input:focus{
+    outline: 0px;
+}
+
+form #file{
+    border: inherit;
+    border-radius: inherit;
+}
+
+.errores{
+    border-radius: 15px;
+    background-color: red;
+    padding: 0 5px;
+    width: fit-content;
+    color: black;
+}
+
 .radioInputs{
     width: 20%;
     text-align: left;

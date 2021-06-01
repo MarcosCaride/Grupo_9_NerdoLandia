@@ -17,7 +17,7 @@
             <form action="/detail/<%= productEdit.id %>?_method=PUT" class="adminForm" method="POST" enctype="multipart/form-data">
           <% }else{ %>
 
-           <form action="/detail" class="adminForm" method="POST" enctype="multipart/form-data">
+           <form action="/detail" class="adminForm" method="POST" class="adminForm" enctype="multipart/form-data">
           <% } %> 
 
             <br>
@@ -28,8 +28,12 @@
             <% if(productEdit){ %> 
               <input type="text" name="name" id="Nombre" value="<%= productEdit.name %> "> 
             <% }else{ %>
-              <input type="text" name="name" id="Nombre"> 
+              <input type="text" name="name" id="Nombre" placeholder="Ingresa un nombre">
             <% } %> 
+
+            <!-- Validaciones -->
+              <p id="erorresNombre" class="errores"></p>
+            <!-- Validaciones -->
                 
   <!-- Nombre -->
              
@@ -37,13 +41,17 @@
 <br>
 
   <!-- Descripcion -->
-                <label for="description">Ingersar descripción del producto</label>
+            <label for="description">Ingersar descripción del producto</label>
             <br>
             <% if(productEdit){ %> 
                 <textarea name="description" id="Descripcion" rows="4"><%= productEdit.description %></textarea>
             <% }else{ %>
-            <textarea name="description" id="Descripcion" rows="4"></textarea>
+                <textarea name="description" id="Descripcion" rows="4" placeholder="Ingresa una descripción"></textarea>
             <% } %> 
+
+            <!-- Validaciones -->
+                <p id="erorresDescripcion" class="errores"></p>
+            <!-- Validaciones -->
   <!-- Descripcion -->
 
 <br>
@@ -53,11 +61,17 @@
 
             <label>Ingresar la Franquicia</label>
 <br>
-            <select name="id_franchise" id="">
+            <select name="id_franchise" id="franchise">
+              <option value="0">Selecciona una Franquicia</option>
               <% franquicias.forEach(franquicia => { %>
                 <option value="<%= franquicia.id %>" <% if( productEdit.id_franchise == franquicia.id ){ %> <%= "selected" %> <% } %>  ><%= franquicia.franchise_name %> </option>
               <% }) %>
             </select>
+
+
+            <!-- Validaciones -->
+              <p id="erorresFranchise" class="errores"></p>
+            <!-- Validaciones -->
 
              
   <!-- Categoria -->
@@ -71,10 +85,14 @@
              <div class="radioInputs">
 
               <% categorias.forEach(categoria => { %>
-                <label><input type= "checkbox" name="id_productsCategory" value="<%= categoria.id %>" <% if( productEdit.id_productsCategory == categoria.id ){ %> <%= "checked" %> <% } %>  ><%= categoria.category_name %> </label>
+                <label><input type= "checkbox" name="category_id" id="category" value="<%= categoria.id %>" <% if( productEdit.id_productsCategory == categoria.id ){ %> <%= "checked" %> <% } %>  ><%= categoria.category_name %> </label>
                 <br>
               <% }) %>
               </div>
+
+            <!-- Validaciones -->
+              <p id="erorresCategory" class="errores"></p>
+            <!-- Validaciones -->
   <!-- Tags -->
            
 <br>
@@ -85,9 +103,12 @@
             <label for="file">Imagen del producto</label>
 <br>
             <div class="">
-              <input type="file" alt="Submit" name="file" id="file">
+              <input type="file" alt="Submit" name="file" id="file" accept=".png, .jpg, .jpeg, .gif">
             </div>
 
+            <!-- Validaciones -->
+            <p id="erorresFile" class="errores"></p>
+            <!-- Validaciones -->
   <!-- Imagen -->
 <br>
 <br>
@@ -95,10 +116,15 @@
             <label for="Precio">Ingresar Precio</label>
 <br>
         <% if(productEdit){ %> 
-            <input type="text" name="price" value="<%= productEdit.price %>"> 
+            <input type="text" name="price" id="price" value="<%= productEdit.price %>"> 
           <% }else{ %>
-            <input type="number" name="price"> 
+            <input type="number" name="price" id="price" placeholder="Ingresa el precio">
           <% } %> 
+
+            <!-- Validaciones -->
+            <p id="erorresPrice" class="errores"></p>
+            <!-- Validaciones -->
+
   <!-- Precio -->
           
           <br>
@@ -113,6 +139,9 @@
 
       <br>
       <br>
+
+      <script src="/JS/validationsAdmin.js"></script>
+
     <%- include('./partials/footer') %> 
   </body>
 </html>

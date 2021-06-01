@@ -59,3 +59,17 @@ CONTINUE DOING> Utilizar el grupo de whatsapp como principal vía de comunicaci�
 STOP DOING> No estar al día con playground. Dividir las ramas por tarea.
 
 LESS OF > Dejar de lado el tablero de Trello.
+
+
+RETROSPECTIVA SPRINT 6
+FORMATO ESTRELLA DE MAR
+
+MORE OF> Avanzar en los contenidos de Playground para estar al día y poder resolver las consignas de los sprints. Molestarnos y mensajearnos mas y mas. Continuar realizando mejoras al diseño de las vistas del sitio. Continuar detallando los pasos que implica cada tarea. Hacer el backlog.
+
+CONTINUE DOING> Seguir mejorando la comunicación por medio de whatsapp, actualizar el trello conforme avanzamos en las tareas de cada uno, continuar trabajando en equipo. Dividir los entregables, sumar mas reuniones siempre que se pueda y seguir buscando mas tiempo para trabajar en el sitio en conjunto.
+
+START DOING> Comenzar a revisar las vistas responsive una por una para mejorarlas. Tomar nota de dónde están los contenidos en playground y dejar sugerencias al respecto en trello.
+
+STOP DOING > Esperar a la siguiente semana de lanzamiento del sprint para empezar a trabajar en el mismo. Es algo que nos pasa seguido, tal vez porque nuestras reuniones weekly son los días lunes y, si el sprint se lanza un miércoles o un viernes, recién el lunes nos juntamos y empezamos a trabajar en el mismo. Dejar de hacer esto.
+
+LESS OF> Tratar de correr menos con los tiempos, si bien siempre llegamos a entregar medianamente en tiempo y forma con las entregas, nos gustaría llegar un poco más tranquilos, para nuestra calma mental.

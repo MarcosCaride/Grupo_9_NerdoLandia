@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
         let erroresNombre = document.getElementById("erroresNombre")
 
         if (campoNombre.value <1) {
-            erroresNombre.innerHTML= "El campo";
+            erroresNombre.innerHTML= "El campo está vacío";
         }
         else if (campoNombre.value.length <2) {
             erroresNombre.innerHTML= "El nombre debe contener al menos dos carecteres"

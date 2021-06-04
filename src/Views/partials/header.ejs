@@ -7,7 +7,13 @@
         </form>
         <button class="menuButton"><i class="fas fa-bars"></i></button>
         <a href="/Carrito" class="carritoE"><i class="fas fa-shopping-cart"></i></a>
-        <a href="/users" class="inicio-sesion"><i class="fas fa-user-circle"></i></a>
+        <a href="/users" class="inicio-sesion">
+          <% if(imagenLogeado){ %> 
+            <img  class="fas" width="2vw" src="/Imagenes/Users/<%= imagenLogeado %>" alt="">
+          <% }else{ %>
+            <i class="fas fa-user-circle"></i>
+          <% } %> 
+        </a>
     </div>
     <nav>
         <a href="/">HOME</a>

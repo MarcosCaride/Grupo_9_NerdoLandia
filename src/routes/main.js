@@ -8,8 +8,5 @@ router.get('/categorias/:categoriaS', mainController.categorias)
 router.get('/heroinas', mainController.heroinas)
 router.get('/sobrenosotros', mainController.contacto)
 
-// 404 Not Found
-router.get('/blog', mainController.blog)
-
 
 module.exports = router

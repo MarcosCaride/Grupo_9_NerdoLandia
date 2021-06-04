@@ -13,6 +13,9 @@ const usersController = {
     },
     
     guardado: async (req, res) => {
+
+        let imagenLogeado = req.imagenLogeado
+
         
         let errores = validationResult(req)
         if (errores.errors.length > 0){
@@ -60,15 +63,17 @@ const usersController = {
                      
                  })
 
-    return res.redirect('/')
+    return res.redirect('/', {imagenLogeado})
 
     },
 
     login:(req, res) => {
-        res.render('login')
+        let imagenLogeado = req.imagenLogeado
+        res.render('login', {imagenLogeado})
     },
 
     loginProcess: async (req, res) => {
+        let imagenLogeado = req.imagenLogeado
 
 
         let userToLogIn = await db.Users.findOne({
@@ -104,13 +109,20 @@ const usersController = {
                     contraseña: {
                         msg: 'Contraseña incorrecta'
                     }
-                }
+                },
+                imagenLogeado
             })
     },
 
     perfil: (req, res) => {
+        let imagenLogeado = "";
+		
+        if (req.session.userLogged) {
+            imagenLogeado = req.session.userLogged.avatar
+        }
         return res.render ('perfil', {
-            user: req.session.userLogged
+            user: req.session.userLogged,
+            imagenLogeado
         })
     },
 

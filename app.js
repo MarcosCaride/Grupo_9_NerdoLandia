@@ -18,6 +18,7 @@ const productsRoutes = require ('./src/routes/products');
 
 // MIDDLEWARES
 const userLoggedMiddleware = require ('./src/Middlewares/userLoggedMiddleware')
+const ifLoggedUser = require ('./src/Middlewares/ifLoggedUser')
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -33,6 +34,7 @@ app.use(session( {
 app.use(cookies());
 
 app.use(userLoggedMiddleware);
+app.use(ifLoggedUser);
 
 app.use(methodOverrride('_method'))
 app.use(express.static(publicPath));

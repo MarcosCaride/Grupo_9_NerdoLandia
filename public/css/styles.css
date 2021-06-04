@@ -536,11 +536,22 @@ form #file{
 }
 
 .errores{
+    display: none;
     border-radius: 15px;
-    background-color: red;
-    padding: 0 5px;
+    background-color: #F9D4D4;
+    padding: 25px;
+    color:red;
+    text-align: center;
+    border: solid 3px;
     width: fit-content;
-    color: black;
+    justify-self: center;
+}
+
+.Formu-Registro {
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    
 }
 
 .radioInputs{
@@ -1379,3 +1390,4 @@ main .adminForm{
     margin: 0 20%;
     border-radius: 30px;
 }
+

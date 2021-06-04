@@ -11,18 +11,16 @@
 
     <!-- Formulario de Registro -->
     <div class="register">
-        <div class="errores">
-            <ul></ul>
-        </div>
-        <main class="register-form">
-        <form action="/users/register" method="POST" enctype="multipart/form-data" class = "Formu-Registro">
+        
+        <main class="mainAdmin">
+        <form action="/users/register" method="POST" enctype="multipart/form-data" class = "adminForm">
                 
                 <br>
                 <label for="name">Nombre:</label>
                 <br>
                 <input type="text" name="name" value="<%= locals.old && old.name %>" id="inputNombre">
                     <!-- Validaciones -->
-                <p id="erroresNombre"></p>
+                <p id="a" class="errores"></p>
                     <!-- Validaciones --> 
                 <% if(locals.errors && errors.name){ %>
                 <p><%= errors.name.msg %></p>
@@ -33,7 +31,7 @@
                 <br>
                 <input type="text" name="surname" value="<%= locals.old && old.surname %>"id="apellido">
                   <!-- Validaciones -->
-                  <p id="erroresApellido"></p>
+                  <p id="erroresApellido" class="errores"></p>
                   <!-- Validaciones -->
                 <% if(locals.errors && errors.surname){ %>
                 <p><%= errors.surname.msg %></p>
@@ -45,7 +43,7 @@
                 <br>
                 <input type="text" name="email" value="<%= locals.old && old.email %>" id="mail">
                   <!-- Validaciones -->
-                  <p id="erorresMail"></p>
+                  <p id="erorresMail" class="errores"></p>
                   <!-- Validaciones -->
                 <% if(locals.errors && errors.email){ %>
                     <p><%= errors.email.msg %></p>
@@ -92,7 +90,7 @@
                 <label for="contraseña">
                 <input type="password" name="contraseña" value="<%= locals.old && old.contraseña %>" id="contraseña">
                 <!-- Validaciones -->
-                <p id="erorresContraseña"></p>
+                <p id="erorresContraseña" class="errores"></p>
                 <!-- Validaciones -->
                 </label>
                 <% if(locals.errors && errors.contraseña){ %>

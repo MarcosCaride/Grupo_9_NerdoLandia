@@ -9,7 +9,10 @@ const db = require ("../database/models");
 const usersController = {
     
     register: (req, res) => {
-        res.render('register')
+        let imagenLogeado = req.imagenLogeado
+
+
+        res.render('register', {imagenLogeado})
     },
     
     guardado: async (req, res) => {
@@ -21,7 +24,7 @@ const usersController = {
         if (errores.errors.length > 0){
             return res.render('register', {
                 errors: errores.mapped(),
-                old: req.body 
+                old: req.body, imagenLogeado
             })
         }
 
@@ -38,7 +41,7 @@ const usersController = {
                             msg: 'Ya hay un usuario con este email'
                         }
                     },
-                    old: req.body
+                    old: req.body, imagenLogeado
                 })
               }
                  });
@@ -115,11 +118,8 @@ const usersController = {
     },
 
     perfil: (req, res) => {
-        let imagenLogeado = "";
-		
-        if (req.session.userLogged) {
-            imagenLogeado = req.session.userLogged.avatar
-        }
+        let imagenLogeado = req.imagenLogeado
+
         return res.render ('perfil', {
             user: req.session.userLogged,
             imagenLogeado

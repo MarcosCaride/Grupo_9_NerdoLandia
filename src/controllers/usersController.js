@@ -9,16 +9,22 @@ const db = require ("../database/models");
 const usersController = {
     
     register: (req, res) => {
-        res.render('register')
+        let imagenLogeado = req.imagenLogeado
+
+
+        res.render('register', {imagenLogeado})
     },
     
     guardado: async (req, res) => {
+
+        let imagenLogeado = req.imagenLogeado
+
         
         let errores = validationResult(req)
         if (errores.errors.length > 0){
             return res.render('register', {
                 errors: errores.mapped(),
-                old: req.body 
+                old: req.body, imagenLogeado
             })
         }
 
@@ -35,7 +41,7 @@ const usersController = {
                             msg: 'Ya hay un usuario con este email'
                         }
                     },
-                    old: req.body
+                    old: req.body, imagenLogeado
                 })
               }
                  });
@@ -60,15 +66,17 @@ const usersController = {
                      
                  })
 
-    return res.redirect('/')
+    return res.redirect('/', {imagenLogeado})
 
     },
 
     login:(req, res) => {
-        res.render('login')
+        let imagenLogeado = req.imagenLogeado
+        res.render('login', {imagenLogeado})
     },
 
     loginProcess: async (req, res) => {
+        let imagenLogeado = req.imagenLogeado
 
 
         let userToLogIn = await db.Users.findOne({
@@ -104,13 +112,17 @@ const usersController = {
                     contraseña: {
                         msg: 'Contraseña incorrecta'
                     }
-                }
+                },
+                imagenLogeado
             })
     },
 
     perfil: (req, res) => {
+        let imagenLogeado = req.imagenLogeado
+
         return res.render ('perfil', {
-            user: req.session.userLogged
+            user: req.session.userLogged,
+            imagenLogeado
         })
     },
 

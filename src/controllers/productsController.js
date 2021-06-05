@@ -14,13 +14,16 @@ const Product = db.Product
 
 const productsController = {
 	detail: (req,res) =>{
+        let imagenLogeado = req.imagenLogeado
+
 			db.Product.findByPk(req.params.id, 
 				// {include: [{association: "franquicia-producto"},{association:"producto-categoria"}]}
 			)
 				.then(producto => {
 					res.render('detail', {
 						product: producto,
-						user: req.session.userLogged
+						user: req.session.userLogged,
+						imagenLogeado
 					});
 				});
 /* 			include: [{association: "franquicia-producto"},{association:"producto-categoria"}]
@@ -34,8 +37,10 @@ const productsController = {
     creador: async (req, res) => {
 		let categorias = await db.Category.findAll()
 		let franquicias = await db.Franchise.findAll()
+        let imagenLogeado = req.imagenLogeado
 
-		res.render('administrator', {categorias, franquicias, productEdit: ""})
+
+		res.render('administrator', {categorias, franquicias, productEdit: "", imagenLogeado})
 
     },
 
@@ -45,10 +50,11 @@ const productsController = {
 		let productEdit = db.Product.findByPk(req.params.id);
 		let pedidoCategorias = db.Category.findAll();
 		let franquicias =  db.Franchise.findAll()
+        let imagenLogeado = req.imagenLogeado
 
 		Promise.all([productEdit, pedidoCategorias, franquicias])
 			.then(function([productEdit, categoria, franquicias]){
-				res.render("administrator", { productEdit , categorias:categoria, franquicias })
+				res.render("administrator", { productEdit , categorias:categoria, franquicias, imagenLogeado })
 			})
 	},
 	
@@ -106,7 +112,7 @@ const productsController = {
 
 		res.redirect('/') */
 
-		// res.redirect('/')
+		res.redirect('/', {imagenLogeado})
 	},
 
 
@@ -130,6 +136,7 @@ const productsController = {
 	},
 
 	delete: async (req, res) => {
+
 			let productId = req.params.id;
 			db.Product
 			.destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción

@@ -5,6 +5,8 @@ const db = require('../database/models');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+
+
 const mainController = {
     index: async (req, res) => {
         let marvel = await db.Product.findAll({
@@ -24,7 +26,9 @@ const mainController = {
                 id_franchise: 3
             }
         });
-		
+        
+        let imagenLogeado = req.imagenLogeado
+
         let androidesDelMes = products.filter(product => product.AndroideDelMes == 'true');
 		// let legos = products.filter(product => product.Lego == 'true');
 		// let Heroinas = products.filter(product => product.Heroinas == 'true');
@@ -35,7 +39,7 @@ const mainController = {
 		let franquicias = await db.Franchise.findAll()
 
 
-		res.render('index', {losSimpsons, marvel, starWars, androidesDelMes, productosdb, categorias, franquicias})
+		res.render('index', {losSimpsons, marvel, starWars, androidesDelMes, productosdb, categorias, franquicias, imagenLogeado })
 	},
 
     carrito: async (req, res) => {
@@ -61,22 +65,21 @@ const mainController = {
         let starWarsBanner =  "Star WarsBanner.jpg"
         let losSimpsonsBanner =  "LosSimpsonsBanner.jpg"
 
-        res.render('categorias', {categoria, marvelBanner, starWarsBanner, losSimpsonsBanner, param})
+        let imagenLogeado = req.imagenLogeado
+
+        res.render('categorias', {categoria, marvelBanner, starWarsBanner, losSimpsonsBanner, param, imagenLogeado})
     },
 
     heroinas: (req,res) => {
+        let imagenLogeado = req.imagenLogeado
 		let Heroinas = products.filter(product => product.Heroina == 'true');
-        res.render('heroinas', {Heroinas})
+        res.render('heroinas', {Heroinas, imagenLogeado})
     },
 
     contacto: (req, res) => {
-        res.render('aboutUs')
-
+        let imagenLogeado = req.imagenLogeado
+        res.render('aboutUs',{imagenLogeado})
     },
-
-    blog: (req, res) => {
-        res.render('404error')
-    }
 }
 
 module.exports = mainController

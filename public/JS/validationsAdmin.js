@@ -69,6 +69,7 @@ window.addEventListener("load", () => {
         //         erorresFile.innerHTML = "El archivo ingresado no esta permititdo"
         // }
         // Intento de validarlo con JavaScript
+        // Pasar las extensiones en una variable
         
 
         if(priceInput.value.length < 1 ){

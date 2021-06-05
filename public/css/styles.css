@@ -31,6 +31,10 @@ header .logo img:hover{
     transition: 250ms;
 }
 
+header .logo .carritoE{
+    display: none;
+}
+
 header .logo a i:hover{
     background-color: #00c2cb;
     color: #000059;
@@ -42,8 +46,8 @@ header p{
     color: blue;
 }
 
-header nav{
-    display: flex;
+header .desktopNavBar{
+    display: none;
     visibility: hidden;
     justify-content: space-evenly;
     align-items: center;
@@ -51,6 +55,82 @@ header nav{
     text-align: center;
     height: 6vh;
     background-color: white;
+}
+
+header .burger{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header .burger:hover{
+    min-height: fit-content;
+}
+
+header .burger:hover .menuButton
+
+.menuButton{
+    display: block;
+    justify-self: center;
+    background-color: white;
+}
+
+header .mobileNavBar{
+    display: none;
+    width: max-content;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+header .mobileNavBar nav{
+    display: block;
+    height: max-content;
+}
+
+li .dropdown{
+    width: 100%;
+}
+
+li .dropdown .navCategorias .dropbtn{
+    min-width: 100%;
+    font-size: 2vh;
+}
+
+li .dropdown .dropdown-content{
+    position: relative;
+    max-height: fit-content;
+    padding-bottom: 10px;
+}
+
+li .dropdown .dropdown-content a{
+    font-size: 2vh;
+}
+
+header .burger:hover .mobileNavBar{
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+.mobileNavBar nav ul{
+    width: 375px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: white;
+}
+
+.mobileNavBar nav li{
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.burger .fa-bars{
+    background-color: white;
+    font-size: 18px;
+    width: 80%;
+    text-align: center;
 }
 
 nav a{
@@ -292,7 +372,6 @@ footer h2{
     font-size: 10px;
     align-self: flex-end;
     text-align: center;
-
 }
 
 .contacto .fa-facebook{
@@ -334,6 +413,15 @@ footer h2{
     margin: 22px 0 22px 5px;
     font-size: 3vw;
     margin: 0;
+    font-family: 'Russo One', sans-serif;
+    text-align: inherit;
+    border: 0;
+    border-radius: 19px;
+    padding-left: 2vw;
+}
+
+#searchBttn{
+    border: 0;
 }
 
 .logo form{
@@ -356,15 +444,19 @@ footer h2{
 .nav header {
     display:hidden;
 }
+
 .logo .carrito {
     display:none;
 }
+
 .logo .inicio-sesion {
-    display:none;
+    display:block;
 }
-.menuButton {
-    display: block;
+
+.logo .imgProfile{
+    width: 10vw;
 }
+
 .product-section {
 
     margin: auto;
@@ -536,11 +628,22 @@ form #file{
 }
 
 .errores{
+    display: none;
     border-radius: 15px;
-    background-color: red;
-    padding: 0 5px;
+    background-color: #F9D4D4;
+    padding: 25px;
+    color:red;
+    text-align: center;
+    border: solid 3px;
     width: fit-content;
-    color: black;
+    justify-self: center;
+}
+
+.Formu-Registro {
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    
 }
 
 .radioInputs{
@@ -979,7 +1082,11 @@ main .adminForm{
 
 
 @media (min-width: 791px){
-    header nav{
+    header .burger{
+        display: none;
+    }
+
+    header .desktopNavBar{
         display: flex;
         visibility: visible;
         justify-content: space-evenly;
@@ -1320,6 +1427,10 @@ main .adminForm{
         width: 13vh;
     }
 
+    .logo .imgProfile{
+        width: 4vw;
+    }
+
     .login{
         margin: 0 20%;
         border-radius: 30px;
@@ -1505,3 +1616,4 @@ main .adminForm{
     margin: 0 20%;
     border-radius: 30px;
 }
+

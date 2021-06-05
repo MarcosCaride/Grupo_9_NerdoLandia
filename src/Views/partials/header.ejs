@@ -3,13 +3,18 @@
         <a href="/"><img width="60px" src="/imagenes/LogoMarcos.png" alt=""></a>
         <form action="/" method="POST">
           <input type="text" placeholder="¿Qué estas buscando?" id="searchBar">
-          <button id="serachBttn"><i class="fas fa-search"></i></button>
+          <button id="searchBttn"><i class="fas fa-search"></i></button>
         </form>
-        <button class="menuButton"><i class="fas fa-bars"></i></button>
         <a href="/Carrito" class="carritoE"><i class="fas fa-shopping-cart"></i></a>
-        <a href="/users" class="inicio-sesion"><i class="fas fa-user-circle"></i></a>
+        <a href="/users" class="inicio-sesion">
+          <% if(imagenLogeado){ %> 
+            <img  class="fas imgProfile" src="/Imagenes/Users/<%= imagenLogeado %>" alt="">
+          <% }else{ %>
+            <i class="fas fa-user-circle"></i>
+          <% } %> 
+        </a>
     </div>
-    <nav>
+    <nav class="desktopNavBar">
         <a href="/">HOME</a>
           <div class="dropdown">
             <div class="navCategorias">
@@ -25,4 +30,42 @@
         <a href="https://cantinadelandroide.blogspot.com">BLOG</a>
         <a href="/sobrenosotros">SOBRE NOSOTROS</a>
     </nav>
+    <article class="burger">
+      <i class="fas fa-bars menuButton"></i>
+      <br>
+      <section class="mobileNavBar">
+        <nav>
+          <ul>
+            <li>
+              <a href="/">HOME</a>
+            </li>
+            <li>
+              <div class="dropdown">
+                <div class="navCategorias">
+                  <button class="dropbtn">CATEGORIAS</button>
+                </div>
+                  <div class="dropdown-content">
+                    <a href="/categorias/1">Marvel</a>
+                    <a href="/categorias/2">Star Wars</a>
+                    <a href="/categorias/3">Los Simpsons</a>
+                  </div>
+              </div>
+            </li>
+            <li>
+              <a href="/heroinas">HEROINAS</a>
+            </li>
+            <li>
+              <a href="https://cantinadelandroide.blogspot.com">BLOG</a>
+            </li>
+            <li>
+              <a href="/sobrenosotros">SOBRE NOSOTROS</a>
+            </li>
+            <li>
+              <a href="/Carrito">Carrito</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </article>
 </header>
+<br>

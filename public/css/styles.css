@@ -31,6 +31,10 @@ header .logo img:hover{
     transition: 250ms;
 }
 
+header .logo .carritoE{
+    display: none;
+}
+
 header .logo a i:hover{
     background-color: #00c2cb;
     color: #000059;
@@ -368,7 +372,6 @@ footer h2{
     font-size: 10px;
     align-self: flex-end;
     text-align: center;
-
 }
 
 .contacto .fa-facebook{
@@ -441,11 +444,17 @@ footer h2{
 .nav header {
     display:hidden;
 }
+
 .logo .carrito {
     display:none;
 }
+
 .logo .inicio-sesion {
-    display:none;
+    display:block;
+}
+
+.logo .imgProfile{
+    width: 10vw;
 }
 
 .product-section {
@@ -1290,6 +1299,10 @@ main .adminForm{
 
     .logo a img{
         width: 13vh;
+    }
+
+    .logo .imgProfile{
+        width: 4vw;
     }
 
     .login{

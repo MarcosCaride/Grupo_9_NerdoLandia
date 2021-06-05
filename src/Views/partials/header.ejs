@@ -8,7 +8,7 @@
         <a href="/Carrito" class="carritoE"><i class="fas fa-shopping-cart"></i></a>
         <a href="/users" class="inicio-sesion">
           <% if(imagenLogeado){ %> 
-            <img  class="fas" width="2vw" src="/Imagenes/Users/<%= imagenLogeado %>" alt="">
+            <img  class="fas imgProfile" src="/Imagenes/Users/<%= imagenLogeado %>" alt="">
           <% }else{ %>
             <i class="fas fa-user-circle"></i>
           <% } %> 
@@ -59,6 +59,9 @@
             </li>
             <li>
               <a href="/sobrenosotros">SOBRE NOSOTROS</a>
+            </li>
+            <li>
+              <a href="/Carrito">Carrito</a>
             </li>
           </ul>
         </nav>

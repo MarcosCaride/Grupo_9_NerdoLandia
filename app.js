@@ -14,6 +14,11 @@ const usersRoutes = require ('./src/routes/users');
 const mainRoutes = require ('./src/routes/main');
 const productsRoutes = require ('./src/routes/products');
 
+//USERS API ROUTES
+const usersAPIroutes = require('./src/routes/api/usersAPIroutes')
+
+//PRODUCTS API ROUTES
+
 
 
 // MIDDLEWARES
@@ -50,4 +55,6 @@ app.use('/detail', productsRoutes)
 
 app.use('/users', usersRoutes);
 
-// Ruteadores
+// Colección de recursos de usuarios (APIs)
+
+app.use('/api/users', usersAPIroutes)

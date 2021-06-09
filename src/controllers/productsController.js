@@ -14,6 +14,11 @@ const Product = db.Product
 
 const productsController = {
 	detail: (req,res) =>{
+
+        let marvelBanner = "MarvelBanner.jpg"
+        let starWarsBanner =  "Star WarsBanner.jpg"
+        let losSimpsonsBanner =  "LosSimpsonsBanner.jpg"
+
         let imagenLogeado = req.imagenLogeado
 
 			db.Product.findByPk(req.params.id, 
@@ -23,7 +28,7 @@ const productsController = {
 					res.render('detail', {
 						product: producto,
 						user: req.session.userLogged,
-						imagenLogeado
+						imagenLogeado, marvelBanner, starWarsBanner, losSimpsonsBanner
 					});
 				});
 /* 			include: [{association: "franquicia-producto"},{association:"producto-categoria"}]

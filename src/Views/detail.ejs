@@ -6,6 +6,20 @@
   <br>
   <br>
 
+  <br>
+
+  <div class="titulo-Section">
+    <% if(product.id_franchise == 1){ %> 
+      <img src="/Imagenes/<%= marvelBanner %>"  alt="">
+    <% }if(product.id_franchise == "2"){ %>
+        <img src="/Imagenes/<%= starWarsBanner %> " alt="">  
+    <% }if(product.id_franchise == "3"){ %> 
+      <img src="/Imagenes/<%= losSimpsonsBanner %> " alt="">  
+    <% } %>
+  </div>
+  <br>
+  <br>
+
   <main class="productD">
     <div class="Imagen">
         <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">

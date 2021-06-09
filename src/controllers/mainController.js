@@ -81,6 +81,11 @@ const mainController = {
         let imagenLogeado = req.imagenLogeado
         res.render('aboutUs',{imagenLogeado})
     },
+
+    error404: (req, res) => {
+        let imagenLogeado = req.imagenLogeado
+        res.render('404error',{imagenLogeado})
+    },
 }
 
 module.exports = mainController

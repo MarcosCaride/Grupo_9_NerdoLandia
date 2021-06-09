@@ -170,7 +170,7 @@ nav a:hover{
     transition: 250ms;
 }
 
-section .titulo-Section{
+.titulo-Section{
     display: flex;
     justify-content: center;
 }
@@ -675,6 +675,27 @@ form #file{
 
 /* ProductCart.html */
 
+.carritoBody{
+    display: flex;
+}
+
+.carritoBody section{
+    background-color: white;
+    padding: 1%;
+    border-radius: 2rem;
+    height: fit-content;
+}
+
+.carritoBody section .totalCarrito{
+    text-align: left;
+}
+
+.descripcion{
+    color: #337ab7;
+    font-family: 'Russo One', sans-serif;
+    margin: 0;
+}
+
 .carrito{
     display: flex;
     width: 60%;
@@ -721,16 +742,6 @@ form #file{
 .carritoDetail a article .infoDelProducto .descripcion{
     font-size: 2vw;
     color: black;
-}
-
-.totalCarrito
-
-.descripcion{
-    text-align: center;
-    font-size: 2vw;
-    color: #337ab7;
-    font-family: 'Russo One', sans-serif;
-    margin: 0;
 }
 
 .caja-producto{

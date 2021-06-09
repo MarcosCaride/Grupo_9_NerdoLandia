@@ -46,33 +46,6 @@
     <br>
     <br>
 
-    <section class="destacados">
-      <div class="titulo-Section">
-        <img src="/Imagenes/AndroidesDelMes.png" width="80%" style="text-align: center;" alt="">
-        <!-- <h2>Marvel</h2> -->
-      </div>
-
-      <br>
-      <br>
-
-      <div class="productos">
-        <% for (product of androidesDelMes){%>
-
-        <a href="/blog">
-          <article>
-            <img src="/Imagenes/products/JSON/<%= product.image %>" alt="<%= product.Nombre %>">
-            <div class="infoDelProducto">
-              <p class="descripcion"><%= product.Nombre %></p>
-              <p class="precio">$<%= product.Precio %></p>
-            </div>
-          </article>
-        </a>
-
-        <% } %>
-
-      </div>
-    </section>
-
     <br>
     <br>
     <br>
@@ -192,6 +165,33 @@
       </div>
 
 
+    </section>
+    <br>
+    <section class="destacados">
+      <div class="titulo-Section">
+        <img src="/Imagenes/AndroidesDelMes.png" width="80%" style="text-align: center;" alt="">
+        <!-- <h2>Marvel</h2> -->
+      </div>
+
+      <br>
+      <br>
+
+      <div class="productos">
+        <% for (product of androidesDelMes){%>
+
+        <a href="/404error">
+          <article>
+            <img src="/Imagenes/products/JSON/<%= product.image %>" alt="<%= product.Nombre %>">
+            <div class="infoDelProducto">
+              <p class="descripcion"><%= product.Nombre %></p>
+              <p class="precio">$<%= product.Precio %></p>
+            </div>
+          </article>
+        </a>
+
+        <% } %>
+
+      </div>
     </section>
     <br>
 

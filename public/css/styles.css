@@ -894,44 +894,83 @@ main .adminForm{
 } */
 
 .containerPerfil {
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
-    background-color: whitesmoke;
     font-family: 'Oxanium', cursive;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 1%;
+    margin-bottom: 5%;
     border-radius: 15px;
+    align-content: flex-start;
+}
+
+.infoPerfil{
+    background: white;
+    border-radius: 20px;
+    width: 50%;
+    padding: 1% 2%;
+    font-size: smaller;
+}
+
+.infoPerfil h2{
+    text-align: left;
+    font-weight: bold;
+    text-decoration: underline #00c2cb;
+    font-size: large;
+}
+
+.infoPerfil ul{
+    list-style-type: none;
+    padding: 3%;
+}
+
+.infoPerfil ul li{
+    text-decoration: none;
+    text-align: left;
+    font-weight: bold;
+}
+
+.saludo-perfil{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: white;
+    border-radius: 20px;
+    height: fit-content;
+    max-width: 40%;
 }
 
 .cajita {
-    display:flex;
-    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: center;
     background: #00c2cb;
     width: 90%;
     border-radius: 10px;
     margin: 10px;
     margin-top: 20px;
     box-sizing: border-box;
-
 }
-.saludo-perfil h2 {
-    font-family: 'Russo One', sans-serif;
+
+.saludo-perfil .cajita h2 {
+    align-self: center;
     background-color: #00c2cb;
-    border-color: gray;
-    border: 5px;
-    padding: 2px;
-    width: 90%;
+    height: fit-content;
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 10px;
     box-sizing: border-box;
+
+    font-weight: bold;
+    font-size: large;
 }
+
 .saludo-perfil img {
+    background-color: black;
     vertical-align: middle;
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+    border: solid 2px;
+    border-radius: 10%;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -939,31 +978,37 @@ main .adminForm{
     margin-right: 5px;
 }  
 
-.saludo-mail {
-    font-family: 'Russo One', sans-serif;
+.comprasRecientes {
+    display: none;
     background-color: #00c2cb;
-    border-color: gray;
-    border: 2px;
-    padding: 5px;
-    width: 90%;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
     border-radius: 10px;
+    width: fit-content;
+    margin-bottom: 5%;
+}
 
+#logout{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
 }
 
 #logout button {
+    display: block;
+    height: fit-content;
+    border: solid black 2px;
     border-radius: 15px;
-    float: right;
-    margin-right: 75px;
+    margin-right: 5%;
+    margin: 3% 3%;
+
+    font-size: small;
 }
 
 #logout button:hover {
-    background-color: #00c2cb;
-    color: #000059;
-    transform: scale(0.85);
-    transition: 700ms;
+    background-color: red;
+    color: black;
+    transform: scale(0.95);
+    transition: 500ms;
 }
 
 /* about us */
@@ -1312,47 +1357,57 @@ main .adminForm{
     
     /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 
-.titulo-section{
-    color:#00c2cb;
-    font-family: 'Russo One', sans-serif;
-    text-align: center;
+    .titulo-section{
+        color:#00c2cb;
+        font-family: 'Russo One', sans-serif;
+        text-align: center;
+        }
+    /* perfil */
+    .infoPerfil h2{
+        font-size: 32px;
     }
-}
-/* perfil */
-.saludo-perfil h2 {
-    font-family: 'Russo One', sans-serif;
-    background-color: #00c2cb;
-    border-color: gray;
-    border: 5px;
-    padding: 2px;
-    width: 50%;
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-.saludo-perfil img {
-    vertical-align: middle;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-top: 10px;
-    margin-left: 5px;
-    box-sizing: border-box;
-    margin-right: 5px;
-  }
-.saludo-mail {
-    font-family: 'Russo One', sans-serif;
-    background-color: #00c2cb;
-    border-color: gray;
-    border: 2px;
-    padding: 5px;
-    width: 50%;
-    margin-left: 20px;
-    margin-right: 50px;
-    text-align: center;
-    border-radius: 10px;
+
+    .infoPerfil ul li{
+        font-size: large;
+    }
+
+    .saludo-perfil{
+        max-width: 30%;
+    }
+
+    .saludo-perfil .cajita{
+        display:flex;
+        flex-wrap: nowrap;
+    }
+
+    .saludo-perfil .cajita h2 {
+        background-color: #00c2cb;
+        margin-top: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 32px;
+    }
+    .saludo-perfil img {
+        vertical-align: middle;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 5px;
+        box-sizing: border-box;
+        margin-right: 5px;
+    }
+    .comprasRecientes{
+        display: block;
+        height: fit-content;
+        padding: 0 2%;
+    }
+
+    #logout button{
+        font-size: x-large;
+    }
 }
 
 @media (min-width: 1000px){
@@ -1577,12 +1632,7 @@ main .adminForm{
     
 /* perfil */
 .saludo-perfil h2 {
-    font-family: 'Russo One', sans-serif;
     background-color: #00c2cb;
-    border-color: gray;
-    border: 5px;
-    padding: 2px;
-    width: 50%;
     margin-top: 20px;
     margin-left: 5px;
     margin-right: 5px;
@@ -1599,18 +1649,6 @@ main .adminForm{
     box-sizing: border-box;
     margin-right: 5px;
   }
-.saludo-mail {
-    font-family: 'Russo One', sans-serif;
-    background-color: #00c2cb;
-    border-color: gray;
-    border: 2px;
-    padding: 5px;
-    width: 50%;
-    margin-left: 20px;
-    margin-right: 50px;
-    text-align: center;
-    border-radius: 10px;
-}
 
 /* Titulo para las secciones Carrito, Formulario Adrministrador, LogIn, Descripcion Carrito*/
 

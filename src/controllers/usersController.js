@@ -122,7 +122,6 @@ const usersController = {
 
     perfil: (req, res) => {
         let imagenLogeado = req.imagenLogeado
-
         return res.render ('perfil', {
             user: req.session.userLogged,
             imagenLogeado

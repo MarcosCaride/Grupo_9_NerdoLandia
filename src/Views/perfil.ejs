@@ -4,7 +4,36 @@
 <body>
     <%- include('./partials/header') %>
 
-    <div class="container">
+    <div class="containerPerfil">
+        <section class="infoPerfil">
+            <div>
+                <h2>Informacion de Usuario:</h2>
+                <br>
+                <ul>
+                    <li>Nombre: </li>
+                    <li><%=  user.name %></li>
+                    <br>
+                    <li>Apellido:</li>
+                    <li><%=  user.surname %></li>
+                    <br>
+                    <li>Correo Electronico:</li>
+                    <li><%=  user.email %></li>
+                    <br>
+                    <li>Teléfono:</li>
+                    <li><%=  user.phoneNumber %></li>
+                    <br>
+                    <li>Fecha de Nacimiento:</li>
+                    <li><%=  user.dateOfBirth %></li>
+                    <br>
+                    <li>Domicilio:</li>
+                    <li><%=  user.address %></li>
+                    <br>
+                    <li>Te uniste el:</li>
+                    <li><%=  user.created_at %></li>
+                </ul>
+
+            </div>
+        </section>
         <section class="saludo-perfil">
             <div class="cajita">
                 <h2> Hola <%=  user.name + " " + user.surname  %> </h2>
@@ -12,12 +41,14 @@
             </div>
             <br>
             <br>
-            <div class="saludo-mail"><%= user.email %> </div>
+            <div class="comprasRecientes">
+                <h4>Compras recientes: </h4>
+            </div>
             <br> 
+            <form action="" method="POST" id=logout>
+                <button type="logout">Cerrar sesión</button><br><br>
+            </form>    
         </section>
-        <form action="" method="POST" id=logout>
-            <button type="logout"><h3>Cerrar sesión</h3></button><br><br>
-        </form>    
         <br>
         <br>
         <br>

@@ -1,9 +1,9 @@
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
-const User = require('../models/User');
 const { send } = require('process');
 
 const db = require ("../database/models");
+const User = db.Users;
 //const { DATE } = require('sequelize/types');
 
 const usersController = {
@@ -29,7 +29,7 @@ const usersController = {
         }
 
 
-        await db.Users.findOne({
+        await User.findOne({
             where: {
              email: req.body.email
             
@@ -44,7 +44,7 @@ const usersController = {
                     old: req.body, imagenLogeado
                 })
               }
-                 });
+                 }).catch(err)
 
                  let imag;
 		if(!req.file){
@@ -52,7 +52,7 @@ const usersController = {
 		}else{
 		imag = req.file.filename;
 		}
-        await db.Users.create({
+        await User.create({
                      name: req.body.name,
                      surname: req.body.surname, 
                      email: req.body.email,
@@ -79,18 +79,20 @@ const usersController = {
         let imagenLogeado = req.imagenLogeado
 
 
-        let userToLogIn = await db.Users.findOne({
+        let userToLogIn = await User.findOne({
             where:  {
                 email: req.body.email
             }
-        })
+        }).catch(error=>
+            console.log(error))
         if(!userToLogIn){
             return res.render('login', {
                 errors: {
                     email: {
                         msg: 'Email incorrecto'
                     }
-                }
+                },
+                imagenLogeado
             })
         }
 
@@ -106,7 +108,7 @@ const usersController = {
                 res.cookie('userEmail', req.body.email, {maxAge: (10000 * 60) * 2 })
             }
             res.redirect('users/perfil')
-        }
+        }else{
             return res.render('login', {
                 errors: {
                     contraseña: {
@@ -115,11 +117,11 @@ const usersController = {
                 },
                 imagenLogeado
             })
+        }
     },
 
     perfil: (req, res) => {
         let imagenLogeado = req.imagenLogeado
-
         return res.render ('perfil', {
             user: req.session.userLogged,
             imagenLogeado

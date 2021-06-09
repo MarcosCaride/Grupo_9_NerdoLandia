@@ -23,7 +23,7 @@ var upload = multer({ storage: storage })
 router.get('/product/:id', productsController.detail)
 
 // Creacion de Productos
-router.get('/administrador', authMiddleware, productsController.creador)
+router.get('/administrador'/*, authMiddleware*/, productsController.creador)
 router.post('/', upload.single('file'), productsController.guardado)
 
 // Edicion de Productos

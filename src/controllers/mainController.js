@@ -43,13 +43,14 @@ const mainController = {
 	},
 
     carrito: async (req, res) => {
+        let imagenLogeado = req.imagenLogeado
         let marvel = await db.Product.findAll({
             where: {
                 id_franchise: 1
             }
         });
         let precioTotal = 0;
-        res.render('productCart', {marvel, precioTotal})
+        res.render('productCart', {marvel, precioTotal,imagenLogeado})
     },
 
     categorias: async (req, res) => {
@@ -79,6 +80,11 @@ const mainController = {
     contacto: (req, res) => {
         let imagenLogeado = req.imagenLogeado
         res.render('aboutUs',{imagenLogeado})
+    },
+
+    error404: (req, res) => {
+        let imagenLogeado = req.imagenLogeado
+        res.render('404error',{imagenLogeado})
     },
 }
 

@@ -5,30 +5,32 @@
 
   <%- include('./partials/header') %>     
   
-  
-  <div class="carrito">
-    <% for (product of marvel){%>
-      <div class="carritoDetail">
-        <a href="/detail/product/<%= product.id %>">
-          <article>
-            <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
-            <div class="infoDelProducto">
-              <p class="descripcion"><%= product.name %></p>
-              <p class="precio">$<%= product.price %></p>
-              <p class="precio"> Cantidad: 2</p>
-            </div>
-          </article>
-        </a>
-      </div>
-      
-      <% precioTotal = precioTotal + (product.price * 2) %> 
-        <% } %>
-        <div class="totalCarrito">
-          <p class="descripcion">Precio Total <%= precioTotal %></p>
+  <main class="carritoBody">
+    <div class="carrito">
+      <% for (product of marvel){%>
+        <div class="carritoDetail">
+          <a href="/detail/product/<%= product.id %>">
+            <article>
+              <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
+              <div class="infoDelProducto">
+                <p class="descripcion"><%= product.name %></p>
+                <p class="precio">$<%= product.price %></p>
+                <p class="precio"> Cantidad: 2</p>
+              </div>
+            </article>
+          </a>
         </div>
-
-
-  </div>
+        <% } %>
+      </div>
+      <section>
+        <% precioTotal = precioTotal + (product.price * 2) %> 
+          <div class="totalCarrito">
+            <h3 class="descripcion">Subtotal: <%= precioTotal %></h3>
+            <h3 class="descripcion">Envio: 0 </h3>
+            <h2 class="descripcion">Precio Total <%= precioTotal %></h2>
+        </div>
+    </section>
+    </main>
   
     <br> 
     <br> 

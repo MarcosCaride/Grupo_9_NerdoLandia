@@ -39,7 +39,7 @@ app.use(session( {
 
 app.use(cookies());
 
-app.use(userLoggedMiddleware);
+// app.use(userLoggedMiddleware);
 app.use(ifLoggedUser);
 
 app.use(methodOverrride('_method'))

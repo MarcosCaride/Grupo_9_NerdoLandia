@@ -17,7 +17,7 @@ function userLoggedMiddleware (req, res, next) {
         if(user){
             req.session.userLogged = user
         }
-    })
+    }).catch((e)=> console.log(e))
 
     // if (userFromCookie){
     //     req.session.userLogged = userFromCookie;

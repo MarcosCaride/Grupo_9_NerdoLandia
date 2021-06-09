@@ -15,6 +15,9 @@ const usersAPIController = {
     'list': (req, res) => {
         db.Users.findAll()
         .then(usuarios => {
+            // let usuarioSinContraseña = usuarios.filter(function(usuarios) {
+            //return usuarios
+            })
             let respuesta = {
                 meta: {
                     status : 200,

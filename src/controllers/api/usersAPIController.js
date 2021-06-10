@@ -15,22 +15,27 @@ const usersAPIController = {
     'list': (req, res) => {
         db.Users.findAll()
         .then(usuarios => {
-            // let usuarioSinContraseña = usuarios.filter(function(usuarios) {
-            //return usuarios
-            })
             let respuesta = {
                 meta: {
                     status : 200,
                     total: usuarios.length,
                     url: 'api/users'
                 },
-                data: usuarios
+                data: usuarios.map (user => {
+                    return {
+                        id: user.id,
+                        name: user.name,
+                        surname: user.surname,
+                        email: user.email,
+                        detail: ('api/users/' + user.id )
+                    }
+                })
             }
                 res.json(respuesta);
             })
     },
     
-    'detail': (req, res) => {
+   'detail': (req, res) => {
         db.Users.findByPk(req.params.id)
             .then(usuarios => {
                 let respuesta = {
@@ -43,7 +48,7 @@ const usersAPIController = {
                 }
                 res.json(respuesta);
             });
-    },
+    }, 
 
 }
 

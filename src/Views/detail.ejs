@@ -9,11 +9,11 @@
   <br>
 
   <div class="titulo-Section">
-    <% if(product.id_franchise == 1){ %> 
+    <% if(product.franquicia_producto.franchise_name == "Marvel"){ %> 
       <img src="/Imagenes/<%= marvelBanner %>"  alt="">
-    <% }if(product.id_franchise == "2"){ %>
+    <% }if(product.franquicia_producto.franchise_name == "Star Wars"){ %>
         <img src="/Imagenes/<%= starWarsBanner %> " alt="">  
-    <% }if(product.id_franchise == "3"){ %> 
+    <% }if(product.franquicia_producto.franchise_name == "Los Simpsons"){ %> 
       <img src="/Imagenes/<%= losSimpsonsBanner %> " alt="">  
     <% } %>
   </div>
@@ -27,6 +27,8 @@
     <div class="Info">
         <h1><%= product.name %></h1>
         <br>
+        <button class="franchise"><%= product.franquicia_producto.franchise_name %> </button>
+        <button class="franchise"><%= product.productoTag.tag_name %> </button>
         <br>
         <h2>$<%= product.price %> </h2>
         <br>

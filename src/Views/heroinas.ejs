@@ -6,20 +6,23 @@
 
     <br>
     <br>
-    <br>
 
     <section class="destacados">
-        <h2>Heroinas</h2>
+      <div class="titulo-Section">
+        <img src="/Imagenes/HeroínasBanner.png" style="width:80%; text-align: center;" alt="">
+        <!-- <h2>Los Simpsons</h2> -->
+      </div>
+      <br>
   
         <div class="productos">
           <% for (product of Heroinas){%>
   
           <a href="/productDetail/detail/<%= product.id %>">
             <article>
-              <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.Nombre %>">
+              <img src="/Imagenes/products/<%= product.image %>" alt="<%= product.name %>">
               <div class="infoDelProducto">
-                <p class="descripcion"><%= product.Nombre %></p>
-                <p class="precio">$<%= product.Precio %></p>
+                <p class="descripcion"><%= product.name %></p>
+                <p class="precio">$<%= product.price %></p>
               </div>
             </article>
           </a>

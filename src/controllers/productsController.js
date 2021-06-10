@@ -7,8 +7,10 @@ const CategoryController = require('./Category.controller')
 //para DB
 const db = require('../database/models');
 
+const Franchise = db.Franchise;
 const Category = db.Category
 const Product = db.Product
+const Tag = db.Tag
 
 // CONTROLADOR
 
@@ -21,8 +23,9 @@ const productsController = {
 
         let imagenLogeado = req.imagenLogeado
 
-			db.Product.findByPk(req.params.id, 
-				// {include: [{association: "franquicia-producto"},{association:"producto-categoria"}]}
+			db.Product.findByPk(req.params.id, {
+				include: ["franquicia_producto", "productoTag"]
+			}
 			)
 				.then(producto => {
 					res.render('detail', {
@@ -41,11 +44,12 @@ const productsController = {
 	//solamente se muestra el formulario, GET
     creador: async (req, res) => {
 		let categorias = await db.Category.findAll()
+		let tag = await Tag.findAll()
 		let franquicias = await db.Franchise.findAll()
         let imagenLogeado = req.imagenLogeado
 
 
-		res.render('administrator', {categorias, franquicias, productEdit: "", imagenLogeado})
+		res.render('administrator', {categorias, franquicias, productEdit: "", imagenLogeado, tag})
 
     },
 
@@ -53,14 +57,15 @@ const productsController = {
 	editor: (req, res) => {
 	
 		let productEdit = db.Product.findByPk(req.params.id);
+		let tag = Tag.findAll()
 		let pedidoCategorias = db.Category.findAll();
 		let franquicias =  db.Franchise.findAll()
         let imagenLogeado = req.imagenLogeado
 
-		Promise.all([productEdit, pedidoCategorias, franquicias])
-			.then(function([productEdit, categoria, franquicias]){
-				res.render("administrator", { productEdit , categorias:categoria, franquicias, imagenLogeado })
-			})
+		Promise.all([productEdit, pedidoCategorias, franquicias, tag])
+			.then(function([productEdit, categoria, franquicias, tag]){
+				res.render("administrator", { productEdit , categorias:categoria, franquicias, imagenLogeado, tag })
+			}).catch(e=>console.log(e))
 	},
 	
 	//se guarda lo del form, POST
@@ -80,14 +85,11 @@ const productsController = {
 			image: imag,
 			price: req.body.price,
 			id_franchise: req.body.id_franchise,
-			created_at: Date.now(),
-			// categorias:  req.body.category_id,
-
+			id_tag: req.body.id_tag,
+			androide_del_mes: req.body.androide_del_mes,
+			heroinas: req.body.heroinas,
+			created_at: Date.now()
 		})
-
-		req.body.category_id.forEach(async category => {
-			await CategoryController.addProduct(category, producto.name);
-		});
 		
 
 		// req.body.category_id.forEach(async id_categoria => {
@@ -117,7 +119,7 @@ const productsController = {
 
 		res.redirect('/') */
 
-		res.redirect('/', {imagenLogeado})
+		res.redirect('/')
 	},
 
 
@@ -130,6 +132,8 @@ const productsController = {
 			image: req.body.file,
 			id_franchise: req.body.id_franchise,
 			id_productsCategory: req.body.id_productsCategory,
+			androide_del_mes: req.body.androide_del_mes,
+			heroinas: req.body.heroinas,
 			//tiene created_at, deberia ser timestamps TRUE?
 			created_at: req.body.created_at,
 		},

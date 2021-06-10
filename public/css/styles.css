@@ -223,8 +223,18 @@ footer h2{
 .productD .Info h1{
     color: #00c2cb;
     font-size: 25px;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
+}
+
+.productD .Info .franchise{
+    background-color: #ff0044;
+    color: black;
+    border: solid black 1px;
+    border-radius: 10px;
+    font-size: 25px;
+    height: fit-content;
+    margin: 2%;
 }
 
 .productD .Info h2{
@@ -253,8 +263,9 @@ footer h2{
 .productD .Info form button:hover{
     border: solid 2px;
     border-radius: 15px;
+    background-color: #00c8ff;
     border-color: #00c2cb;
-    color: #00153D;
+    color: black;
     transition: 400ms;
 }
 

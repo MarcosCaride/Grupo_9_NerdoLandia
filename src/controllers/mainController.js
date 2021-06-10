@@ -26,10 +26,32 @@ const mainController = {
                 id_franchise: 3
             }
         });
+
+        let futurama = await db.Product.findAll({
+            where: {
+                id_franchise: 4
+            }
+        });
+
+        let rickAndMorty = await db.Product.findAll({
+            where: {
+                id_franchise: 5
+            }
+        });
+
+        let dc = await db.Product.findAll({
+            where: {
+                id_franchise: 6
+            }
+        });
+
+        let androidesDelMes = await db.Product.findAll({
+            where: {
+                androide_del_mes: "Yes"
+            }
+        });
         
         let imagenLogeado = req.imagenLogeado
-
-        let androidesDelMes = products.filter(product => product.AndroideDelMes == 'true');
 		// let legos = products.filter(product => product.Lego == 'true');
 		// let Heroinas = products.filter(product => product.Heroinas == 'true');
 		// let funkoPOP = products.filter(product => product.Funko == 'true');
@@ -39,7 +61,19 @@ const mainController = {
 		let franquicias = await db.Franchise.findAll()
 
 
-		res.render('index', {losSimpsons, marvel, starWars, androidesDelMes, productosdb, categorias, franquicias, imagenLogeado })
+		res.render('index', {
+            marvel,
+            starWars,
+            losSimpsons,
+            futurama,
+            rickAndMorty,
+            dc,
+            androidesDelMes,
+            productosdb,
+            categorias,
+            franquicias,
+            imagenLogeado,
+         })
 	},
 
     carrito: async (req, res) => {
@@ -65,15 +99,32 @@ const mainController = {
         let marvelBanner = "MarvelBanner.jpg"
         let starWarsBanner =  "Star WarsBanner.jpg"
         let losSimpsonsBanner =  "LosSimpsonsBanner.jpg"
+        let futuramaBanner =  "futuramaBanner.png"
+        let rickYMortyBanner =  "RickYMortyBanner.png"
+        let dcBanner =  "DCBanner.jpg"
 
         let imagenLogeado = req.imagenLogeado
 
-        res.render('categorias', {categoria, marvelBanner, starWarsBanner, losSimpsonsBanner, param, imagenLogeado})
+        res.render('categorias', {
+            categoria,
+            marvelBanner,
+            starWarsBanner,
+            losSimpsonsBanner,
+            futuramaBanner,
+            rickYMortyBanner,
+            dcBanner,
+            param,
+            imagenLogeado
+        })
     },
 
-    heroinas: (req,res) => {
+    heroinas: async(req,res) => {
         let imagenLogeado = req.imagenLogeado
-		let Heroinas = products.filter(product => product.Heroina == 'true');
+        let Heroinas = await db.Product.findAll({
+            where: {
+                heroinas: "Yes"
+            }
+        })
         res.render('heroinas', {Heroinas, imagenLogeado})
     },
 

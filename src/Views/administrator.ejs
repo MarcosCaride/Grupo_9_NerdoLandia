@@ -6,7 +6,7 @@
 
       <div class="titulo-section">
         <% if(productEdit){ %> 
-          <h2>Editor del producto: "<%= productEdit.Nombre %>" </h2>
+          <h2>Editor del producto: "<%= productEdit.name %>" </h2>
         <% }else{ %>
           <h2>Creación de Productos</h2>
         <% } %> 
@@ -80,15 +80,14 @@
 <br>
 
   <!-- Tags -->
-            <label>Ingresa los Categorias</label>
+            <label>Ingresar la Categorias</label>
             <br>
-             <div class="radioInputs">
-
-              <% categorias.forEach(categoria => { %>
-                <label><input type= "checkbox" name="category_id" id="category" value="<%= categoria.id %>" <% if( productEdit.id_productsCategory == categoria.id ){ %> <%= "checked" %> <% } %>  ><%= categoria.category_name %> </label>
-                <br>
-              <% }) %>
-              </div>
+              <select name="id_tag" id="franchise">
+                <option value="0">Selecciona una Categoria</option>
+                <% tag.forEach(tag => { %>
+                  <option value="<%= tag.id %>" <% if( productEdit.id_tag == tag.id ){ %> <%= "selected" %> <% } %>  ><%= tag.tag_name %> </option>
+                <% }) %>
+              </select>
 
             <!-- Validaciones -->
               <p id="erorresCategory" class="errores"></p>
@@ -97,6 +96,71 @@
            
 <br>
 <br>
+
+<!-- Androide Del Mes -->
+
+            <label for="androide_del_mes">Androide Del Mes</label>
+            <br>
+            <% if(productEdit.androide_del_mes == "Yes"){ %> 
+            <label for="androide_del_mes">
+              <input type="radio" name="androide_del_mes" id="androide_del_mes" value="Yes" checked>
+              Si
+            </label>
+            <br>
+            <label for="androide_del_mes">
+              <input type="radio" name="androide_del_mes" id="androide_del_mes" value="No">
+              No
+            </label>
+              <% }else{ %>
+                <label for="androide_del_mes">
+                  <input type="radio" name="androide_del_mes" id="androide_del_mes" value="Yes">
+                  Si
+                </label>
+                <br>
+                <label for="androide_del_mes">
+                  <input type="radio" name="androide_del_mes" id="androide_del_mes" value="No" checked>
+                  No
+                </label>
+                <% } %>
+
+<!-- Androide Del Mes -->
+
+<br>
+<br>
+
+<!-- Heroinas -->
+            <label for="heroinas">Heroinas</label>
+            <br>
+        <% if(productEdit.heroinas == "Yes"){ %> 
+        <label for="heroinas">
+           <input type="radio" name="heroinas" id="heroinas" value="Yes" checked>
+          Si
+        </label>
+        <br>
+        <label for="heroinas">
+          <input type="radio" name="heroinas" id="heroinas" value="No">
+          No
+        </label>
+          <% }else{ %>
+            <label for="heroinas">
+              <input type="radio" name="heroinas" id="heroinas" value="Yes">
+             Si
+           </label>
+            <br>
+            <label for="heroinas">
+              <input type="radio" name="heroinas" id="heroinas" value="No" checked>
+              No
+            </label>
+            <% } %> 
+            
+
+<!-- Heroinas -->
+            <br>
+            <br>
+
+
+
+
 
   <!-- Imagen -->
             

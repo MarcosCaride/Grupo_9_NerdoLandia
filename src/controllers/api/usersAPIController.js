@@ -27,7 +27,7 @@ const usersAPIController = {
                         name: user.name,
                         surname: user.surname,
                         email: user.email,
-                        detail: ('api/users/' + user.id )
+                        detail: ('api/users/' + user.DNI )
                     }
                 })
             }
@@ -38,13 +38,16 @@ const usersAPIController = {
    'detail': (req, res) => {
         db.Users.findByPk(req.params.id)
             .then(usuarios => {
+                delete usuarios.dataValues.password
+                let usuarioSinPass =  usuarios.dataValues
                 let respuesta = {
                     meta: {
                         status: 200,
                         total: usuarios.length,
                         url: '/api/users/:id'
                     },
-                    data: usuarios
+
+                    data: usuarioSinPass,
                 }
                 res.json(respuesta);
             });

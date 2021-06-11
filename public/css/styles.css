@@ -1679,6 +1679,134 @@ main .adminForm{
     font-family: 'Russo One', sans-serif;
     text-align: center;
     }
+
+    
+    /* about us */
+    .main {
+        display: block;
+        width:80%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+    }
+
+    .creadores h1 {
+        font-family: 'Oxanium';
+        background-color:  #00c2cb;
+        color: #44515E;
+        font-size: 5vh; 
+        width: 60%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        padding-top: 10px;
+        box-sizing: border-box;
+        
+    }
+
+    .creadores {
+        width: 85%;
+        text-align:center;
+        margin: auto;
+        display: block;
+    }
+
+
+    .header-aboutUs img {
+        display: block;
+        width:80%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+    }
+
+    .agos {
+            text-align: justify;
+            background-color: whitesmoke;
+            font-family: 'Oxanium', cursive;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-right: 40px;
+            border-radius: 15px;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: wrap;
+    }
+
+    .dani {
+        text-align: justify;
+        background-color: whitesmoke;
+        font-family: 'Oxanium', cursive;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 40px;
+        border-radius: 15px;
+        padding: 5px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: wrap;
+    }
+
+    .marcos {
+        text-align: justify;
+        background-color: whitesmoke;
+        font-family: 'Oxanium', cursive;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 40px;
+        border-radius: 15px;
+        padding: 5px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: wrap;
+    }
+
+    .agos h2 {
+        font-family: 'Oxanium', cursive;
+        color:  #00c2cb;
+        text-align: left;
+        margin-left: 25px;
+        font-size: 3em;
+    }
+
+    .dani h2 {
+        font-family: 'Oxanium', cursive;
+        color:  #00c2cb;
+        text-align: right;
+        margin-right: 30px;
+        font-size: 3em
+    }
+
+    .marcos h2 {
+        font-family: 'Oxanium', cursive;
+        color:  #00c2cb;
+        text-align: left;
+        margin-left: 25px;
+        font-size: 3em;
+    }
+
+
+
+    .presentacion p {
+        font-family: 'Oxanium', cursive;
+        color: grey;
+        font-size: 2em;
+        padding: 10px;
+        margin: 15px;
+        box-sizing: border-box;
+    }
+
+    #foto-perfil {
+        margin:5px;
+    }
+
 }
 
     .titulo-register {
@@ -1693,128 +1821,3 @@ main .adminForm{
     border-radius: 30px;
 }
 
-/* about us */
-.main {
-    display: block;
-    width:80%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20px;
-}
-
-.creadores h1 {
-    font-family: 'Oxanium';
-    background-color:  #00c2cb;
-    color: #44515E;
-    font-size: 5vh; 
-    width: 60%;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 15px;
-    padding-top: 10px;
-    box-sizing: border-box;
-    
-}
-
-.creadores {
-    width: 85%;
-    text-align:center;
-    margin: auto;
-    display: block;
-}
-
-
-.header-aboutUs img {
-    display: block;
-    width:80%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 30px;
-}
-
-.agos {
-        text-align: justify;
-        background-color: whitesmoke;
-        font-family: 'Oxanium', cursive;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 20px;
-        margin-right: 40px;
-        border-radius: 15px;
-        padding: 5px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: wrap;
-}
-
-.dani {
-    text-align: justify;
-    background-color: whitesmoke;
-    font-family: 'Oxanium', cursive;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 40px;
-    border-radius: 15px;
-    padding: 5px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: wrap;
-}
-
-.marcos {
-    text-align: justify;
-    background-color: whitesmoke;
-    font-family: 'Oxanium', cursive;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 40px;
-    border-radius: 15px;
-    padding: 5px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: wrap;
-}
-
-.agos h2 {
-    font-family: 'Oxanium', cursive;
-    color:  #00c2cb;
-    text-align: left;
-    margin-left: 25px;
-    font-size: 3em;
-}
-
-.dani h2 {
-    font-family: 'Oxanium', cursive;
-    color:  #00c2cb;
-    text-align: right;
-    margin-right: 30px;
-    font-size: 3em
-}
-
-.marcos h2 {
-    font-family: 'Oxanium', cursive;
-    color:  #00c2cb;
-    text-align: left;
-    margin-left: 25px;
-    font-size: 3em;
-}
-
-
-
-.presentacion p {
-    font-family: 'Oxanium', cursive;
-    color: grey;
-    font-size: 2em;
-    padding: 10px;
-    margin: 15px;
-    box-sizing: border-box;
-}
-
-#foto-perfil {
-    margin:5px;
-}

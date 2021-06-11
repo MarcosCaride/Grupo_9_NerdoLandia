@@ -1124,7 +1124,7 @@ main .adminForm{
     font-family: 'Oxanium', cursive;
     color:  #00c2cb;
     text-align: left;
-    margin-left: 25px;
+    margin-left: 5px;
     font-size: 4.5vh;
 }
 
@@ -1132,15 +1132,15 @@ main .adminForm{
     font-family: 'Oxanium', cursive;
     color:  #00c2cb;
     text-align: right;
-    margin-right: 30px;
-    font-size: 4.5vh;
+    margin-right: 35px;
+    font-size: 4vh;
 }
 
 .marcos h2 {
     font-family: 'Oxanium', cursive;
     color:  #00c2cb;
     text-align: left;
-    margin-left: 25px;
+    margin-left: 5px;
     font-size: 4.5vh;
 }
 
@@ -1157,6 +1157,10 @@ main .adminForm{
 
 #foto-perfil {
     margin:5px;
+    width:30%;
+    height:30%;
+   
+    
 }
 
 
@@ -1694,7 +1698,7 @@ main .adminForm{
         font-family: 'Oxanium';
         background-color:  #00c2cb;
         color: #44515E;
-        font-size: 5vh; 
+        font-size: 10vh; 
         width: 60%;
         display: block;
         margin-right: auto;

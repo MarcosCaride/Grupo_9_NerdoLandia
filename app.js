@@ -19,6 +19,7 @@ const usersAPIroutes = require('./src/routes/api/usersAPIroutes')
 
 //PRODUCTS API ROUTES
 const productsAPIroutes = require("./src/routes/api/productsAPIroutes")
+const CategoriesAPIRoutes = require("./src/routes/api/CategoriesAPIRoutes")
 
 
 
@@ -60,3 +61,4 @@ app.use('/users', usersRoutes);
 
 app.use('/api/users', usersAPIroutes)
 app.use('/api/products', productsAPIroutes)
+app.use('/api/categories', CategoriesAPIRoutes)

@@ -44,7 +44,7 @@ const usersController = {
                     old: req.body, imagenLogeado
                 })
               }
-                 }).catch(err)
+                 }).catch(e => console.log(e))
 
                  let imag;
 		if(!req.file){
@@ -63,10 +63,9 @@ const usersController = {
                      dateOfBirth: req.body.fecha,
                      phoneNumber: req.body.telefono,
                      created_at: Date.now()
-                     
                  })
 
-    return res.redirect('/', {imagenLogeado})
+    return res.redirect('/')
 
     },
 

@@ -6,15 +6,15 @@ const moment = require('moment');
 
 
 //Aqui tienen otra forma de llamar a cada uno de los modelos
-const Products = db.Product;
+const Tag = db.Tag;
 
 //---------------------------
 //Dentro del actorsAPIController uso las dos forma de poder llamar a nuestros modelo
 //----------------------------------
 const productsAPIController = {
     'list': (req, res) => {
-        Products.findAll({
-            include: ["franquicia_producto", "productoTag"]
+        Tag.findAll({
+            include: ["productoTag"]
         })
         .then(usuarios => {
             let respuesta = {
@@ -30,7 +30,7 @@ const productsAPIController = {
     },
     
     'detail': (req, res) => {
-        Products.findByPk(req.params.id)
+        Tag.findByPk(req.params.id)
             .then(usuarios => {
                 let respuesta = {
                     meta: {

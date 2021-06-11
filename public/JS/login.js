@@ -19,10 +19,12 @@ window.addEventListener('load', function (){
         //para revisar si funciona la validación de emailFormat desactivar input email en login.ejs
         if (email.value.length < 1){
                 erroresEmail.innerHTML = "Debes completar el email"      
-        } 
+                erroresEmail.style.display= "block"
+            } 
         
         if ((email.value.length > 0) && (!email.value.match(emailFormat))) {
             erroresEmailFormat.innerHTML = "El email no es válido"
+            erroresEmailFormat.style.display= "block"
         }
         
 
@@ -36,6 +38,7 @@ window.addEventListener('load', function (){
             let erroresContraseña = document.getElementById('erroresContraseña')
         if (contraseña.value.length < 1){
             erroresContraseña.innerHTML = "Debes completar la contraseña"      
+            erroresContraseña.style.display= "block"
         }
 
         if (erroresEmail.innerText || erroresEmailFormat.innerText || erroresContraseña.innerText  ) {

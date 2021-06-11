@@ -15,15 +15,15 @@
               <div class="infoDelProducto">
                 <p class="descripcion"><%= product.name %></p>
                 <p class="precio">$<%= product.price %></p>
-                <p class="precio"> Cantidad: 2</p>
+                <p class="precio"> Cantidad: 1</p>
               </div>
             </article>
           </a>
         </div>
+        <% precioTotal = precioTotal + (product.price) %> 
         <% } %>
       </div>
       <section>
-        <% precioTotal = precioTotal + (product.price * 2) %> 
           <div class="totalCarrito">
             <h3 class="descripcion">Subtotal: <%= precioTotal %></h3>
             <h3 class="descripcion">Envio: 0 </h3>

@@ -13,7 +13,9 @@ const Products = db.Product;
 //----------------------------------
 const productsAPIController = {
     'list': (req, res) => {
-        Products.findAll()
+        Products.findAll({
+            include: ["franquicia_producto", "productoTag"]
+        })
         .then(usuarios => {
             let respuesta = {
                 meta: {

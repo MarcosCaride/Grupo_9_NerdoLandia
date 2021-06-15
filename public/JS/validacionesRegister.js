@@ -11,10 +11,11 @@ window.addEventListener("load", function() {
         if (campoNombre.value <1) {
             erroresNombre.innerHTML= "El campo está vacío";
             erroresNombre.style.display= "block"
-        }
-        else if (campoNombre.value.length <2) {
+        }else if (campoNombre.value.length <2) {
             erroresNombre.innerHTML= "El nombre debe contener al menos dos carecteres"
             erroresNombre.style.display= "block"
+        }else{
+            erroresNombre.innerHTML = ""
         }   
 
         let campoApellido =document.getElementById ("apellido");
@@ -27,6 +28,8 @@ window.addEventListener("load", function() {
         else if (campoApellido.value.length<2) {
             erroresApellido.innerHTML= "El apellido debe contener al menos dos caracteres"
             erroresApellido.style.display= "block"
+        }else{
+            erroresApellido.innerHTML = ""
         }
 
         let campoContraseña= document.getElementById("contraseña");
@@ -39,6 +42,8 @@ window.addEventListener("load", function() {
         else if (campoContraseña.value.length<8) {
             erroresContraseña.innerHTML= "La contraseña debe contener al menos ocho caracteres"
             erroresContraseña.style.display= "block"
+        }else{
+            erroresContraseña.innerHTML = ""
         }
 
         let campoMail= document.getElementById("mail");

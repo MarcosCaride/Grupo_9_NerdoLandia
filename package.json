@@ -4,7 +4,7 @@
   "description": "Por el Grupo_9_NerdoLandia",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

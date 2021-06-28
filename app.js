@@ -45,7 +45,10 @@ app.use(ifLoggedUser);
 
 app.use(methodOverrride('_method'))
 app.use(express.static(publicPath));
-app.listen(3030, () => console.log("Nerdo Landia en funcionamiento"))
+app.listen (process.env.PORT || 3000, function () {
+    console.log ('Nerdolandia en puerto 3000');
+});
+
 
 // Ruteadores
 

@@ -23,19 +23,7 @@ const productsAPIController = {
                     total: usuarios.length,
                     url: 'api/products'
                 },
-                data: usuarios.map (user => {
-                    return {
-                        id: user.id,
-                        name: user.name,
-                        description: user.description,
-                        price: user.price,
-                        image: `/Imagenes/products/${user.image}`,
-                        franquicia_producto: user.franquicia_producto,
-                        productoTag: user.productoTag,
-                        androide_del_mes: user.androide_del_mes,
-                        heroinas: user.heroinas
-                    }
-                })
+                data: usuarios
             }
                 res.json(respuesta);
             })

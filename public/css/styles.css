@@ -61,8 +61,8 @@ header .desktopNavBar{
 header .burger{
     background-color: white;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 header .burger:hover{
@@ -122,15 +122,16 @@ header .burger:hover .mobileNavBar{
     background-color: white;
 }
 
-.mobileNavBar nav li{
+.mobileNavBar nav ul{
     width: 100%;
-    padding-bottom: 10px;
+    justify-content: center;
+    /* padding-bottom: 10px; */
 }
 
 .burger .fa-bars{
     background-color: white;
     font-size: 18px;
-    width: 80%;
+    width: 100%;
     text-align: center;
 }
 
@@ -168,6 +169,7 @@ nav a:hover{
     border-bottom: solid;
     border-color: #00c2cb;
     transition: 250ms;
+    padding: 0;
 }
 
 .titulo-Section{
@@ -433,7 +435,7 @@ footer h2{
     height: 100%;
     text-align: center;
     margin: 22px 0 22px 5px;
-    font-size: 3vw;
+    font-size: 3vh;
     margin: 0;
     font-family: 'Russo One', sans-serif;
     text-align: inherit;
@@ -451,6 +453,7 @@ footer h2{
 #searchBttn .fa-search{
     border-radius: 100%;
     background: none;
+    background-color: white;
 }
 
 .logo form{
@@ -835,7 +838,7 @@ form #file{
 /* Dropdown Button */
 .dropbtn {
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 2vh;
     background-color: white;
     color: black;
     align-self: center;
@@ -858,7 +861,6 @@ form #file{
 
   .navCategorias{
       display: flex;
-      height: 100%;
       align-content: center;
   }
   
@@ -877,7 +879,7 @@ form #file{
     text-decoration: none;
     display: block;
     border-bottom: 0;
-    font-size: 1.5vw;
+    font-size: 2vh;
     padding: 0;
   }
   
@@ -1844,10 +1846,30 @@ main .adminForm{
     .productD .Info .franchise{
         font-size: 17px;
     }
+    
+    .productD .Info h1{
+        font-size: 25px;
+    }
+
+    .productD .Info h2{
+        font-size: 20px;
+    }
+
+    .inicio-sesion .fa-user-circle{
+        font-size: 20px;
+    }
+
+    .dropdown:hover .dropdown-content{
+        display: contents;
+    }
 }
 
 @media (max-width: 791px){
     .productD .Info .franchise{
         font-size: 12px;
+    }
+
+    #searchBar{
+        font-size: 3vw;
     }
 }

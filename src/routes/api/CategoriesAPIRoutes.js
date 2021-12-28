@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const CategoriesApiController = require('../../controllers/api/CategoriesApiController');
+// const CategoriesApiController = require('../../controllers/api/CategoriesApiController');
 
 //Rutas
 //Listado de todos los usuarios
-router.get('/', CategoriesApiController.list);
+// router.get('/', CategoriesApiController.list);
 //Detalle del usuario
 
 /* 

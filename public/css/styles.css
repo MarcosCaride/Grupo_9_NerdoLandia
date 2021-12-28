@@ -193,6 +193,7 @@ footer h2{
 .productD{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     padding: 5% 2%;
@@ -203,14 +204,18 @@ footer h2{
 }
 
 .productD .Imagen{
-    width: 50%;
-    justify-self: flex-start;
+    display: flex;
+    width: 40%;
+    align-content: center;
+    justify-self: flex-end;
     max-height: fit-content;
 }
 
 .productD .Imagen img{
     width: 100%;
-    justify-self: flex-start;
+    height: max-content;
+    justify-self: center;
+    align-self: center;
 }
 
 .productD .Info{
@@ -219,7 +224,7 @@ footer h2{
     align-content: flex-start;
     justify-content: flex-end;
     text-align: right;
-    width: 50%;
+    width: 40%;
 }
 
 .productD .Info h1{
@@ -1359,9 +1364,11 @@ main .adminForm{
         border-radius: 8px;
         text-align: center;
     }
+
     .nombre-producto,.precio {
         background-color: white;
     }
+
     .delete-edit {
         display:flex;
         flex-wrap: wrap;
@@ -1833,3 +1840,14 @@ main .adminForm{
     border-radius: 30px;
 }
 
+@media (max-width: 1000px){
+    .productD .Info .franchise{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 791px){
+    .productD .Info .franchise{
+        font-size: 12px;
+    }
+}

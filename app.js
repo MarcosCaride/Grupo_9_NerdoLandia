@@ -29,7 +29,7 @@ const ifLoggedUser = require ('./src/Middlewares/ifLoggedUser')
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('views', path.join(process.cwd(), '/src/views'));
+app.set('views', path.join(process.cwd(), '/views'));
 app.set('view engine', 'ejs');
 
 app.use(session( {

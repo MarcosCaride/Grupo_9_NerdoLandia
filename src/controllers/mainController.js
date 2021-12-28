@@ -61,7 +61,7 @@ const mainController = {
 		let franquicias = await db.Franchise.findAll()
 
 
-		res.render('index.ejs', {
+		res.render('indexs', {
             marvel,
             starWars,
             losSimpsons,
